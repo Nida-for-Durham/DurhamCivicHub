@@ -346,6 +346,85 @@
     }
     .exp-notice a { color: #b45309; font-weight: 600; }
 
+    /* ─── Funding Sources ───────────────────────────────────────────── */
+    .exp-funding {
+      background: #fff;
+      border: 1.5px solid var(--border, #e5e0d8);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .exp-funding-title {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #888;
+      margin-bottom: 1rem;
+    }
+    .exp-funding-row {
+      display: flex;
+      align-items: center;
+      gap: .85rem;
+      margin-bottom: .75rem;
+    }
+    .exp-funding-row:last-child { margin-bottom: 0; }
+    .exp-funding-icon { font-size: 1rem; width: 1.4rem; text-align: center; flex-shrink: 0; }
+    .exp-funding-label {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--exp-navy);
+      width: 10rem;
+      flex-shrink: 0;
+    }
+    .exp-funding-bar-wrap {
+      flex: 1;
+      height: 8px;
+      background: #f1f5f9;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .exp-funding-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width .5s ease;
+    }
+    .exp-funding-pct {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--exp-navy);
+      width: 3rem;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .exp-funding-amt {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .78rem;
+      color: #888;
+      width: 5rem;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .exp-funding-note {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .72rem;
+      color: #aaa;
+      margin-top: .85rem;
+      line-height: 1.5;
+    }
+
+    /* ─── Dept detail enhancement ───────────────────────────────────── */
+    .exp-dept-about {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .78rem;
+      color: #666;
+      margin-bottom: .25rem;
+      line-height: 1.45;
+    }
+
     /* ─── DPS split view ────────────────────────────────────────────── */
     .exp-split {
       display: grid;
@@ -359,6 +438,11 @@
     }
     @media (min-width: 960px) {
       .exp-areas { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .exp-funding-amt { display: none; }
+      .exp-funding-label { width: 7rem; }
     }
   </style>
 </head>
@@ -527,14 +611,15 @@
     ).join('');
 
     // ── DPS has two views: funding sources & expenditures ──
-    // viewMode 'sources' → show e.areas (where money comes from)
-    // viewMode 'spending' → show e.expenditures (what it's spent on)
     const isDPS = e.id === 'dps';
     const viewToggle = isDPS ? `
       <div class="exp-view-toggle">
         <button class="exp-view-btn${viewMode !== 'spending' ? ' active' : ''}" onclick="setView('sources')">By Funding Source</button>
         <button class="exp-view-btn${viewMode === 'spending' ? ' active' : ''}"  onclick="setView('spending')">By Expenditure</button>
       </div>` : '';
+
+    // ── Funding Sources section (county/city) ──
+    const fundingHtml = buildFundingSources(e);
 
     // ── Area cards ──
     const areas = isDPS && viewMode === 'spending'
@@ -549,15 +634,15 @@
       const barPct  = totalForPct ? (amt / totalForPct * 100) : 0;
       const hasDepts = (a.departments || []).length > 0;
 
-      const deptsHtml = hasDepts ? buildDeptTable(a.departments, yr, prevYr, amt) : '';
-      const noticeHtml = !hasDepts && amt ? `
+      const deptsHtml = hasDepts ? buildDeptTable(a.departments, yr, prevYr, amt, e) : '';
+      const noticeHtml = !hasDepts ? `
         <div class="exp-notice">
-          Department-level detail for this area is in the official budget document.
+          Detailed breakdown available in the official budget document.
           <a href="${e.sourceUrl}" target="_blank" rel="noopener">View full budget →</a>
         </div>` : '';
 
       return `
-        <div class="exp-area${hasDepts || noticeHtml ? ' expandable' : ''}" id="area-${idx}">
+        <div class="exp-area expandable" id="area-${idx}">
           <div class="exp-area-header" onclick="toggleArea(${idx})">
             <span class="exp-area-icon">${a.icon || '📊'}</span>
             <div class="exp-area-info">
@@ -569,14 +654,22 @@
               <div class="exp-area-pct">${pct(amt, totalForPct)} of total</div>
               ${yoyBadge(amt, prevAmt)}
             </div>
-            ${hasDepts || noticeHtml ? '<span class="exp-area-chevron">›</span>' : ''}
+            <span class="exp-area-chevron">›</span>
           </div>
           <div class="exp-bar-wrap">
             <div class="exp-bar-fill" style="width:${barPct.toFixed(1)}%;background:${e.accent || '#E97221'}"></div>
           </div>
-          ${hasDepts || noticeHtml ? `<div class="exp-area-detail">${deptsHtml}${noticeHtml}${a.sourceNote ? `<div class="exp-source-note">${a.sourceNote}</div>` : ''}</div>` : ''}
+          <div class="exp-area-detail">
+            ${deptsHtml}
+            ${!hasDepts ? noticeHtml : ''}
+            ${a.sourceNote ? `<div class="exp-source-note">${a.sourceNote}</div>` : ''}
+          </div>
         </div>`;
     }).join('');
+
+    const spendingLabel = isDPS
+      ? (viewMode === 'spending' ? 'Where the Money Goes' : 'Where the Money Comes From')
+      : 'Where the Money Goes';
 
     // ── Assemble ──
     main.innerHTML = `
@@ -596,50 +689,95 @@
           </div>`).join('')}
       </div>
 
-      <div class="exp-section-title">${
-        isDPS
-          ? (viewMode === 'spending' ? 'Expenditures by Category' : 'Funding Sources')
-          : 'Spending by Area'
-      }</div>
+      ${fundingHtml}
+
+      <div class="exp-section-title">${spendingLabel}</div>
+      <p style="font-family:'Libre Franklin',sans-serif;font-size:.82rem;color:#555;margin:-0.5rem 0 1rem;line-height:1.55;">Click any area below to see a department-by-department breakdown.</p>
       <div class="exp-areas">${areaCards}</div>
 
       <p style="font-family:'Libre Franklin',sans-serif;font-size:.75rem;color:#aaa;margin-top:2rem;line-height:1.6;">
         All figures sourced from official government budget documents. YoY comparisons reflect prior adopted budget.
         ${prevYr ? '' : 'Prior-year comparison not yet available.'}
-        Some department-level breakdowns are only available in the full budget document.
+        Department-level dollar amounts marked — are available in the full budget document.
+        Funding source percentages for county and city are approximate estimates from the adopted budget summary.
       </p>
     `;
   }
 
-  function buildDeptTable(depts, yr, prevYr, areaTotal) {
+  // ── Render funding sources bar chart ────────────────────────────────────
+  function buildFundingSources(e) {
+    const isDPS = e.id === 'dps';
+    // DPS: funding sources are already the "areas" in sources view — skip this panel
+    if (isDPS) return '';
+    const sources = e.fundingSources;
+    if (!sources || !sources.length) return '';
+
+    const rows = sources.map(s => `
+      <div class="exp-funding-row">
+        <span class="exp-funding-icon">${s.icon}</span>
+        <span class="exp-funding-label">${s.name}</span>
+        <div class="exp-funding-bar-wrap">
+          <div class="exp-funding-bar-fill" style="width:${s.pct}%;background:${s.color}"></div>
+        </div>
+        <span class="exp-funding-pct">${s.pct.toFixed(1)}%</span>
+        <span class="exp-funding-amt">${fmtDollars(s.amount)}</span>
+      </div>`).join('');
+
+    return `
+      <div class="exp-section-title">Where the Money Comes From</div>
+      <div class="exp-funding">
+        <div class="exp-funding-title">Revenue Sources (${e.totals[activeYear]?.generalFund ? 'General Fund' : 'All Funds'} — Approximate)</div>
+        ${rows}
+        ${e.fundingSourcesNote ? `<div class="exp-funding-note">ⓘ ${e.fundingSourcesNote}</div>` : ''}
+      </div>`;
+  }
+
+  function buildDeptTable(depts, yr, prevYr, areaTotal, entity) {
+    const hasAnyAmt = depts.some(d => d.amounts?.[yr] != null);
+
     const rows = depts.map(d => {
       const amt  = d.amounts?.[yr]    ?? null;
       const prev = d.amounts?.[prevYr] ?? null;
-      const barW = areaTotal ? (amt / areaTotal * 100).toFixed(0) : 0;
+      const barW = (areaTotal && amt) ? (amt / areaTotal * 100) : 0;
+
+      if (!hasAnyAmt) {
+        // Qualitative-only row: show description but no dollar columns
+        return `
+          <tr>
+            <td style="padding:.6rem .5rem;">
+              <div style="font-weight:600;color:var(--exp-navy);">${d.name}</div>
+              ${d.description ? `<div class="exp-dept-about">${d.description}</div>` : ''}
+            </td>
+          </tr>`;
+      }
+
       return `
         <tr>
           <td>
-            ${d.name}
-            <div class="exp-dept-bar" style="width:${barW}%"></div>
+            <div style="font-weight:600;">${d.name}</div>
+            ${d.description ? `<div class="exp-dept-about">${d.description}</div>` : ''}
+            ${amt ? `<div class="exp-dept-bar" style="width:${barW.toFixed(0)}%;background:${entity?.accent || '#207C91'}"></div>` : ''}
           </td>
           <td>${fmtDollars(amt)}</td>
-          ${prevYr ? `<td>${yoyBadge(amt, prev) || fmtDollars(prev)}</td>` : ''}
-          <td>${pct(amt, areaTotal)}</td>
+          ${prevYr ? `<td>${amt != null && prev != null ? yoyBadge(amt, prev) : (fmtDollars(prev) || '—')}</td>` : ''}
+          <td>${amt ? pct(amt, areaTotal) : '—'}</td>
         </tr>`;
     }).join('');
 
-    return `
-      <table class="exp-dept-table">
-        <thead>
-          <tr>
-            <th>Line Item</th>
-            <th>${yr}</th>
-            ${prevYr ? `<th>vs ${prevYr}</th>` : ''}
-            <th>% of Area</th>
-          </tr>
-        </thead>
-        <tbody>${rows}</tbody>
-      </table>`;
+    const thead = hasAnyAmt ? `
+      <thead>
+        <tr>
+          <th>Department / Division</th>
+          <th>${yr}</th>
+          ${prevYr ? `<th>vs ${prevYr}</th>` : ''}
+          <th>% of Area</th>
+        </tr>
+      </thead>` : `
+      <thead>
+        <tr><th>Department / Division</th></tr>
+      </thead>`;
+
+    return `<table class="exp-dept-table">${thead}<tbody>${rows}</tbody></table>`;
   }
 
   // ── Toggle area open/close ──────────────────────────────────────────────
