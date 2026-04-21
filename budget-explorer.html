@@ -430,7 +430,7 @@
   let budgetData    = null;
   let activeEntity  = 0;
   let activeYear    = null;
-  let viewMode      = 'spending'; // 'spending' | 'funding' (DPS only)
+  let viewMode      = 'sources'; // 'sources' | 'spending' (DPS only: sources=funding sources, spending=expenditures)
 
   // ── Formatters ──────────────────────────────────────────────────────────
   function fmtDollars(n) {
@@ -474,7 +474,7 @@
     activeEntity = idx;
     const e = budgetData.entities[idx];
     activeYear = e.years[0];
-    viewMode = 'spending';
+    viewMode = 'sources'; // DPS defaults to 'By Funding Source'
     buildTabs();
     renderEntity();
   }
@@ -489,13 +489,14 @@
     const prevTotals = prevYr ? (e.totals[prevYr] || {}) : {};
 
     // ── Stats bar ──
-    const perResident = totals.allFunds && totals.population
+    // Per-capita: skip for DPS since taxRate already shows per-pupil expenditure
+    const perCapita = (e.id !== 'dps') && totals.allFunds && totals.population
       ? '$' + Math.round(totals.allFunds / totals.population).toLocaleString()
       : null;
 
     const statCards = [
       {
-        label: 'Total Budget',
+        label: 'Total Budget (All Funds)',
         value: fmtDollars(totals.allFunds),
         sub:   yr,
         badge: yoyBadge(totals.allFunds, prevTotals.allFunds),
@@ -503,7 +504,7 @@
       totals.generalFund ? {
         label: 'General Fund',
         value: fmtDollars(totals.generalFund),
-        sub:   'Operating budget',
+        sub:   'Operating fund (excl. capital & enterprise)',
         badge: yoyBadge(totals.generalFund, prevTotals.generalFund),
       } : null,
       totals.taxRate ? {
@@ -512,10 +513,10 @@
         sub:   yr,
         badge: '',
       } : null,
-      perResident ? {
+      perCapita ? {
         label: 'Per Resident',
-        value: perResident,
-        sub:   'Approx. ' + (totals.population / 1000).toFixed(0) + 'K residents',
+        value: perCapita,
+        sub:   'Approx. ' + Math.round(totals.population / 1000) + 'K residents',
         badge: '',
       } : null,
     ].filter(Boolean);
@@ -526,15 +527,17 @@
     ).join('');
 
     // ── DPS has two views: funding sources & expenditures ──
+    // viewMode 'sources' → show e.areas (where money comes from)
+    // viewMode 'spending' → show e.expenditures (what it's spent on)
     const isDPS = e.id === 'dps';
     const viewToggle = isDPS ? `
       <div class="exp-view-toggle">
-        <button class="exp-view-btn${viewMode === 'spending' ? ' active' : ''}" onclick="setView('spending')">By Funding Source</button>
-        <button class="exp-view-btn${viewMode === 'funding' ? ' active' : ''}"  onclick="setView('funding')">By Expenditure</button>
+        <button class="exp-view-btn${viewMode !== 'spending' ? ' active' : ''}" onclick="setView('sources')">By Funding Source</button>
+        <button class="exp-view-btn${viewMode === 'spending' ? ' active' : ''}"  onclick="setView('spending')">By Expenditure</button>
       </div>` : '';
 
     // ── Area cards ──
-    const areas = isDPS && viewMode === 'funding'
+    const areas = isDPS && viewMode === 'spending'
       ? (e.expenditures || [])
       : (e.areas || []);
 
@@ -593,7 +596,11 @@
           </div>`).join('')}
       </div>
 
-      <div class="exp-section-title">${isDPS && viewMode === 'funding' ? 'Expenditures by Category' : 'Spending by Area'}</div>
+      <div class="exp-section-title">${
+        isDPS
+          ? (viewMode === 'spending' ? 'Expenditures by Category' : 'Funding Sources')
+          : 'Spending by Area'
+      }</div>
       <div class="exp-areas">${areaCards}</div>
 
       <p style="font-family:'Libre Franklin',sans-serif;font-size:.75rem;color:#aaa;margin-top:2rem;line-height:1.6;">
