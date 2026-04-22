@@ -57,11 +57,11 @@ function buildNavDropdowns() {
 
   const NAV_CONFIG = {
     'meetings.html': [
-      { label: 'Meetings & Calendar',      url: 'meetings.html',                  header: true },
-      { label: 'Board of Commissioners',   url: 'meetings.html#commissioners'   },
-      { label: 'Durham City Council',      url: 'meetings.html#city-council'    },
-      { label: 'DPS Board of Education',   url: 'meetings.html#dps'             },
-      { label: 'Boards & Commissions',     url: 'meetings.html#advisory'        },
+      { label: 'Meetings & Calendar',      url: 'meetings.html',   header: true },
+      { label: 'Board of Commissioners',   url: 'meetings.html'                 },
+      { label: 'Durham City Council',      url: 'meetings.html'                 },
+      { label: 'DPS Board of Education',   url: 'meetings.html'                 },
+      { label: 'Boards & Commissions',     url: 'meetings.html'                 },
     ],
     'budget.html': [
       { label: 'Budget Hub',               url: 'budget.html',                    header: true },
