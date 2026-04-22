@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-21",
+  "updated": "2026-04-22",
   "note": "Edit this file to add or update meetings. Status values: upcoming, minutes, cancelled.",
   "bodies": [
     {
@@ -7,7 +7,7 @@
       "name": "Board of Commissioners",
       "description": "Durham County's five elected commissioners set the county property tax rate and adopt the county's annual operating budget. (The City of Durham sets a separate city tax rate independently.)",
       "schedule": "2nd & 4th Monday, 9:00 AM",
-      "location": "200 E. Main St., Durham — Commissioners Chambers, Room 2A",
+      "location": "200 E. Main St., Durham \u2014 Commissioners Chambers, Room 2A",
       "archiveUrl": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
       "group": "elected",
       "meetings": [
@@ -32,25 +32,25 @@
           ]
         },
         {
-          "date": "2026-04-21",
-          "type": "Work Session",
-          "status": "upcoming",
+          "date": "2026-04-14",
+          "type": "Joint City-County Meeting",
+          "status": "past",
           "links": [
             {
-              "label": "Agenda",
-              "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
+              "label": "Agenda Packet",
+              "url": "https://durhamcounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=1535",
               "primary": true
             },
             {
-              "label": "Live Stream",
-              "url": "https://www.youtube.com/@DurhamCountyNC"
+              "label": "Video Recording",
+              "url": "https://durhamcounty.granicus.com/MediaPlayer.php?view_id=2&clip_id=1535"
             }
           ]
         },
         {
-          "date": "2026-04-14",
+          "date": "2026-04-13",
           "type": "Regular Meeting",
-          "status": "minutes",
+          "status": "past",
           "links": [
             {
               "label": "Agenda Packet",
@@ -58,27 +58,31 @@
               "primary": true
             },
             {
-              "label": "Video",
-              "url": "https://www.youtube.com/@DurhamCountyNC"
+              "label": "Video Recording",
+              "url": "https://durhamcounty.granicus.com/MediaPlayer.php?view_id=2&clip_id=1534"
             }
           ]
         },
         {
-          "date": "2026-04-07",
+          "date": "2026-04-06",
           "type": "Work Session",
-          "status": "minutes",
+          "status": "past",
           "links": [
             {
               "label": "Agenda Packet",
               "url": "https://durhamcounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=1533",
               "primary": true
+            },
+            {
+              "label": "Video Recording",
+              "url": "https://durhamcounty.granicus.com/MediaPlayer.php?view_id=2&clip_id=1533"
             }
           ]
         },
         {
-          "date": "2026-03-24",
+          "date": "2026-03-23",
           "type": "Regular Meeting",
-          "status": "minutes",
+          "status": "past",
           "links": [
             {
               "label": "Agenda Packet",
@@ -86,15 +90,15 @@
               "primary": true
             },
             {
-              "label": "Video",
-              "url": "https://www.youtube.com/@DurhamCountyNC"
+              "label": "Video Recording",
+              "url": "https://durhamcounty.granicus.com/MediaPlayer.php?view_id=2&clip_id=1531"
             }
           ]
         },
         {
-          "date": "2026-03-10",
+          "date": "2026-03-09",
           "type": "Regular Meeting",
-          "status": "minutes",
+          "status": "past",
           "links": [
             {
               "label": "Agenda Packet",
@@ -102,8 +106,24 @@
               "primary": true
             },
             {
-              "label": "Video",
-              "url": "https://www.youtube.com/@DurhamCountyNC"
+              "label": "Video Recording",
+              "url": "https://durhamcounty.granicus.com/MediaPlayer.php?view_id=2&clip_id=1530"
+            }
+          ]
+        },
+        {
+          "date": "2026-03-02",
+          "type": "Work Session",
+          "status": "past",
+          "links": [
+            {
+              "label": "Agenda Packet",
+              "url": "https://durhamcounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=1528",
+              "primary": true
+            },
+            {
+              "label": "Video Recording",
+              "url": "https://durhamcounty.granicus.com/MediaPlayer.php?view_id=2&clip_id=1528"
             }
           ]
         }
@@ -114,18 +134,18 @@
       "name": "Durham City Council",
       "description": "The seven-member City Council sets city policy, adopts the city budget, and appoints the city manager.",
       "schedule": "1st & 3rd Monday, 7:00 PM",
-      "location": "101 City Hall Plaza, Durham — Council Chambers",
+      "location": "101 City Hall Plaza, Durham \u2014 Council Chambers",
       "archiveUrl": "https://www.durhamnc.gov/1323/City-Council",
       "group": "elected",
       "meetings": [
         {
-          "date": "2026-05-04",
-          "type": "Regular Meeting",
+          "date": "2026-04-23",
+          "type": "Work Session",
           "status": "upcoming",
           "links": [
             {
-              "label": "Agenda",
-              "url": "https://www.durhamnc.gov/1338/City-Council",
+              "label": "Agenda Packet",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04232026-3433?packet=true",
               "primary": true
             },
             {
@@ -140,33 +160,25 @@
         },
         {
           "date": "2026-04-20",
-          "type": "Work Session",
-          "status": "minutes",
+          "type": "Regular Meeting",
+          "status": "past",
           "links": [
             {
               "label": "Agenda Packet",
               "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04202026-3430?packet=true",
               "primary": true
-            },
-            {
-              "label": "Video",
-              "url": "https://www.youtube.com/@CityofDurhamNC"
             }
           ]
         },
         {
-          "date": "2026-04-07",
-          "type": "Regular Meeting",
-          "status": "minutes",
+          "date": "2026-04-09",
+          "type": "Work Session",
+          "status": "past",
           "links": [
             {
               "label": "Agenda Packet",
-              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04062026-3417?packet=true",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04092026-3418?packet=true",
               "primary": true
-            },
-            {
-              "label": "Video",
-              "url": "https://www.youtube.com/@CityofDurhamNC"
             }
           ]
         }
@@ -228,14 +240,14 @@
       "name": "City-County Planning Commission",
       "description": "Reviews rezoning petitions, subdivision plans, and long-range land use policy for both the City and County.",
       "schedule": "4th Wednesday, 9:00 AM",
-      "location": "101 City Hall Plaza, Durham — Committee Room",
+      "location": "101 City Hall Plaza, Durham \u2014 Committee Room",
       "archiveUrl": "https://www.durhamnc.gov/1367/Planning-Commission",
       "group": "advisory",
       "meetings": [
         {
-          "date": "2026-04-23",
+          "date": "2026-04-14",
           "type": "Regular Meeting",
-          "status": "upcoming",
+          "status": "past",
           "links": [
             {
               "label": "Agenda",
@@ -245,13 +257,25 @@
           ]
         },
         {
-          "date": "2026-03-25",
+          "date": "2026-03-10",
           "type": "Regular Meeting",
-          "status": "minutes",
+          "status": "past",
           "links": [
             {
-              "label": "Agenda Packet",
+              "label": "Agenda",
               "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_03102026-3388",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-02-24",
+          "type": "Regular Meeting",
+          "status": "past",
+          "links": [
+            {
+              "label": "Agenda",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_02242026-3372",
               "primary": true
             }
           ]
@@ -263,30 +287,42 @@
       "name": "Board of Adjustment",
       "description": "Hears appeals of zoning decisions and grants variances from development regulations.",
       "schedule": "2nd & 4th Thursday, 9:00 AM",
-      "location": "101 City Hall Plaza, Durham — Committee Room",
+      "location": "101 City Hall Plaza, Durham \u2014 Committee Room",
       "archiveUrl": "https://www.durhamnc.gov/1372/Board-of-Adjustment-BOA",
       "group": "advisory",
       "meetings": [
         {
-          "date": "2026-05-19",
+          "date": "2026-04-28",
           "type": "Regular Meeting",
           "status": "upcoming",
           "links": [
             {
               "label": "Agenda",
-              "url": "https://www.durhamnc.gov/580/Board-of-Adjustment",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04282026-3431",
               "primary": true
             }
           ]
         },
         {
-          "date": "2026-04-15",
+          "date": "2026-03-24",
           "type": "Regular Meeting",
-          "status": "minutes",
+          "status": "past",
           "links": [
             {
-              "label": "Minutes",
-              "url": "https://www.durhamnc.gov/580/Board-of-Adjustment",
+              "label": "Agenda",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_03242026-3397",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-02-24",
+          "type": "Regular Meeting",
+          "status": "past",
+          "links": [
+            {
+              "label": "Agenda",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_02242026-3373",
               "primary": true
             }
           ]
@@ -368,7 +404,7 @@
       "name": "Civilian Police Review Board",
       "description": "Reviews civilian complaints and matters related to police conduct in the City of Durham.",
       "schedule": "3rd Wednesday, 6:00 PM",
-      "location": "101 City Hall Plaza, Durham — Conference Room 1A",
+      "location": "101 City Hall Plaza, Durham \u2014 Conference Room 1A",
       "archiveUrl": "https://www.durhamnc.gov/AgendaCenter",
       "group": "advisory",
       "meetings": []
@@ -388,7 +424,7 @@
       "name": "Environmental Affairs Board",
       "description": "Advises City Council and BOCC on watershed protection, air quality, energy conservation, and related environmental matters.",
       "schedule": "1st Wednesday, 6:00 PM (no July)",
-      "location": "101 City Hall Plaza, Durham — Committee Room",
+      "location": "101 City Hall Plaza, Durham \u2014 Committee Room",
       "archiveUrl": "https://www.durhamnc.gov/1368/Environmental-Affairs-Board-EAB",
       "group": "advisory",
       "meetings": []
@@ -398,7 +434,7 @@
       "name": "Historic Preservation Commission",
       "description": "Holds quasi-judicial hearings on exterior changes to historic district or landmark properties.",
       "schedule": "1st Tuesday, 9:00 AM",
-      "location": "101 City Hall Plaza, Durham — Committee Room",
+      "location": "101 City Hall Plaza, Durham \u2014 Committee Room",
       "archiveUrl": "https://www.durhamnc.gov/397/Historic-Preservation-Commission-HPC",
       "group": "advisory",
       "meetings": []
@@ -418,7 +454,7 @@
       "name": "Workers' Rights Commission",
       "description": "City commission focused on worker advocacy and protection of worker rights in Durham.",
       "schedule": "4th Tuesday, 6:00 PM",
-      "location": "101 City Hall Plaza, Durham — Conference Room 1A",
+      "location": "101 City Hall Plaza, Durham \u2014 Conference Room 1A",
       "archiveUrl": "https://www.durhamnc.gov/AgendaCenter",
       "group": "advisory",
       "meetings": []
@@ -478,7 +514,7 @@
       "name": "Homeless Services Advisory Committee",
       "description": "Provides guidance to county and city leadership on initiatives to prevent and end homelessness in Durham.",
       "schedule": "4th Wednesday, 3:00 PM",
-      "location": "414 E. Main St., Durham — Conference Room C",
+      "location": "414 E. Main St., Durham \u2014 Conference Room C",
       "archiveUrl": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Homeless-Services-Advisory-Committee",
       "group": "advisory",
       "meetings": []
@@ -488,7 +524,7 @@
       "name": "Joint City-County Planning Committee",
       "description": "Expedites joint City and County consideration of planning issues affecting both governments.",
       "schedule": "1st Wednesday, 9:30 AM",
-      "location": "101 City Hall Plaza, Durham — Committee Room",
+      "location": "101 City Hall Plaza, Durham \u2014 Committee Room",
       "archiveUrl": "https://www.durhamnc.gov/1418/Joint-City-County-Planning-Committee",
       "group": "advisory",
       "meetings": []
@@ -568,7 +604,7 @@
       "name": "Citizens Advisory Committee",
       "description": "Advises City Council and BOCC on housing and community development needs funded by HUD block grants.",
       "schedule": "4th Monday, 6:00 PM",
-      "location": "101 City Hall Plaza, Durham — Conference Room 1A",
+      "location": "101 City Hall Plaza, Durham \u2014 Conference Room 1A",
       "archiveUrl": "https://www.durhamnc.gov/4775/Citizens-Advisory-Committee-CAC",
       "group": "advisory",
       "meetings": []
