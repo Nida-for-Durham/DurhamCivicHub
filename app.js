@@ -335,6 +335,7 @@ function renderStories() {
     </article>
   `;
   }).join('');
+  if (window._twParse) window._twParse(grid);
 }
 
 // ── Meetings ──────────────────────────────────────────────────
@@ -419,6 +420,8 @@ function renderMeetings(data, container) {
       ${advisory.map(renderBodyCard).join('')}
     </div>
   `;
+
+  if (window._twParse) window._twParse(container);
 
   // Hash-based scroll: handle #commissioners, #city-council, #dps, #advisory, etc.
   const hash = window.location.hash;
@@ -749,9 +752,11 @@ function injectLanguageSelector() {
   const dropdown = document.createElement('div');
   dropdown.className = 'nav-lang-dropdown';
   dropdown.setAttribute('role', 'menu');
-  dropdown.innerHTML = LANGUAGES.map(l =>
-    `<a class="nav-lang-option" href="#" data-lang="${l.code}" role="menuitem">${l.label}</a>`
-  ).join('');
+  dropdown.innerHTML =
+    `<a class="nav-lang-option nav-lang-option--reset" href="#" data-lang="" role="menuitem">↩ English (original)</a>` +
+    LANGUAGES.map(l =>
+      `<a class="nav-lang-option" href="#" data-lang="${l.code}" role="menuitem">${l.label}</a>`
+    ).join('');
 
   wrapper.appendChild(btn);
   wrapper.appendChild(dropdown);
@@ -767,10 +772,31 @@ function injectLanguageSelector() {
     a.addEventListener('click', e => {
       e.preventDefault();
       const lang = a.dataset.lang;
-      const url  = encodeURIComponent(window.location.href);
-      window.open(`https://translate.google.com/translate?sl=en&tl=${lang}&u=${url}`, '_blank', 'noopener');
       wrapper.classList.remove('open');
       btn.setAttribute('aria-expanded', 'false');
+
+      if (!lang) {
+        // Reset to English — clear cookie and reload
+        const exp = 'Thu, 01 Jan 1970 00:00:00 UTC';
+        document.cookie = `googtrans=; expires=${exp}; path=/`;
+        document.cookie = `googtrans=; expires=${exp}; path=/; domain=${window.location.hostname}`;
+        window.location.reload();
+        return;
+      }
+
+      // Try widget select first (instant, no reload)
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event('change'));
+      } else {
+        // Fallback: set cookie and reload
+        document.cookie = `googtrans=/en/${lang}; path=/`;
+        if (window.location.hostname) {
+          document.cookie = `googtrans=/en/${lang}; path=/; domain=${window.location.hostname}`;
+        }
+        window.location.reload();
+      }
     });
   });
 
@@ -778,6 +804,36 @@ function injectLanguageSelector() {
     wrapper.classList.remove('open');
     btn.setAttribute('aria-expanded', 'false');
   });
+
+  // ── Google Translate widget (hidden, client-side) ─────────────
+  const gtDiv = document.createElement('div');
+  gtDiv.id = 'google_translate_element';
+  gtDiv.style.cssText = 'position:absolute;left:-9999px;top:0;visibility:hidden;overflow:hidden;height:0;';
+  document.body.appendChild(gtDiv);
+
+  window.googleTranslateElementInit = function () {
+    try {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'es,ar,vi,zh-CN,fr,pt,hi,tl,ko,am',
+        autoDisplay: false,
+      }, 'google_translate_element');
+    } catch (e) {}
+  };
+
+  const gtScript = document.createElement('script');
+  gtScript.src   = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  gtScript.async = true;
+  document.head.appendChild(gtScript);
+
+  // Suppress Google's toolbar/banner
+  const gtStyle = document.createElement('style');
+  gtStyle.textContent =
+    '.goog-te-banner-frame.skiptranslate{display:none!important;}' +
+    '.goog-te-gadget{display:none!important;}' +
+    '.VIpgJd-ZVi9od-ORHb-OEVmcd{display:none!important;}' +
+    'body{top:0!important;}';
+  document.head.appendChild(gtStyle);
 }
 
 // ── Init ──────────────────────────────────────────────────────
@@ -786,6 +842,17 @@ document.addEventListener('DOMContentLoaded', () => {
   injectSearchUI();
   buildNavDropdowns();
   injectLanguageSelector();
+
+  // Load Twemoji for consistent graphic emoji across all browsers/platforms
+  const twScript = document.createElement('script');
+  twScript.src = 'https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js';
+  twScript.crossOrigin = 'anonymous';
+  twScript.onload = () => {
+    twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+    // Re-parse when dynamic content is added (news cards, meeting rows, etc.)
+    window._twParse = el => twemoji.parse(el || document.body, { folder: 'svg', ext: '.svg' });
+  };
+  document.head.appendChild(twScript);
 
   // News search wiring
   const ns = document.getElementById('newsSearch');

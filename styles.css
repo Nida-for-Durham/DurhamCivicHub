@@ -9,6 +9,15 @@
 /* ── Font Imports ── */
 @import url('https://api.fontshare.com/v2/css?f[]=margin@700,800&display=swap');
 
+/* ── Twemoji graphic emoji ── */
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
+  display: inline-block;
+}
+
 /* ── Custom Properties ── */
 :root {
   /* Brand palette — Nida Allam brand guide */
@@ -1045,6 +1054,13 @@ a { color: var(--teal); }
   transition: background .12s;
 }
 .nav-lang-option:hover { background: #f3f4f6; text-decoration: none; }
+.nav-lang-option--reset {
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: .2rem;
+  padding-bottom: .55rem;
+  color: #6b7280;
+  font-size: .8rem;
+}
 @media (max-width: 640px) {
   .nav-lang-btn { font-size: 0; gap: 0; padding: .4rem .5rem; }
   .nav-lang-btn svg { width: 18px; height: 18px; }

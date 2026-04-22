@@ -197,12 +197,12 @@
       border-radius: 10px;
       line-height: 1;
     }
-    .cip-status--active,
-    .cip-status--ongoing         { background: #dcfce7; color: #166534; }
-    .cip-status--planning        { background: #dbeafe; color: #1e40af; }
-    .cip-status--design          { background: #fef9c3; color: #854d0e; }
-    .cip-status--various,
-    .cip-status--multiple-phases { background: #f3f4f6; color: #374151; }
+    .cip-status--in-progress { background: #dcfce7; color: #166534; }
+    .cip-status--planning    { background: #dbeafe; color: #1e40af; }
+    .cip-status--paused      { background: #fef9c3; color: #854d0e; }
+    .cip-status--complete    { background: #d1fae5; color: #065f46; }
+    .cip-status--delayed     { background: #fee2e2; color: #991b1b; }
+    .cip-status--other       { background: #f3f4f6; color: #374151; }
     .cip-desc {
       font-size: .88rem;
       color: #4b5563;
@@ -689,32 +689,43 @@
         return '$' + (n / 1e3).toFixed(0) + 'K';
       }
 
+      const ENTITY_COLORS = { city: '#207C91', county: '#262E4F', dps: '#5b21b6' };
+      const ENTITY_LABELS = { city: 'City of Durham', county: 'Durham County', dps: 'Durham Public Schools' };
+
       const totalBudget = projects.reduce((s, p) => s + p.amount, 0);
       const totalCount  = projects.length;
 
-      // By entity
-      const ENTITY_COLORS = { city: '#207C91', county: '#262E4F', dps: '#5b21b6' };
-      const ENTITY_LABELS = { city: 'City of Durham', county: 'Durham County', dps: 'Durham Public Schools' };
       const byEntity = {};
-      projects.forEach(p => {
-        byEntity[p.entity] = (byEntity[p.entity] || 0) + p.amount;
-      });
+      projects.forEach(p => { byEntity[p.entity] = (byEntity[p.entity] || 0) + p.amount; });
       const maxEntity = Math.max(...Object.values(byEntity));
 
-      // By category
-      const byCategory = {};
+      // By category with entity breakdown
+      const byCatTotal = {}, byCatEntity = {};
       projects.forEach(p => {
-        byCategory[p.category] = (byCategory[p.category] || 0) + p.amount;
+        byCatTotal[p.category]  = (byCatTotal[p.category] || 0) + p.amount;
+        if (!byCatEntity[p.category]) byCatEntity[p.category] = {};
+        byCatEntity[p.category][p.entity] = (byCatEntity[p.category][p.entity] || 0) + p.amount;
       });
-      const sortedCats = Object.entries(byCategory).sort((a,b) => b[1]-a[1]);
+      const sortedCats = Object.entries(byCatTotal).sort((a,b) => b[1]-a[1]);
       const maxCat = sortedCats[0]?.[1] || 1;
 
-      // By status
-      const byStatus = {};
+      // By status with entity breakdown
+      const byStatusTotal = {}, byStatusEntity = {};
       projects.forEach(p => {
-        byStatus[p.status] = (byStatus[p.status] || 0) + 1;
+        byStatusTotal[p.status]  = (byStatusTotal[p.status] || 0) + p.amount;
+        if (!byStatusEntity[p.status]) byStatusEntity[p.status] = {};
+        byStatusEntity[p.status][p.entity] = (byStatusEntity[p.status][p.entity] || 0) + p.amount;
       });
-      const statusColors = { active:'#16a34a', ongoing:'#16a34a', planning:'#2563eb', design:'#d97706', various:'#6b7280' };
+      const maxStatus = Math.max(...Object.values(byStatusTotal));
+
+      function stackedBar(entityBreakdown, total, maxTotal) {
+        const outerPct = (total / maxTotal * 100).toFixed(1);
+        const segs = Object.entries(entityBreakdown)
+          .filter(([,v]) => v > 0)
+          .map(([ent, amt]) => `<div style="width:${(amt/total*100).toFixed(1)}%;background:${ENTITY_COLORS[ent]||'#6b7280'};height:100%;" title="${ENTITY_LABELS[ent]||ent}: ${fmtM(amt)}"></div>`)
+          .join('');
+        return `<div style="height:100%;width:${outerPct}%;display:flex;border-radius:4px;overflow:hidden;">${segs}</div>`;
+      }
 
       body.innerHTML = `
         <div class="cip-modal-kpi-row">
@@ -727,48 +738,49 @@
             <div class="cip-modal-kpi-lbl">Total Budget</div>
           </div>
           <div class="cip-modal-kpi">
-            <div class="cip-modal-kpi-val">${Object.keys(byCategory).length}</div>
+            <div class="cip-modal-kpi-val">${Object.keys(byCatTotal).length}</div>
             <div class="cip-modal-kpi-lbl">Categories</div>
           </div>
+        </div>
+
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.25rem;align-items:center;">
+          ${Object.entries(ENTITY_LABELS).map(([k,v]) => `
+            <span style="display:flex;align-items:center;gap:.3rem;font-size:.77rem;font-weight:600;color:#374151;">
+              <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${ENTITY_COLORS[k]};"></span>${v}
+            </span>`).join('')}
+          <span style="font-size:.72rem;color:#9ca3af;font-style:italic;">Hover segments for details</span>
         </div>
 
         <div class="cip-modal-section">
           <div class="cip-modal-section-title">Budget by Entity</div>
           ${Object.entries(byEntity).map(([k,v]) => `
             <div class="cip-bar-row">
-              <div class="cip-bar-label">${ENTITY_LABELS[k] || k}</div>
+              <div class="cip-bar-label">${ENTITY_LABELS[k]||k}</div>
               <div class="cip-bar-track">
                 <div class="cip-bar-fill" style="width:${Math.round(v/maxEntity*100)}%;background:${ENTITY_COLORS[k]||'#6b7280'}"></div>
               </div>
               <div class="cip-bar-val">${fmtM(v)}</div>
-            </div>
-          `).join('')}
+            </div>`).join('')}
         </div>
 
         <div class="cip-modal-section">
-          <div class="cip-modal-section-title">Budget by Category</div>
-          ${sortedCats.map(([cat,v]) => `
+          <div class="cip-modal-section-title">Budget by Category (colored by entity)</div>
+          ${sortedCats.map(([cat,total]) => `
             <div class="cip-bar-row">
               <div class="cip-bar-label" title="${cat}">${categoryIcon(cat)} ${cat}</div>
-              <div class="cip-bar-track">
-                <div class="cip-bar-fill" style="width:${Math.round(v/maxCat*100)}%;background:var(--teal,#207C91)"></div>
-              </div>
-              <div class="cip-bar-val">${fmtM(v)}</div>
-            </div>
-          `).join('')}
+              <div class="cip-bar-track">${stackedBar(byCatEntity[cat]||{}, total, maxCat)}</div>
+              <div class="cip-bar-val">${fmtM(total)}</div>
+            </div>`).join('')}
         </div>
 
         <div class="cip-modal-section">
-          <div class="cip-modal-section-title">Projects by Status</div>
-          ${Object.entries(byStatus).map(([s,n]) => `
+          <div class="cip-modal-section-title">Budget by Status (colored by entity)</div>
+          ${Object.entries(byStatusTotal).map(([s,total]) => `
             <div class="cip-bar-row">
               <div class="cip-bar-label" style="text-transform:capitalize">${s}</div>
-              <div class="cip-bar-track">
-                <div class="cip-bar-fill" style="width:${Math.round(n/totalCount*100)}%;background:${statusColors[s.toLowerCase()]||'#6b7280'}"></div>
-              </div>
-              <div class="cip-bar-val">${n} projects</div>
-            </div>
-          `).join('')}
+              <div class="cip-bar-track">${stackedBar(byStatusEntity[s]||{}, total, maxStatus)}</div>
+              <div class="cip-bar-val">${fmtM(total)}</div>
+            </div>`).join('')}
         </div>
       `;
 
@@ -785,7 +797,8 @@
 
     (function () {
       let allProjects = [];
-      let activeEntity = 'all';
+      let allMarkers  = [];   // [{marker, entity, category}]
+      let activeEntity   = 'all';
       let activeCategory = 'all';
 
       function fmtMoney(n) {
@@ -796,59 +809,112 @@
       }
 
       function statusClass(status) {
-        const s = (status || '').toLowerCase();
-        if (s === 'active') return 'cip-status--active';
-        if (s === 'ongoing') return 'cip-status--ongoing';
-        if (s === 'planning') return 'cip-status--planning';
-        if (s === 'design') return 'cip-status--design';
-        return 'cip-status--various';
+        switch ((status || '').toLowerCase().replace(/\s+/g, '-')) {
+          case 'in-progress': return 'cip-status--in-progress';
+          case 'planning':    return 'cip-status--planning';
+          case 'paused':      return 'cip-status--paused';
+          case 'complete':    return 'cip-status--complete';
+          case 'delayed':     return 'cip-status--delayed';
+          default:            return 'cip-status--other';
+        }
       }
 
+      function statusStyle(s) {
+        switch ((s || '').toLowerCase()) {
+          case 'in progress': return 'background:#dcfce7;color:#166534;';
+          case 'planning':    return 'background:#dbeafe;color:#1e40af;';
+          case 'paused':      return 'background:#fef9c3;color:#854d0e;';
+          case 'complete':    return 'background:#d1fae5;color:#065f46;';
+          case 'delayed':     return 'background:#fee2e2;color:#991b1b;';
+          default:            return 'background:#f3f4f6;color:#374151;';
+        }
+      }
+
+      // ── Map sync ─────────────────────────────────────────────────
+      function syncMapMarkers() {
+        allMarkers.forEach(({marker, entity, category}) => {
+          const show = (activeEntity   === 'all' || entity   === activeEntity) &&
+                       (activeCategory === 'all' || category === activeCategory);
+          const el = marker.getElement();
+          if (el) el.style.display = show ? '' : 'none';
+        });
+      }
+
+      function syncLegendState() {
+        document.querySelectorAll('[data-legend-entity]').forEach(btn => {
+          btn.classList.toggle('cip-legend-item--active',
+            activeEntity !== 'all' && btn.dataset.legendEntity === activeEntity);
+        });
+        document.querySelectorAll('[data-legend-cat]').forEach(btn => {
+          btn.classList.toggle('cip-legend-item--active',
+            activeCategory !== 'all' && btn.dataset.legendCat === activeCategory);
+        });
+      }
+
+      window.legendFilterEntity = function(entity) {
+        activeEntity = (activeEntity === entity) ? 'all' : entity;
+        document.querySelectorAll('[data-entity]').forEach(b => b.classList.remove('active','active--navy','active--dps'));
+        const cardBtn = document.querySelector(`[data-entity="${activeEntity}"]`);
+        if (cardBtn) {
+          if      (activeEntity === 'county') cardBtn.classList.add('active','active--navy');
+          else if (activeEntity === 'dps')    cardBtn.classList.add('active','active--dps');
+          else                                cardBtn.classList.add('active');
+        }
+        syncLegendState();
+        renderProjects();
+      };
+
+      window.legendFilterCategory = function(cat) {
+        activeCategory = (activeCategory === cat) ? 'all' : cat;
+        document.querySelectorAll('[data-cat]').forEach(b => b.classList.remove('active'));
+        const cardBtn = document.querySelector(`[data-cat="${activeCategory}"]`);
+        if (cardBtn) cardBtn.classList.add('active');
+        syncLegendState();
+        renderProjects();
+      };
+
+      // ── Cards ────────────────────────────────────────────────────
       function renderProjects() {
-        const grid = document.getElementById('cipGrid');
+        const grid    = document.getElementById('cipGrid');
         const countEl = document.getElementById('cipCount');
         if (!grid) return;
 
-        const filtered = allProjects.filter(p => {
-          if (activeEntity !== 'all' && p.entity !== activeEntity) return false;
-          if (activeCategory !== 'all' && p.category !== activeCategory) return false;
-          return true;
-        });
+        const filtered = allProjects.filter(p =>
+          (activeEntity   === 'all' || p.entity   === activeEntity) &&
+          (activeCategory === 'all' || p.category === activeCategory)
+        );
 
         countEl.textContent = filtered.length === allProjects.length
           ? `Showing all ${filtered.length} projects`
           : `Showing ${filtered.length} of ${allProjects.length} projects`;
 
-        if (filtered.length === 0) {
-          grid.innerHTML = '<div class="cip-empty">No projects match the selected filters.</div>';
-          return;
-        }
+        grid.innerHTML = filtered.length === 0
+          ? '<div class="cip-empty">No projects match the selected filters.</div>'
+          : filtered.map(p => `
+              <div class="cip-card" id="project-${p.id}">
+                <div class="cip-card-header">
+                  <span class="cip-entity-badge cip-entity-badge--${p.entity}">${p.entityLabel}</span>
+                  <span class="cip-category-tag">${p.category}</span>
+                </div>
+                <h2 class="cip-card-title">${p.title}</h2>
+                <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;">
+                  <span class="cip-amount">${fmtMoney(p.amount)}</span>
+                  <span class="cip-status-badge ${statusClass(p.status)}">${p.status}</span>
+                </div>
+                <p class="cip-desc">${p.description}</p>
+                <div class="cip-card-footer">
+                  <span class="cip-year-label">${p.year}</span>
+                  <a class="cip-source-link" href="${p.sourceUrl}" target="_blank" rel="noopener">Source →</a>
+                </div>
+              </div>`).join('');
 
-        grid.innerHTML = filtered.map(p => `
-          <div class="cip-card" id="project-${p.id}">
-            <div class="cip-card-header">
-              <span class="cip-entity-badge cip-entity-badge--${p.entity}">${p.entityLabel}</span>
-              <span class="cip-category-tag">${p.category}</span>
-            </div>
-            <h2 class="cip-card-title">${p.title}</h2>
-            <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;">
-              <span class="cip-amount">${fmtMoney(p.amount)}</span>
-              <span class="cip-status-badge ${statusClass(p.status)}">${p.status}</span>
-            </div>
-            <p class="cip-desc">${p.description}</p>
-            <div class="cip-card-footer">
-              <span class="cip-year-label">${p.year}</span>
-              <a class="cip-source-link" href="${p.sourceUrl}" target="_blank" rel="noopener">Source →</a>
-            </div>
-          </div>
-        `).join('');
+        syncMapMarkers();
+        if (window._twParse) window._twParse(grid);
       }
 
       function buildCategoryFilters(projects) {
         const container = document.getElementById('categoryFilters');
         if (!container) return;
-
-        const categories = ['all', ...new Set(projects.map(p => p.category))];
 
         const allBtn = document.createElement('button');
         allBtn.className = 'cip-filter-btn active';
@@ -857,7 +923,7 @@
         allBtn.onclick = function () { setCategoryFilter('all', this); };
         container.appendChild(allBtn);
 
-        categories.filter(c => c !== 'all').forEach(cat => {
+        [...new Set(projects.map(p => p.category))].forEach(cat => {
           const btn = document.createElement('button');
           btn.className = 'cip-filter-btn';
           btn.dataset.cat = cat;
@@ -869,78 +935,85 @@
 
       window.setEntityFilter = function (entity, btn) {
         activeEntity = entity;
-        document.querySelectorAll('[data-entity]').forEach(b => {
-          b.classList.remove('active', 'active--navy', 'active--dps');
-        });
-        if (entity === 'county') {
-          btn.classList.add('active', 'active--navy');
-        } else if (entity === 'dps') {
-          btn.classList.add('active', 'active--dps');
-        } else {
-          btn.classList.add('active');
-        }
+        document.querySelectorAll('[data-entity]').forEach(b => b.classList.remove('active','active--navy','active--dps'));
+        if      (entity === 'county') btn.classList.add('active','active--navy');
+        else if (entity === 'dps')    btn.classList.add('active','active--dps');
+        else                          btn.classList.add('active');
+        syncLegendState();
         renderProjects();
       };
 
       window.setCategoryFilter = function (cat, btn) {
         activeCategory = cat;
-        document.querySelectorAll('[data-cat]').forEach(b => {
-          b.classList.remove('active');
-        });
+        document.querySelectorAll('[data-cat]').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        syncLegendState();
         renderProjects();
       };
 
+      // ── Map ──────────────────────────────────────────────────────
       function initMap(projects) {
-        const map = L.map('cipMap').setView([35.9940, -78.8986], 12);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        const streetLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-          maxZoom: 18
-        }).addTo(map);
+          maxZoom: 19
+        });
+        const satLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+          attribution: 'Tiles © Esri &mdash; Source: Esri, Maxar, Earthstar Geographics',
+          maxZoom: 19
+        });
+
+        const map = L.map('cipMap', { layers: [streetLayer] }).setView([35.9940, -78.8986], 12);
+
+        L.control.layers(
+          { '🗺 Street View': streetLayer, '🛰 Satellite': satLayer },
+          {},
+          { position: 'topleft', collapsed: false }
+        ).addTo(map);
 
         // Durham County boundary outline
         fetch('https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWGS84Current/MapServer/10/query?where=STATE+%3D+%2737%27+AND+COUNTY+%3D+%27063%27&outFields=NAME&f=geojson&outSR=4326')
           .then(r => r.json())
-          .then(geojson => {
-            L.geoJSON(geojson, {
-              style: { color: '#E97221', weight: 2.5, fillOpacity: 0 }
-            }).addTo(map);
-          })
+          .then(geojson => L.geoJSON(geojson, { style: { color: '#E97221', weight: 2.5, fillOpacity: 0 } }).addTo(map))
           .catch(() => {});
 
-        // Emoji icon markers by category
+        // Markers with full-detail popups
         projects.forEach(p => {
           if (!p.lat || !p.lng) return;
           const color   = p.entity === 'city' ? '#207C91' : p.entity === 'dps' ? '#5b21b6' : '#262E4F';
           const icon    = categoryIcon(p.category);
+          let   iconHtml = `<span style="font-size:1.1rem;line-height:1;">${icon}</span>`;
+          if (typeof twemoji !== 'undefined') {
+            iconHtml = twemoji.parse(iconHtml, {
+              folder: 'svg', ext: '.svg',
+              attributes: () => ({ width: '18', height: '18', style: 'display:block;' })
+            });
+          }
           const divIcon = L.divIcon({
-            html: `<div style="width:34px;height:34px;border-radius:50%;background:${color};border:2.5px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;font-size:1rem;line-height:1;">${icon}</div>`,
-            className: '',
-            iconSize: [34, 34],
-            iconAnchor: [17, 17],
-            popupAnchor: [0, -20]
+            html: `<div style="width:34px;height:34px;border-radius:50%;background:${color};border:2.5px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;">${iconHtml}</div>`,
+            className: '', iconSize: [34,34], iconAnchor: [17,17], popupAnchor: [0,-20]
           });
           const marker = L.marker([p.lat, p.lng], { icon: divIcon }).addTo(map);
+          allMarkers.push({ marker, entity: p.entity, category: p.category });
+
           marker.bindPopup(`
-            <strong style="font-family:sans-serif;font-size:.9rem;">${p.title}</strong><br>
-            <span style="font-family:sans-serif;font-size:.8rem;color:#666;">${p.entityLabel} · ${p.category}</span><br>
-            <strong style="font-family:sans-serif;color:#207C91;">$${(p.amount/1e6).toFixed(1)}M</strong>
-            ${p.locationNote ? `<br><em style="font-size:.82rem;color:#999;">${p.locationNote}</em>` : ''}
-          `);
-          marker.on('click', () => {
-            const card = document.getElementById('project-' + p.id);
-            if (card) {
-              card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-              card.style.outline = '3px solid #E97221';
-              setTimeout(() => card.style.outline = '', 2000);
-            }
-          });
+            <div style="font-family:'Libre Franklin',sans-serif;width:260px;">
+              <div style="font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:${color};margin-bottom:.35rem;">${p.entityLabel} · ${icon} ${p.category}</div>
+              <div style="font-size:.98rem;font-weight:800;color:#262E4F;line-height:1.3;margin-bottom:.4rem;">${p.title}</div>
+              <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.4rem;flex-wrap:wrap;">
+                <span style="font-size:1.35rem;font-weight:800;color:#262E4F;line-height:1;">${fmtMoney(p.amount)}</span>
+                <span style="font-size:.72rem;font-weight:700;padding:.18rem .45rem;border-radius:8px;${statusStyle(p.status)}">${p.status}</span>
+              </div>
+              <p style="font-size:.82rem;color:#4b5563;line-height:1.5;margin:.35rem 0 .5rem;">${p.description}</p>
+              <div style="font-size:.76rem;color:#9ca3af;margin-bottom:.5rem;">${p.year}${p.locationNote ? ' · ' + p.locationNote : ''}</div>
+              <a href="${p.sourceUrl}" target="_blank" rel="noopener noreferrer" style="font-size:.8rem;font-weight:700;color:#207C91;text-decoration:none;">View source →</a>
+            </div>
+          `, { maxWidth: 280, minWidth: 260 });
         });
 
-        // ── Map Legend Control ──────────────────────────────────────
+        // Legend with filter buttons
         const categories = [...new Set(projects.map(p => p.category))].sort();
         const legend = L.control({ position: 'topright' });
-        legend.onAdd = function() {
+        legend.onAdd = function () {
           const div = L.DomUtil.create('div', 'cip-map-legend');
           L.DomEvent.disableClickPropagation(div);
           div.innerHTML = `
@@ -951,25 +1024,37 @@
             <div class="cip-map-legend-body" id="cipLegendBody">
               <div class="cip-legend-section">
                 <div class="cip-legend-section-title">By Entity</div>
-                <div class="cip-legend-item"><span class="cip-legend-dot" style="background:#207C91;"></span>City of Durham</div>
-                <div class="cip-legend-item"><span class="cip-legend-dot" style="background:#262E4F;"></span>Durham County</div>
-                <div class="cip-legend-item"><span class="cip-legend-dot" style="background:#5b21b6;"></span>Durham Public Schools</div>
+                <button class="cip-legend-item cip-legend-item--btn" data-legend-entity="city">
+                  <span class="cip-legend-dot" style="background:#207C91;"></span>City of Durham
+                </button>
+                <button class="cip-legend-item cip-legend-item--btn" data-legend-entity="county">
+                  <span class="cip-legend-dot" style="background:#262E4F;"></span>Durham County
+                </button>
+                <button class="cip-legend-item cip-legend-item--btn" data-legend-entity="dps">
+                  <span class="cip-legend-dot" style="background:#5b21b6;"></span>Durham Public Schools
+                </button>
               </div>
               <div class="cip-legend-section" style="margin-top:.55rem;">
                 <div class="cip-legend-section-title">By Category</div>
                 ${categories.map(cat => `
-                  <div class="cip-legend-item">
+                  <button class="cip-legend-item cip-legend-item--btn" data-legend-cat="${cat}">
                     <span style="font-size:.95rem;line-height:1;">${categoryIcon(cat)}</span>
                     ${cat}
-                  </div>`).join('')}
+                  </button>`).join('')}
               </div>
-              <div style="font-family:'Libre Franklin',sans-serif;font-size:.72rem;color:#9ca3af;font-style:italic;margin-top:.5rem;">Click a marker to jump to its card</div>
+              <div style="font-family:'Libre Franklin',sans-serif;font-size:.71rem;color:#9ca3af;font-style:italic;margin-top:.5rem;padding:0 .2rem;">Click to filter · click again to reset</div>
             </div>`;
-          // Toggle collapse
-          div.querySelector('.cip-legend-toggle').addEventListener('click', function() {
-            const body = div.querySelector('#cipLegendBody');
-            const collapsed = body.style.display === 'none';
-            body.style.display = collapsed ? '' : 'none';
+
+          div.querySelectorAll('[data-legend-entity]').forEach(btn => {
+            btn.addEventListener('click', () => window.legendFilterEntity(btn.dataset.legendEntity));
+          });
+          div.querySelectorAll('[data-legend-cat]').forEach(btn => {
+            btn.addEventListener('click', () => window.legendFilterCategory(btn.dataset.legendCat));
+          });
+          div.querySelector('.cip-legend-toggle').addEventListener('click', function () {
+            const bodyEl = div.querySelector('#cipLegendBody');
+            const collapsed = bodyEl.style.display === 'none';
+            bodyEl.style.display = collapsed ? '' : 'none';
             this.textContent = collapsed ? '−' : '+';
           });
           return div;
