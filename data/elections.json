@@ -1,0 +1,23 @@
+{
+  "lastUpdated": "2026-04-22",
+  "source": "https://www.ncsbe.gov/voting/upcoming-election",
+  "nextElection": {
+    "date": "2026-11-03",
+    "label": "November 3, 2026",
+    "type": "General Election: Federal, State & Local",
+    "color": "orange"
+  },
+  "earlyVoting": {
+    "start": "2026-10-15",
+    "end": "2026-10-31",
+    "label": "Oct 15 – Oct 31, 2026",
+    "desc": "Multiple locations across Durham County",
+    "color": "teal"
+  },
+  "registrationDeadline": {
+    "date": "2026-10-09",
+    "label": "October 9, 2026",
+    "note": "Same-day registration available during early voting",
+    "color": "navy"
+  }
+}
