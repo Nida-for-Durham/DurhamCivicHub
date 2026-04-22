@@ -243,6 +243,194 @@
       "links": [
         { "label": "Details", "url": "https://www.dconc.gov/Public-Health/Clinical-Services" }
       ]
+    },
+    {
+      "id": 22,
+      "date": "2026-04-21",
+      "title": "Durham State of the City Address",
+      "time": "Tuesday · 6:00 PM – 7:30 PM",
+      "location": "Durham Performing Arts Center, 123 Vivian St.",
+      "category": "government",
+      "links": [
+        { "label": "City Calendar", "url": "https://www.durhamnc.gov/calendar.aspx" }
+      ]
+    },
+    {
+      "id": 23,
+      "date": "2026-04-22",
+      "title": "Durham Housing Authority Board of Commissioners Meeting",
+      "time": "Wednesday · 5:30 PM",
+      "location": "423 Morris St., Durham",
+      "category": "government",
+      "links": [
+        { "label": "Details", "url": "https://www.durhamhousingauthority.org" }
+      ]
+    },
+    {
+      "id": 24,
+      "date": "2026-04-22",
+      "title": "Civilian Police Review Board Meeting",
+      "time": "Wednesday · 6:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        { "label": "City Calendar", "url": "https://www.durhamnc.gov/calendar.aspx" }
+      ]
+    },
+    {
+      "id": 25,
+      "date": "2026-04-23",
+      "title": "Durham Peoples Alliance – Monthly Welcome & Hangout",
+      "time": "Thursday · 6:00 PM",
+      "location": "Boricua Soul, Durham",
+      "category": "community",
+      "links": [
+        { "label": "Event Details", "url": "https://www.durhampa.org/calendar" }
+      ]
+    },
+    {
+      "id": 26,
+      "date": "2026-04-25",
+      "title": "Spring Backyard Composting Class – City of Durham",
+      "time": "Saturday · 10:30 AM – 12:00 PM",
+      "location": "Solid Waste Facility, 1833 Camden Ave., Durham",
+      "category": "community",
+      "links": [
+        { "label": "City Calendar", "url": "https://www.durhamnc.gov/calendar.aspx" }
+      ]
+    },
+    {
+      "id": 27,
+      "date": "2026-04-29",
+      "title": "Community Sing – People's Alliance & Durham CAN",
+      "time": "Wednesday · 6:15 PM (doors open)",
+      "location": "Westminster Presbyterian Church, 3639 Old Chapel Hill Rd, Durham",
+      "category": "community",
+      "links": [
+        { "label": "Event Details", "url": "https://www.durhampa.org/calendar" }
+      ]
+    },
+    {
+      "id": 28,
+      "date": "2026-04-30",
+      "title": "Hayti Heritage Center: Moonchild — The Life and Music of Yusuf Salim",
+      "time": "Thursday · 7:00 PM",
+      "location": "Hayti Heritage Center, 804 Old Fayetteville St., Durham",
+      "category": "community",
+      "links": [
+        { "label": "Tickets & Info", "url": "https://www.hayti.org/season-schedule" }
+      ]
+    },
+    {
+      "id": 29,
+      "date": "2026-05-04",
+      "title": "Durham City Council – Regular Business Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        { "label": "Agenda Center", "url": "https://www.durhamnc.gov/AgendaCenter" },
+        { "label": "Public Comment", "url": "https://www.durhamnc.gov/1338/City-Council" }
+      ]
+    },
+    {
+      "id": 30,
+      "date": "2026-05-07",
+      "title": "Hayti Dialogues: In Conversation with Brit Bennett",
+      "time": "Thursday · 6:30 PM",
+      "location": "Hayti Heritage Center, 804 Old Fayetteville St., Durham",
+      "category": "community",
+      "links": [
+        { "label": "Tickets & Info", "url": "https://www.hayti.org/season-schedule" }
+      ]
+    },
+    {
+      "id": 31,
+      "date": "2026-05-16",
+      "title": "Durham Peoples Alliance – Education Team Meeting",
+      "time": "Saturday · 1:00 PM",
+      "location": "Near Old Northern HS, Durham (location TBD)",
+      "category": "community",
+      "links": [
+        { "label": "Event Details", "url": "https://www.durhampa.org/calendar" }
+      ]
+    },
+    {
+      "id": 32,
+      "date": "2026-05-18",
+      "title": "Durham City Council – Regular Business Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        { "label": "Agenda Center", "url": "https://www.durhamnc.gov/AgendaCenter" }
+      ]
+    },
+    {
+      "id": 33,
+      "date": "2026-05-20",
+      "title": "Beechwood Cemetery Columbarium Dedication",
+      "time": "Wednesday · 5:00 PM – 7:00 PM",
+      "location": "Beechwood Cemetery, 3300 Fayetteville St., Durham",
+      "category": "community",
+      "links": [
+        { "label": "City Calendar", "url": "https://www.durhamnc.gov/calendar.aspx" }
+      ]
+    },
+    {
+      "id": 34,
+      "date": "2026-05-27",
+      "title": "Durham City Council – Budget Work Session",
+      "time": "Wednesday · 9:00 AM – 4:30 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "budget",
+      "links": [
+        { "label": "City Calendar", "url": "https://www.durhamnc.gov/calendar.aspx" }
+      ]
+    },
+    {
+      "id": 35,
+      "date": "2026-05-28",
+      "title": "Durham City Council – Budget Work Session",
+      "time": "Thursday · 9:00 AM – 4:30 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "budget",
+      "links": [
+        { "label": "City Calendar", "url": "https://www.durhamnc.gov/calendar.aspx" }
+      ]
+    },
+    {
+      "id": 36,
+      "date": "2026-06-04",
+      "title": "Hayti Heritage Center: YahZarah",
+      "time": "Thursday · 7:00 PM",
+      "location": "Hayti Heritage Center, 804 Old Fayetteville St., Durham",
+      "category": "community",
+      "links": [
+        { "label": "Tickets & Info", "url": "https://www.hayti.org/season-schedule" }
+      ]
+    },
+    {
+      "id": 37,
+      "date": "2026-06-19",
+      "title": "Hayti Heritage Center: Monét Noelle Marshall",
+      "time": "Friday · 7:00 PM",
+      "location": "Hayti Heritage Center, 804 Old Fayetteville St., Durham",
+      "category": "community",
+      "links": [
+        { "label": "Tickets & Info", "url": "https://www.hayti.org/season-schedule" }
+      ]
+    },
+    {
+      "id": 38,
+      "date": "2026-07-04",
+      "title": "Stagville and the Roots of Durham – Durham Peoples Alliance",
+      "time": "Saturday · 10:00 AM",
+      "location": "Stagville Historic Site, 5828 Old Oxford Hwy, Durham",
+      "category": "community",
+      "links": [
+        { "label": "Event Details", "url": "https://www.durhampa.org/calendar" }
+      ]
     }
   ]
 }
