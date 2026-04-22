@@ -641,7 +641,7 @@
         <span class="logo-bull">🐂</span>
         <span class="logo-text">Durham<strong>Civic</strong>Hub</span>
       </a>
-      <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
+      <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation"><i data-lucide="menu" aria-hidden="true" class="lucide-wrap"></i></button>
       <nav class="main-nav" id="mainNav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="news.html" class="nav-link">News</a>
@@ -837,7 +837,7 @@
         <div class="exp-area expandable" id="area-${idx}">
           <div class="exp-area-header" onclick="toggleArea(${idx})">
             <div class="exp-area-info">
-              <div class="exp-area-name"><span class="exp-area-icon">${a.icon || '📊'}</span>${a.name}</div>
+              <div class="exp-area-name"><span class="exp-area-icon">${a.icon || '<i data-lucide="bar-chart-2" aria-hidden="true" class="lucide-wrap"></i>'}</span>${a.name}</div>
               ${a.description ? `<div class="exp-area-desc">${a.description}</div>` : ''}
             </div>
             <div class="exp-area-right">
@@ -881,7 +881,7 @@
       <div class="exp-controls">
         ${e.years.length > 1 ? `<select class="exp-year-select" onchange="switchYear(this.value)">${yearOpts}</select>` : `<span style="font-family:'Libre Franklin',sans-serif;font-size:.85rem;font-weight:600;color:#888;">${yr}</span>`}
         ${viewToggle}
-        <a class="exp-source-link" href="${e.sourceUrl}" target="_blank" rel="noopener">📄 ${e.sourceLabel} →</a>
+        <a class="exp-source-link" href="${e.sourceUrl}" target="_blank" rel="noopener"><i data-lucide="file-text" aria-hidden="true" class="lucide-wrap"></i> ${e.sourceLabel} →</a>
       </div>
 
       <div class="exp-stats">
@@ -909,7 +909,7 @@
         color: #1e40af;
         font-weight: 600;
       ">
-        <span style="font-size:1.1rem;">💡</span>
+        <span style="font-size:1.1rem;"><i data-lucide="lightbulb" aria-hidden="true" class="lucide-wrap"></i></span>
         Enter your home value below to see your personal tax breakdown →
       </div>` : ''}
 
@@ -1039,7 +1039,7 @@
       </div>
       <div class="exp-receipt-card">
         <div style="background:#fef9ec;border:1.5px solid #fcd34d;border-radius:7px;padding:.75rem 1rem;margin-bottom:.75rem;font-family:'Libre Franklin',sans-serif;font-size:.83rem;color:#78350f;line-height:1.55;">
-          ⚠ <strong>Estimate only.</strong> This calculator uses the adopted tax rate and budget proportions to approximate your bill. Actual tax amounts depend on your property's assessed value and any exemptions. Verify your property value at <a href="https://taxcama.dconc.gov/camapwa/" target="_blank" rel="noopener" style="color:#92400e;font-weight:700;">Durham County Tax Administration</a>.
+          <i data-lucide="triangle-alert" aria-hidden="true" class="lucide-wrap"></i> <strong>Estimate only.</strong> This calculator uses the adopted tax rate and budget proportions to approximate your bill. Actual tax amounts depend on your property's assessed value and any exemptions. Verify your property value at <a href="https://taxcama.dconc.gov/camapwa/" target="_blank" rel="noopener" style="color:#92400e;font-weight:700;">Durham County Tax Administration</a>.
         </div>
         <div id="crossNote_${e.id}" style="background:#f0f9ff;border:1.5px solid #bae6fd;border-radius:7px;padding:.75rem 1rem;margin-bottom:1rem;font-family:'Libre Franklin',sans-serif;font-size:.83rem;color:#0c4a6e;line-height:1.55;">
           ⓘ ${staticCrossNote}
@@ -1083,14 +1083,14 @@
       if (cityOps && (cityOps.departments || []).some(d => d.amounts?.[yr])) {
         receiptItems = (cityOps.departments || [])
           .filter(d => d.amounts?.[yr])
-          .map(d => ({ name: d.name, icon: '📊', amount: d.amounts[yr] }));
+          .map(d => ({ name: d.name, icon: '<i data-lucide="bar-chart-2" aria-hidden="true" class="lucide-wrap"></i>', amount: d.amounts[yr] }));
       } else if (cityOps) {
-        receiptItems = [{ name: cityOps.name, icon: cityOps.icon || '🏙️', amount: cityOps.amounts?.[yr] }];
+        receiptItems = [{ name: cityOps.name, icon: cityOps.icon || '<i data-lucide="building-2" aria-hidden="true" class="lucide-wrap"></i>', amount: cityOps.amounts?.[yr] }];
       }
     } else {
       receiptItems = (e.areas || [])
         .filter(a => a.amounts?.[yr])
-        .map(a => ({ name: a.name, icon: a.icon || '📊', amount: a.amounts[yr] }));
+        .map(a => ({ name: a.name, icon: a.icon || '<i data-lucide="bar-chart-2" aria-hidden="true" class="lucide-wrap"></i>', amount: a.amounts[yr] }));
     }
 
     const areaTotal = receiptItems.reduce((sum, a) => sum + (a.amount ?? 0), 0);

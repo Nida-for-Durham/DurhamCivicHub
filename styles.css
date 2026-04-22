@@ -9,16 +9,25 @@
 /* ── Font Imports ── */
 @import url('https://api.fontshare.com/v2/css?f[]=margin@700,800&display=swap');
 
-/* ── Twemoji graphic emoji ── */
-img.emoji {
-  height: 1em;
-  width: 1em;
-  max-height: 1.5em;
-  max-width: 1.5em;
-  margin: 0 .05em 0 .1em;
-  vertical-align: -0.1em;
+/* ── Lucide SVG icons ── */
+.lucide-wrap,
+.lucide {
   display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  flex-shrink: 0;
 }
+/* Section header icons */
+h1 .lucide, h2 .lucide, h3 .lucide { width: 1.1em; height: 1.1em; }
+/* Card icon wrappers that used font-size for emoji sizing */
+.link-card-icon .lucide,
+.resource-card-icon .lucide,
+.budget-hub-card-icon .lucide,
+.voter-tool-icon .lucide,
+.doc-card-icon .lucide { width: 1.75rem; height: 1.75rem; }
+/* Nav menu icon */
+.nav-toggle .lucide { width: 1.5rem; height: 1.5rem; }
 
 /* ── Custom Properties ── */
 :root {

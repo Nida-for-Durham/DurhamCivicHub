@@ -349,7 +349,7 @@ function renderStories() {
     </article>
   `;
   }).join('');
-  if (window._twParse) window._twParse(grid);
+  if (window._lcIcons) window._lcIcons(grid);
 }
 
 // ── Meetings ──────────────────────────────────────────────────
@@ -1138,16 +1138,15 @@ document.addEventListener('DOMContentLoaded', () => {
   injectFooterTimestamp();
   fetchWeatherAlerts();
 
-  // Load Twemoji for consistent graphic emoji across all browsers/platforms
-  const twScript = document.createElement('script');
-  twScript.src = 'https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js';
-  twScript.crossOrigin = 'anonymous';
-  twScript.onload = () => {
-    twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
-    // Re-parse when dynamic content is added (news cards, meeting rows, etc.)
-    window._twParse = el => twemoji.parse(el || document.body, { folder: 'svg', ext: '.svg' });
+  // Load Lucide icons (replaces emoji with consistent SVG icons)
+  const lcScript = document.createElement('script');
+  lcScript.src = 'https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js';
+  lcScript.crossOrigin = 'anonymous';
+  lcScript.onload = () => {
+    lucide.createIcons();
+    window._lcIcons = (el) => lucide.createIcons({ nodes: el ? [el] : undefined });
   };
-  document.head.appendChild(twScript);
+  document.head.appendChild(lcScript);
 
   // News search wiring
   const ns = document.getElementById('newsSearch');

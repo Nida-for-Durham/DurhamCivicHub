@@ -170,7 +170,7 @@
         <span class="logo-bull">🐂</span>
         <span class="logo-text">Durham<strong>Civic</strong>Hub</span>
       </a>
-      <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
+      <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation"><i data-lucide="menu" aria-hidden="true" class="lucide-wrap"></i></button>
       <nav class="main-nav" id="mainNav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="news.html" class="nav-link">News</a>
@@ -335,9 +335,9 @@
         </div>
         <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:.85rem;">${b.notes}</p>
         <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
-          <a href="mailto:${b.clerkEmail}?subject=Public%20Comment%20Request" style="display:inline-flex;align-items:center;gap:.35rem;background:var(--navy);color:#fff;font-family:'Libre Franklin',sans-serif;font-size:.8rem;font-weight:700;padding:.42rem .9rem;border-radius:6px;text-decoration:none;">✉️ Email Clerk</a>
-          <a href="${calUrl}" download="meeting.ics" style="display:inline-flex;align-items:center;gap:.35rem;background:var(--teal);color:#fff;font-family:'Libre Franklin',sans-serif;font-size:.8rem;font-weight:700;padding:.42rem .9rem;border-radius:6px;text-decoration:none;">📅 Add to calendar</a>
-          <a href="${b.rulesUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;background:#fff;color:var(--navy);border:1.5px solid var(--border);font-family:'Libre Franklin',sans-serif;font-size:.8rem;font-weight:700;padding:.42rem .9rem;border-radius:6px;text-decoration:none;">📋 Official rules</a>
+          <a href="mailto:${b.clerkEmail}?subject=Public%20Comment%20Request" style="display:inline-flex;align-items:center;gap:.35rem;background:var(--navy);color:#fff;font-family:'Libre Franklin',sans-serif;font-size:.8rem;font-weight:700;padding:.42rem .9rem;border-radius:6px;text-decoration:none;"><i data-lucide="mail" aria-hidden="true" class="lucide-wrap"></i> Email Clerk</a>
+          <a href="${calUrl}" download="meeting.ics" style="display:inline-flex;align-items:center;gap:.35rem;background:var(--teal);color:#fff;font-family:'Libre Franklin',sans-serif;font-size:.8rem;font-weight:700;padding:.42rem .9rem;border-radius:6px;text-decoration:none;"><i data-lucide="calendar" aria-hidden="true" class="lucide-wrap"></i> Add to calendar</a>
+          <a href="${b.rulesUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;background:#fff;color:var(--navy);border:1.5px solid var(--border);font-family:'Libre Franklin',sans-serif;font-size:.8rem;font-weight:700;padding:.42rem .9rem;border-radius:6px;text-decoration:none;"><i data-lucide="clipboard-list" aria-hidden="true" class="lucide-wrap"></i> Official rules</a>
         </div>`;
     }
 
@@ -359,8 +359,8 @@
 
   <!-- ── View Tabs ── -->
   <div class="page-tabs">
-    <button class="page-tab active" id="tabSchedules" onclick="switchTab('schedules')">📋 Meeting Schedules</button>
-    <button class="page-tab" id="tabCalendar" onclick="switchTab('calendar')">📅 Civic Calendar</button>
+    <button class="page-tab active" id="tabSchedules" onclick="switchTab('schedules')"><i data-lucide="clipboard-list" aria-hidden="true" class="lucide-wrap"></i> Meeting Schedules</button>
+    <button class="page-tab" id="tabCalendar" onclick="switchTab('calendar')"><i data-lucide="calendar" aria-hidden="true" class="lucide-wrap"></i> Civic Calendar</button>
   </div>
 
   <!-- ── Main ── -->
@@ -400,8 +400,8 @@
             <button class="tag-btn" onclick="calFilterCat('health',this)">Health</button>
           </div>
           <div class="cal-view-toggle">
-            <button class="cal-view-btn active" id="calViewGrid" onclick="setCalView('grid')">📅 Grid</button>
-            <button class="cal-view-btn" id="calViewList" onclick="setCalView('list')">☰ List</button>
+            <button class="cal-view-btn active" id="calViewGrid" onclick="setCalView('grid')"><i data-lucide="calendar" aria-hidden="true" class="lucide-wrap"></i> Grid</button>
+            <button class="cal-view-btn" id="calViewList" onclick="setCalView('list')"><i data-lucide="menu" aria-hidden="true" class="lucide-wrap"></i> List</button>
           </div>
         </div>
 
@@ -412,7 +412,7 @@
         <div id="calDayDetail" class="cal-day-detail" style="display:none">
           <div class="cal-day-detail-header">
             <span class="cal-day-detail-title" id="calDayDetailTitle"></span>
-            <button class="cal-day-detail-close" onclick="closeDayDetail()" aria-label="Close">✕</button>
+            <button class="cal-day-detail-close" onclick="closeDayDetail()" aria-label="Close"><i data-lucide="x" aria-hidden="true" class="lucide-wrap"></i></button>
           </div>
           <div class="cal-day-detail-body" id="calDayDetailBody"></div>
         </div>
