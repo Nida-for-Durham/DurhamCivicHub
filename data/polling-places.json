@@ -1,0 +1,412 @@
+{
+  "updated": "2026-03-03",
+  "source": "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2026_03_03/polling_place_20260303.csv",
+  "places": [
+    {
+      "precinct": "01",
+      "name": "W J BROGDEN MIDDLE SCHOOL",
+      "address": "1001 LEON ST",
+      "city": "DURHAM",
+      "zip": "27704"
+    },
+    {
+      "precinct": "55-11",
+      "name": "WEAVER STREET CENTER",
+      "address": "3000 W WEAVER ST",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "12",
+      "name": "MONUMENT OF FAITH CHURCH",
+      "address": "900 SIMMONS ST",
+      "city": "DURHAM",
+      "zip": "27701"
+    },
+    {
+      "precinct": "13",
+      "name": "BURTON ELEMENTARY SCHOOL",
+      "address": "1500 MATHISON ST",
+      "city": "DURHAM",
+      "zip": "27701"
+    },
+    {
+      "precinct": "14",
+      "name": "GREATER EMMANUEL TEMPLE OF GRACE",
+      "address": "2722 E MAIN ST",
+      "city": "DURHAM",
+      "zip": "27703"
+    },
+    {
+      "precinct": "37",
+      "name": "COLE MILL ROAD CHURCH OF CHRIST",
+      "address": "1617 COLE MILL RD",
+      "city": "DURHAM",
+      "zip": "27705"
+    },
+    {
+      "precinct": "43",
+      "name": "FOREST VIEW ELEMENTARY SCHOOL",
+      "address": "3007 MT. SINAI RD",
+      "city": "DURHAM",
+      "zip": "27705"
+    },
+    {
+      "precinct": "32",
+      "name": "NEAL MIDDLE SCHOOL",
+      "address": "201 BAPTIST RD",
+      "city": "DURHAM",
+      "zip": "27704"
+    },
+    {
+      "precinct": "17",
+      "name": "DURHAM COUNTY MAIN LIBRARY",
+      "address": "300 N ROXBORO ST",
+      "city": "DURHAM",
+      "zip": "27701"
+    },
+    {
+      "precinct": "40",
+      "name": "ROGERS HERR MIDDLE SCHOOL",
+      "address": "911 W CORNWALLIS RD",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "42",
+      "name": "JAMES E SHEPARD MAGNET SCHOOL",
+      "address": "2401 DAKOTA ST",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "44",
+      "name": "NORTH REGIONAL LIBRARY",
+      "address": "221 MILTON RD",
+      "city": "DURHAM",
+      "zip": "27712"
+    },
+    {
+      "precinct": "31",
+      "name": "BETHESDA RURITAN CLUB",
+      "address": "1714 S MIAMI BLVD",
+      "city": "DURHAM",
+      "zip": "27703"
+    },
+    {
+      "precinct": "41",
+      "name": "WHITE ROCK BAPTIST CHURCH",
+      "address": "3400 FAYETTEVILLE ST",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "38",
+      "name": "HOPE VALLEY BAPTIST CHURCH",
+      "address": "6900 GARRETT RD",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "45",
+      "name": "TEMPLE BAPTIST CHURCH",
+      "address": "2121 UMSTEAD RD",
+      "city": "DURHAM",
+      "zip": "27712"
+    },
+    {
+      "precinct": "04",
+      "name": "N C SCHOOL OF SCIENCE AND MATH",
+      "address": "1219 BROAD ST",
+      "city": "DURHAM",
+      "zip": "27705"
+    },
+    {
+      "precinct": "51",
+      "name": "SOUTHWEST ELEMENTARY SCHOOL",
+      "address": "2320 COOK RD",
+      "city": "DURHAM",
+      "zip": "27713"
+    },
+    {
+      "precinct": "57",
+      "name": "TRIANGLE GRACE CHURCH",
+      "address": "5001 TUDOR PL",
+      "city": "DURHAM",
+      "zip": "27713"
+    },
+    {
+      "precinct": "50",
+      "name": "MCMANNEN UNITED METHODIST CHURCH",
+      "address": "4102 NEAL RD",
+      "city": "DURHAM",
+      "zip": "27705"
+    },
+    {
+      "precinct": "54",
+      "name": "SOUTH REGIONAL LIBRARY",
+      "address": "4505 S ALSTON AVE",
+      "city": "DURHAM",
+      "zip": "27713"
+    },
+    {
+      "precinct": "02",
+      "name": "GEORGE WATTS ELEMENTARY SCHOOL",
+      "address": "700 WATTS ST",
+      "city": "DURHAM",
+      "zip": "27701"
+    },
+    {
+      "precinct": "03",
+      "name": "E K POWE ELEMENTARY SCHOOL",
+      "address": "913 NINTH ST",
+      "city": "DURHAM",
+      "zip": "27705"
+    },
+    {
+      "precinct": "19",
+      "name": "AMERICAN LEGION POST #7",
+      "address": "406 E TRINITY AVE",
+      "city": "DURHAM",
+      "zip": "27701"
+    },
+    {
+      "precinct": "05",
+      "name": "W I PATTERSON RECREATION CENTER",
+      "address": "2614 CREST ST",
+      "city": "DURHAM",
+      "zip": "27705"
+    },
+    {
+      "precinct": "20",
+      "name": "DURHAM COUNTY AGRICULTURAL BUILDING",
+      "address": "721 FOSTER ST",
+      "city": "DURHAM",
+      "zip": "27701"
+    },
+    {
+      "precinct": "21",
+      "name": "CLUB BOULEVARD HUMANITIES MAGNET SCHOOL",
+      "address": "400 W CLUB BLVD",
+      "city": "DURHAM",
+      "zip": "27704"
+    },
+    {
+      "precinct": "22",
+      "name": "LAKEVIEW SECONDARY SCHOOL",
+      "address": "3507 DEARBORN DR",
+      "city": "DURHAM",
+      "zip": "27704"
+    },
+    {
+      "precinct": "23",
+      "name": "HOLT ELEMENTARY SCHOOL",
+      "address": "4019 HOLT SCHOOL RD",
+      "city": "DURHAM",
+      "zip": "27704"
+    },
+    {
+      "precinct": "24",
+      "name": "DPS STAFF DEVELOPMENT CENTER",
+      "address": "2107 HILLANDALE RD",
+      "city": "DURHAM",
+      "zip": "27705"
+    },
+    {
+      "precinct": "25",
+      "name": "OLD NORTHERN HIGH SCHOOL",
+      "address": "117 TOM WILKINSON RD",
+      "city": "DURHAM",
+      "zip": "27712"
+    },
+    {
+      "precinct": "27",
+      "name": "CREEKSIDE ELEMENTARY SCHOOL",
+      "address": "5321 EPHESUS CHURCH RD",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "06",
+      "name": "LAKEWOOD ELEMENTARY SCHOOL",
+      "address": "2520 VESSON AVE",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "36",
+      "name": "YATES BAPTIST CHURCH",
+      "address": "2819 CHAPEL HILL RD",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "46",
+      "name": "EDISON JOHNSON COMMUNITY CENTER",
+      "address": "500 W MURRAY AVE",
+      "city": "DURHAM",
+      "zip": "27704"
+    },
+    {
+      "precinct": "47",
+      "name": "IRWIN R HOLMES SR REC CENTER AT CAMPUS HILLS",
+      "address": "2000 S ALSTON AVE",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "55-49",
+      "name": "NCCU - TURNER LAW BLDG",
+      "address": "640 NELSON ST",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "30-2",
+      "name": "SOUTHERN HIGH SCHOOL",
+      "address": "800 CLAYTON RD",
+      "city": "DURHAM",
+      "zip": "27703"
+    },
+    {
+      "precinct": "07",
+      "name": "DURHAM SCHOOL OF THE ARTS",
+      "address": "400 N DUKE ST",
+      "city": "DURHAM",
+      "zip": "27701"
+    },
+    {
+      "precinct": "34-1",
+      "name": "PEARSONTOWN ELEMENTARY SCHOOL",
+      "address": "4915 BARBEE RD",
+      "city": "DURHAM",
+      "zip": "27713"
+    },
+    {
+      "precinct": "34-2",
+      "name": "IVY COMMUNITY CENTER",
+      "address": "4222 FAYETTEVILLE RD",
+      "city": "DURHAM",
+      "zip": "27713"
+    },
+    {
+      "precinct": "18",
+      "name": "KIPP DURHAM COLLEGE PREP PUBLIC SCHOOL",
+      "address": "1107 HOLLOWAY ST",
+      "city": "DURHAM",
+      "zip": "27701"
+    },
+    {
+      "precinct": "08",
+      "name": "MOREHEAD MONTESSORI MAGNET SCHOOL",
+      "address": "909 COBB ST",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "53-2",
+      "name": "WAYPOINT CHURCH",
+      "address": "6804 FARRINGTON RD",
+      "city": "CHAPEL HILL",
+      "zip": "27517"
+    },
+    {
+      "precinct": "15",
+      "name": "HOLTON CAREER AND RESOURCE CENTER",
+      "address": "401 N DRIVER ST",
+      "city": "DURHAM",
+      "zip": "27703"
+    },
+    {
+      "precinct": "56",
+      "name": "ST STEPHENS EPISCOPAL CHURCH-PARISH HALL",
+      "address": "82 KIMBERLY DR",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "09",
+      "name": "FOREST HILLS CLUB HOUSE",
+      "address": "1639 UNIVERSITY DR",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "33-1",
+      "name": "BETHESDA ELEMENTARY SCHOOL",
+      "address": "2009 S MIAMI BLVD",
+      "city": "DURHAM",
+      "zip": "27703"
+    },
+    {
+      "precinct": "33-2",
+      "name": "LOWE'S GROVE BAPTIST CHURCH",
+      "address": "4430 S ALSTON AVE",
+      "city": "DURHAM",
+      "zip": "27713"
+    },
+    {
+      "precinct": "30-3",
+      "name": "EAST REGIONAL LIBRARY",
+      "address": "211 LICK CREEK LN",
+      "city": "DURHAM",
+      "zip": "27703"
+    },
+    {
+      "precinct": "30-4",
+      "name": "SPRING VALLEY ELEMENTARY SCHOOL",
+      "address": "2051 NORTHERN DURHAM PKWY",
+      "city": "DURHAM",
+      "zip": "27703"
+    },
+    {
+      "precinct": "35-4",
+      "name": "LYONS FARM ELEMENTARY SCHOOL",
+      "address": "906 SCOTT KING RD",
+      "city": "DURHAM",
+      "zip": "27713"
+    },
+    {
+      "precinct": "35-5",
+      "name": "ZAKAT FOUNDATION OF AMERICA COMMUNITY CENTER",
+      "address": "5110 REVERE RD",
+      "city": "DURHAM",
+      "zip": "27713"
+    },
+    {
+      "precinct": "26",
+      "name": "ROUGEMONT UNITED METHODIST CHURCH",
+      "address": "105 RED MOUNTAIN RD",
+      "city": "ROUGEMONT",
+      "zip": "27572"
+    },
+    {
+      "precinct": "29",
+      "name": "GORMAN RURITAN CLUB",
+      "address": "2309 E GEER ST",
+      "city": "DURHAM",
+      "zip": "27704"
+    },
+    {
+      "precinct": "10",
+      "name": "C C SPAULDING ELEMENTARY SCHOOL",
+      "address": "1531 S ROXBORO ST",
+      "city": "DURHAM",
+      "zip": "27707"
+    },
+    {
+      "precinct": "28",
+      "name": "MT CALVARY MISSIONARY BAPTIST CHURCH",
+      "address": "8021 STAGVILLE RD",
+      "city": "BAHAMA",
+      "zip": "27503"
+    },
+    {
+      "precinct": "52",
+      "name": "APOSTOLIC HOUSE OF DELIVERANCE",
+      "address": "2806 CHEEK RD",
+      "city": "DURHAM",
+      "zip": "27704"
+    }
+  ]
+}
