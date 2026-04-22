@@ -4,8 +4,8 @@
   "summary": {
     "cityTotal": 537600000,
     "countyTotal": 160000000,
-    "dpsTotal": 61800000,
-    "totalCIP": 759400000
+    "dpsTotal": 423505000,
+    "totalCIP": 1121105000
   },
   "projects": [
     {
@@ -138,16 +138,16 @@
     },
     {
       "id": "dps-capital",
-      "title": "Durham Public Schools Capital Improvements",
+      "title": "Durham Public Schools 2022 Bond Program",
       "entity": "dps",
       "entityLabel": "Durham Public Schools",
       "category": "Education",
-      "amount": 61800000,
-      "description": "Durham County's annual appropriation for DPS capital improvements — school building repairs, HVAC replacements, roofing, and facility upgrades. Durham County provides the funding; DPS manages the construction projects. Separate from the current expense allocation.",
-      "status": "Ongoing",
-      "year": "FY2025-26",
-      "sourceUrl": "https://www.dconc.gov/Budget-and-Management-Services",
-      "sourceLabel": "Durham County FY2025-26 Adopted Budget",
+      "amount": 423505000,
+      "description": "The $423.5 million voter-approved 2022 bond referendum funds new school construction and major renovations across Durham Public Schools. Projects include a new Murray-Massenburg Elementary, a new Durham School of the Arts campus, and renovations at Club Boulevard, Glenn, and other schools. DPS manages construction; Durham County funded the bond.",
+      "status": "Active",
+      "year": "2022 Bond",
+      "sourceUrl": "https://www.dpsnc.net/page/2022-bond-and-building-program-information",
+      "sourceLabel": "DPS 2022 Bond and Building Program",
       "lat": 35.9808,
       "lng": -78.9230,
       "locationNote": "Program-level estimate — projects occur throughout Durham County schools"

@@ -57,11 +57,11 @@ function buildNavDropdowns() {
 
   const NAV_CONFIG = {
     'meetings.html': [
-      { label: 'Meetings & Calendar',      url: 'meetings.html',   header: true },
-      { label: 'Board of Commissioners',   url: 'meetings.html'                 },
-      { label: 'Durham City Council',      url: 'meetings.html'                 },
-      { label: 'DPS Board of Education',   url: 'meetings.html'                 },
-      { label: 'Boards & Commissions',     url: 'meetings.html'                 },
+      { label: 'Meetings & Calendar',      url: 'meetings.html',                  header: true },
+      { label: 'Board of Commissioners',   url: 'meetings.html#commissioners'   },
+      { label: 'Durham City Council',      url: 'meetings.html#city-council'    },
+      { label: 'DPS Board of Education',   url: 'meetings.html#dps'             },
+      { label: 'Boards & Commissions',     url: 'meetings.html#advisory'        },
     ],
     'budget.html': [
       { label: 'Budget Hub',               url: 'budget.html',                    header: true },
@@ -414,11 +414,20 @@ function renderMeetings(data, container) {
       <h2 class="meetings-group-title">Elected Boards</h2>
       ${elected.map(renderBodyCard).join('')}
     </div>
-    <div class="meetings-group">
+    <div class="meetings-group" id="advisory">
       <h2 class="meetings-group-title">Advisory Boards &amp; Commissions</h2>
       ${advisory.map(renderBodyCard).join('')}
     </div>
   `;
+
+  // Hash-based scroll: handle #commissioners, #city-council, #dps, #advisory, etc.
+  const hash = window.location.hash;
+  if (hash) {
+    setTimeout(() => {
+      const el = document.getElementById(hash.slice(1));
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 120);
+  }
 }
 
 function renderMeetingRow(m) {
