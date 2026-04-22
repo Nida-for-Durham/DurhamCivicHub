@@ -61,7 +61,7 @@ function buildNavDropdowns() {
       { label: 'Board of Commissioners',   url: 'meetings.html#commissioners'   },
       { label: 'Durham City Council',      url: 'meetings.html#city-council'    },
       { label: 'DPS Board of Education',   url: 'meetings.html#dps'             },
-      { label: 'Planning Commission',      url: 'meetings.html#planning'        },
+      { label: 'Boards & Commissions',     url: 'meetings.html#advisory'        },
     ],
     'budget.html': [
       { label: 'Budget Hub',               url: 'budget.html',                    header: true },
@@ -77,12 +77,6 @@ function buildNavDropdowns() {
       { label: 'Register to Vote',         url: 'https://www.ncsbe.gov/registering/how-register', external: true },
       { label: 'Check Registration',       url: 'https://vt.ncsbe.gov/RegLkup/',  external: true },
       { label: 'Find Polling Place',       url: 'https://vt.ncsbe.gov/PPLkup/',   external: true },
-    ],
-    'news.html': [
-      { label: 'All News',                 url: 'news.html',                       header: true },
-      { label: 'Budget News',              url: 'news.html' },
-      { label: 'Schools News',             url: 'news.html' },
-      { label: 'Government News',          url: 'news.html' },
     ],
   };
 
