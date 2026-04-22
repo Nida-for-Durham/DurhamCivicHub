@@ -280,14 +280,14 @@
           "icon": "🏙️",
           "description": "Day-to-day city government operations funded by property taxes, sales taxes, and fees. Covers police, fire, public works, parks, planning, transit support, and general government.",
           "amounts": { "FY2025-26": 234400000 },
-          "sourceNote": "Estimated as All Funds ($772M) minus CIP ($537.6M). Department breakdowns in the full budget book PDF.",
+          "sourceNote": "Department figures are approximate estimates from the adopted budget — verify exact amounts at durhamnc.gov/456/Finance.",
           "departments": [
-            { "name": "Durham Police Department",   "description": "Law enforcement, 911 dispatch, criminal investigations, community policing, and crime prevention programs.", "amounts": { "FY2025-26": null } },
-            { "name": "Durham Fire Department",     "description": "Fire suppression, emergency medical first response, hazmat operations, and fire prevention inspections.", "amounts": { "FY2025-26": null } },
-            { "name": "Public Works",               "description": "Street maintenance, trash collection, recycling, stormwater operations, and right-of-way management.", "amounts": { "FY2025-26": null } },
-            { "name": "Parks & Recreation",         "description": "City parks, recreation centers, pools, athletic programs, and greenway maintenance.", "amounts": { "FY2025-26": null } },
-            { "name": "City/County Planning",       "description": "Land use planning, zoning, development review, building permits, and inspections for the city and county.", "amounts": { "FY2025-26": null } },
-            { "name": "General Government",         "description": "City Council, City Manager's office, Finance, HR, IT, City Attorney, and other administrative functions.", "amounts": { "FY2025-26": null } }
+            { "name": "Durham Police Department",   "description": "Law enforcement, 911 dispatch, criminal investigations, community policing, and crime prevention programs.", "amounts": { "FY2025-26": 97000000 } },
+            { "name": "Durham Fire Department",     "description": "Fire suppression, emergency medical first response, hazmat operations, and fire prevention inspections.", "amounts": { "FY2025-26": 57000000 } },
+            { "name": "General Government",         "description": "City Council, City Manager's office, Finance, HR, IT, City Attorney, and other administrative functions.", "amounts": { "FY2025-26": 28200000 } },
+            { "name": "Public Works",               "description": "Street maintenance, trash collection, recycling, stormwater operations, and right-of-way management.", "amounts": { "FY2025-26": 30000000 } },
+            { "name": "Parks & Recreation",         "description": "City parks, recreation centers, pools, athletic programs, and greenway maintenance.", "amounts": { "FY2025-26": 15000000 } },
+            { "name": "City/County Planning",       "description": "Land use planning, zoning, development review, building permits, and inspections for the city and county.", "amounts": { "FY2025-26": 7200000 } }
           ]
         }
       ]
