@@ -11,10 +11,25 @@
       "taxRatePer100": 0.5542,
       "sourceUrl": "https://www.dconc.gov/Budget-and-Management-Services",
       "sourceLabel": "Durham County Budget & Management Services",
-      "years": ["FY2025-26", "FY2024-25"],
+      "years": [
+        "FY2025-26",
+        "FY2024-25"
+      ],
       "totals": {
-        "FY2025-26": { "allFunds": 1038000000, "generalFund": 689700000, "taxRate": "55.42¢ / $100", "population": 340000, "note": "Source: Durham County FY2025-26 Adopted Budget Summary" },
-        "FY2024-25": { "allFunds": 966000000,  "generalFund": 651000000,  "taxRate": "51.92¢ / $100", "population": 335000, "note": "Source: Durham County FY2024-25 Adopted Budget Summary" }
+        "FY2025-26": {
+          "allFunds": 1038000000,
+          "generalFund": 689700000,
+          "taxRate": "55.42¢ / $100",
+          "population": 340000,
+          "note": "Source: Durham County FY2025-26 Adopted Budget Summary"
+        },
+        "FY2024-25": {
+          "allFunds": 966000000,
+          "generalFund": 651000000,
+          "taxRate": "51.92¢ / $100",
+          "population": 335000,
+          "note": "Source: Durham County FY2024-25 Adopted Budget Summary"
+        }
       },
       "fundingSources": [
         {
@@ -65,14 +80,52 @@
           "name": "Education",
           "icon": "🎓",
           "description": "County funding passed through to Durham Public Schools and Durham Technical Community College. Includes current expense, capital outlay, debt service, and ARPA support.",
-          "amounts": { "FY2025-26": 248100000, "FY2024-25": 235200000 },
+          "amounts": {
+            "FY2025-26": 248100000,
+            "FY2024-25": 235200000
+          },
           "sourceNote": "Source: Durham County FY2025-26 Budget Summary; Education.pdf",
           "departments": [
-            { "name": "DPS – Current Expense",   "description": "Funds daily school operations — teacher and staff salaries, instructional materials, utilities, and support services for Durham Public Schools.", "amounts": { "FY2025-26": 219528912, "FY2024-25": 206601332 } },
-            { "name": "DPS – Capital Outlay",     "description": "Pays for school building repairs, equipment replacements, and smaller facility improvements not covered by bond projects.", "amounts": { "FY2025-26": 5000000,   "FY2024-25": 2000000   } },
-            { "name": "DPS – ARPA Title I",       "description": "Federal American Rescue Plan funds targeted to low-income students in Title I schools.", "amounts": { "FY2025-26": 723376,    "FY2024-25": 716624    } },
-            { "name": "DTCC – Current Expense",   "description": "Operating support for Durham Technical Community College, the county's two-year public college serving approximately 14,000 students.", "amounts": { "FY2025-26": 12058661,  "FY2024-25": 11872083  } },
-            { "name": "DTCC – Capital Outlay",    "description": "Funding for DTCC facilities maintenance, equipment, and capital improvements.", "amounts": { "FY2025-26": 560000,    "FY2024-25": 560000    } }
+            {
+              "name": "DPS – Current Expense",
+              "description": "Funds daily school operations — teacher and staff salaries, instructional materials, utilities, and support services for Durham Public Schools.",
+              "amounts": {
+                "FY2025-26": 219528912,
+                "FY2024-25": 206601332
+              }
+            },
+            {
+              "name": "DPS – Capital Outlay",
+              "description": "Pays for school building repairs, equipment replacements, and smaller facility improvements not covered by bond projects.",
+              "amounts": {
+                "FY2025-26": 5000000,
+                "FY2024-25": 2000000
+              }
+            },
+            {
+              "name": "DPS – ARPA Title I",
+              "description": "Federal American Rescue Plan funds targeted to low-income students in Title I schools.",
+              "amounts": {
+                "FY2025-26": 723376,
+                "FY2024-25": 716624
+              }
+            },
+            {
+              "name": "DTCC – Current Expense",
+              "description": "Operating support for Durham Technical Community College, the county's two-year public college serving approximately 14,000 students.",
+              "amounts": {
+                "FY2025-26": 12058661,
+                "FY2024-25": 11872083
+              }
+            },
+            {
+              "name": "DTCC – Capital Outlay",
+              "description": "Funding for DTCC facilities maintenance, equipment, and capital improvements.",
+              "amounts": {
+                "FY2025-26": 560000,
+                "FY2024-25": 560000
+              }
+            }
           ]
         },
         {
@@ -80,15 +133,54 @@
           "name": "Administration",
           "icon": "🏛️",
           "description": "County management, finance, human resources, information technology, legal, and general government operations.",
-          "amounts": { "FY2025-26": 193500000, "FY2024-25": null },
+          "amounts": {
+            "FY2025-26": 193500000,
+            "FY2024-25": null
+          },
           "sourceNote": "Source: Durham County FY2025-26 Budget Summary page",
           "departments": [
-            { "name": "County Manager's Office",     "description": "Executive leadership and policy coordination across all county departments.", "amounts": { "FY2025-26": null } },
-            { "name": "Finance & Budget",            "description": "Financial management, accounting, purchasing, and budget administration for the entire county.", "amounts": { "FY2025-26": null } },
-            { "name": "Human Resources",             "description": "Employee recruitment, benefits administration, workforce development, and labor relations.", "amounts": { "FY2025-26": null } },
-            { "name": "Information Technology",      "description": "County-wide technology infrastructure, cybersecurity, digital services, and help desk support.", "amounts": { "FY2025-26": null } },
-            { "name": "County Attorney",             "description": "Legal counsel, contract review, and representation for the Board of Commissioners and county departments.", "amounts": { "FY2025-26": null } },
-            { "name": "Register of Deeds",           "description": "Recording and preservation of land records, birth/death certificates, and other official documents.", "amounts": { "FY2025-26": null } }
+            {
+              "name": "County Manager's Office",
+              "description": "Executive leadership and policy coordination across all county departments.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Finance & Budget",
+              "description": "Financial management, accounting, purchasing, and budget administration for the entire county.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Human Resources",
+              "description": "Employee recruitment, benefits administration, workforce development, and labor relations.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Information Technology",
+              "description": "County-wide technology infrastructure, cybersecurity, digital services, and help desk support.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "County Attorney",
+              "description": "Legal counsel, contract review, and representation for the Board of Commissioners and county departments.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Register of Deeds",
+              "description": "Recording and preservation of land records, birth/death certificates, and other official documents.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            }
           ]
         },
         {
@@ -96,14 +188,47 @@
           "name": "Human Services",
           "icon": "🤝",
           "description": "Social services, public health, mental health, child welfare, aging services, and community assistance programs.",
-          "amounts": { "FY2025-26": 114800000, "FY2024-25": null },
+          "amounts": {
+            "FY2025-26": 114800000,
+            "FY2024-25": null
+          },
           "sourceNote": "Source: Durham County FY2025-26 Budget Summary page",
           "departments": [
-            { "name": "Durham County Social Services", "description": "Child protective services, foster care, adoption, adult services, and economic assistance programs including Medicaid, Food & Nutrition, and Work First.", "amounts": { "FY2025-26": null } },
-            { "name": "Public Health",                 "description": "Disease surveillance, immunizations, maternal and child health, environmental health inspections, and community health programs.", "amounts": { "FY2025-26": null } },
-            { "name": "Mental Health / LME-MCO",       "description": "County support for behavioral health services coordinated through the Local Management Entity — Managed Care Organization.", "amounts": { "FY2025-26": null } },
-            { "name": "Aging & In-Home Care",          "description": "Senior centers, Meals on Wheels, transportation assistance, and in-home aide services for older adults.", "amounts": { "FY2025-26": null } },
-            { "name": "Community & Family Services",   "description": "Housing assistance, utility aid, emergency relief, and partnerships with nonprofits serving Durham families.", "amounts": { "FY2025-26": null } }
+            {
+              "name": "Durham County Social Services",
+              "description": "Child protective services, foster care, adoption, adult services, and economic assistance programs including Medicaid, Food & Nutrition, and Work First.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Public Health",
+              "description": "Disease surveillance, immunizations, maternal and child health, environmental health inspections, and community health programs.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Mental Health / LME-MCO",
+              "description": "County support for behavioral health services coordinated through the Local Management Entity — Managed Care Organization.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Aging & In-Home Care",
+              "description": "Senior centers, Meals on Wheels, transportation assistance, and in-home aide services for older adults.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Community & Family Services",
+              "description": "Housing assistance, utility aid, emergency relief, and partnerships with nonprofits serving Durham families.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            }
           ]
         },
         {
@@ -111,13 +236,40 @@
           "name": "Public Safety",
           "icon": "🚔",
           "description": "Sheriff's Office, Emergency Medical Services, Emergency Management, and Animal Control.",
-          "amounts": { "FY2025-26": 95100000, "FY2024-25": null },
+          "amounts": {
+            "FY2025-26": 95100000,
+            "FY2024-25": null
+          },
           "sourceNote": "Source: Durham County FY2025-26 Budget Summary page",
           "departments": [
-            { "name": "Durham County Sheriff's Office", "description": "Patrol, criminal investigations, courthouse security, civil process, and operation of the Durham County Jail.", "amounts": { "FY2025-26": null } },
-            { "name": "Emergency Medical Services",     "description": "Countywide 911 ambulance response, paramedic staffing, and medical first response from 10 EMS stations.", "amounts": { "FY2025-26": null } },
-            { "name": "Emergency Management",          "description": "Disaster preparedness, hazard planning, and coordination of county-wide emergency response.", "amounts": { "FY2025-26": null } },
-            { "name": "Animal Control Services",       "description": "Animal shelter operations, adoption programs, humane enforcement, and public safety response to animal complaints.", "amounts": { "FY2025-26": null } }
+            {
+              "name": "Durham County Sheriff's Office",
+              "description": "Patrol, criminal investigations, courthouse security, civil process, and operation of the Durham County Jail.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Emergency Medical Services",
+              "description": "Countywide 911 ambulance response, paramedic staffing, and medical first response from 10 EMS stations.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Emergency Management",
+              "description": "Disaster preparedness, hazard planning, and coordination of county-wide emergency response.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Animal Control Services",
+              "description": "Animal shelter operations, adoption programs, humane enforcement, and public safety response to animal complaints.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            }
           ]
         },
         {
@@ -125,13 +277,44 @@
           "name": "Debt Service",
           "icon": "📄",
           "description": "Principal and interest payments on bonds and loans, including DPS school construction debt, DTCC debt, and county facilities debt.",
-          "amounts": { "FY2025-26": 116589842, "FY2024-25": null },
+          "amounts": {
+            "FY2025-26": 116589842,
+            "FY2024-25": null
+          },
           "sourceNote": "Source: Durham County FY2025-26 Approved Budget Summary PDF",
           "departments": [
-            { "name": "DPS-related Debt",    "description": "Bond payments for Durham Public Schools construction and renovation projects — including school building bonds approved by voters.", "amounts": { "FY2025-26": 61792616, "FY2024-25": 51719972 } },
-            { "name": "DTCC-related Debt",   "description": "Bond repayment for Durham Technical Community College facility construction and improvements.", "amounts": { "FY2025-26": 10493086, "FY2024-25": 4309998  } },
-            { "name": "County Facilities",   "description": "Debt payments on county-owned buildings, the Judicial Building, detention center, and other infrastructure.", "amounts": { "FY2025-26": 41972343, "FY2024-25": null      } },
-            { "name": "NCMLS-related Debt",  "description": "Payments for the NC Medical Examiners office and related county-shared facilities.", "amounts": { "FY2025-26": 2331797,  "FY2024-25": null      } }
+            {
+              "name": "DPS-related Debt",
+              "description": "Bond payments for Durham Public Schools construction and renovation projects — including school building bonds approved by voters.",
+              "amounts": {
+                "FY2025-26": 61792616,
+                "FY2024-25": 51719972
+              }
+            },
+            {
+              "name": "DTCC-related Debt",
+              "description": "Bond repayment for Durham Technical Community College facility construction and improvements.",
+              "amounts": {
+                "FY2025-26": 10493086,
+                "FY2024-25": 4309998
+              }
+            },
+            {
+              "name": "County Facilities",
+              "description": "Debt payments on county-owned buildings, the Judicial Building, detention center, and other infrastructure.",
+              "amounts": {
+                "FY2025-26": 41972343,
+                "FY2024-25": null
+              }
+            },
+            {
+              "name": "NCMLS-related Debt",
+              "description": "Payments for the NC Medical Examiners office and related county-shared facilities.",
+              "amounts": {
+                "FY2025-26": 2331797,
+                "FY2024-25": null
+              }
+            }
           ]
         },
         {
@@ -139,13 +322,40 @@
           "name": "Capital Projects",
           "icon": "🏗️",
           "description": "Capital Finance Plan Fund — major facility construction, renovation, and infrastructure improvements funded by bonds and pay-as-you-go capital.",
-          "amounts": { "FY2025-26": 126101344, "FY2024-25": 115928164 },
+          "amounts": {
+            "FY2025-26": 126101344,
+            "FY2024-25": 115928164
+          },
           "sourceNote": "Source: Durham County FY2025-26 Approved Budget Summary PDF",
           "departments": [
-            { "name": "School Construction & Renovation", "description": "New school buildings, major renovations, and HVAC/roofing replacements at Durham Public Schools facilities.", "amounts": { "FY2025-26": null } },
-            { "name": "County Facility Projects",         "description": "Improvements to county-owned buildings including the Detention Center, Human Services complex, and administrative offices.", "amounts": { "FY2025-26": null } },
-            { "name": "Parks & Greenways",               "description": "Trail construction, park improvements, greenway extensions, and recreation facility upgrades funded by the parks bond.", "amounts": { "FY2025-26": null } },
-            { "name": "Technology Infrastructure",        "description": "Major IT investments, fiber connectivity, and digital infrastructure capital projects.", "amounts": { "FY2025-26": null } }
+            {
+              "name": "School Construction & Renovation",
+              "description": "New school buildings, major renovations, and HVAC/roofing replacements at Durham Public Schools facilities.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "County Facility Projects",
+              "description": "Improvements to county-owned buildings including the Detention Center, Human Services complex, and administrative offices.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Parks & Greenways",
+              "description": "Trail construction, park improvements, greenway extensions, and recreation facility upgrades funded by the parks bond.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Technology Infrastructure",
+              "description": "Major IT investments, fiber connectivity, and digital infrastructure capital projects.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            }
           ]
         },
         {
@@ -153,11 +363,26 @@
           "name": "Culture & Recreation",
           "icon": "📚",
           "description": "Durham County Public Library system, parks, and recreation facilities.",
-          "amounts": { "FY2025-26": 17300000, "FY2024-25": null },
+          "amounts": {
+            "FY2025-26": 17300000,
+            "FY2024-25": null
+          },
           "sourceNote": "Source: Durham County FY2025-26 Budget Summary page",
           "departments": [
-            { "name": "Durham County Public Library", "description": "Main library and branch locations across Durham County — book lending, digital resources, programming, and community meeting space.", "amounts": { "FY2025-26": null } },
-            { "name": "Parks & Recreation",          "description": "County-operated parks, athletic fields, greenways, nature preserves, and recreation programming.", "amounts": { "FY2025-26": null } }
+            {
+              "name": "Durham County Public Library",
+              "description": "Main library and branch locations across Durham County — book lending, digital resources, programming, and community meeting space.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Parks & Recreation",
+              "description": "County-operated parks, athletic fields, greenways, nature preserves, and recreation programming.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            }
           ]
         },
         {
@@ -165,12 +390,33 @@
           "name": "Economic Development",
           "icon": "📈",
           "description": "Economic and physical development, planning, and community development initiatives.",
-          "amounts": { "FY2025-26": 10400000, "FY2024-25": null },
+          "amounts": {
+            "FY2025-26": 10400000,
+            "FY2024-25": null
+          },
           "sourceNote": "Source: Durham County FY2025-26 Budget Summary page",
           "departments": [
-            { "name": "Planning Department",           "description": "Land use planning, zoning administration, subdivision review, and the county's comprehensive plan.", "amounts": { "FY2025-26": null } },
-            { "name": "Economic Development Office",   "description": "Business recruitment, retention, workforce partnerships, and support for Durham's economic growth strategy.", "amounts": { "FY2025-26": null } },
-            { "name": "Community Development",        "description": "Affordable housing programs, HOME funds, CDBG grants, and neighborhood revitalization initiatives.", "amounts": { "FY2025-26": null } }
+            {
+              "name": "Planning Department",
+              "description": "Land use planning, zoning administration, subdivision review, and the county's comprehensive plan.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Economic Development Office",
+              "description": "Business recruitment, retention, workforce partnerships, and support for Durham's economic growth strategy.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Community Development",
+              "description": "Affordable housing programs, HOME funds, CDBG grants, and neighborhood revitalization initiatives.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            }
           ]
         },
         {
@@ -178,12 +424,33 @@
           "name": "Environmental Protection",
           "icon": "🌿",
           "description": "Soil & Water Conservation, environmental health, and related natural resource programs.",
-          "amounts": { "FY2025-26": 7900000, "FY2024-25": null },
+          "amounts": {
+            "FY2025-26": 7900000,
+            "FY2024-25": null
+          },
           "sourceNote": "Source: Durham County FY2025-26 Budget Summary page",
           "departments": [
-            { "name": "Soil & Water Conservation", "description": "Watershed protection, erosion control assistance for property owners, and agricultural conservation programs.", "amounts": { "FY2025-26": null } },
-            { "name": "Environmental Health",       "description": "Restaurant inspections, well and septic permits, swimming pool inspections, and childcare facility oversight.", "amounts": { "FY2025-26": null } },
-            { "name": "Cooperative Extension",     "description": "NC State/NC A&T cooperative extension providing agricultural, horticultural, and 4-H youth programming.", "amounts": { "FY2025-26": null } }
+            {
+              "name": "Soil & Water Conservation",
+              "description": "Watershed protection, erosion control assistance for property owners, and agricultural conservation programs.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Environmental Health",
+              "description": "Restaurant inspections, well and septic permits, swimming pool inspections, and childcare facility oversight.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Cooperative Extension",
+              "description": "NC State/NC A&T cooperative extension providing agricultural, horticultural, and 4-H youth programming.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            }
           ]
         },
         {
@@ -191,10 +458,19 @@
           "name": "Transportation",
           "icon": "🚌",
           "description": "County contribution to public transit and transportation services.",
-          "amounts": { "FY2025-26": 4500000, "FY2024-25": null },
+          "amounts": {
+            "FY2025-26": 4500000,
+            "FY2024-25": null
+          },
           "sourceNote": "Source: Durham County FY2025-26 Budget Summary page",
           "departments": [
-            { "name": "GoDurham / GoTriangle Transit", "description": "County funding support for GoDurham bus service and GoTriangle regional transit, connecting residents to jobs, healthcare, and services.", "amounts": { "FY2025-26": null } }
+            {
+              "name": "GoDurham / GoTriangle Transit",
+              "description": "County funding support for GoDurham bus service and GoTriangle regional transit, connecting residents to jobs, healthcare, and services.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            }
           ]
         }
       ]
@@ -209,9 +485,16 @@
       "taxRatePer100": 0.4371,
       "sourceUrl": "https://www.durhamnc.gov/456/Finance",
       "sourceLabel": "City of Durham Finance Department",
-      "years": ["FY2025-26"],
+      "years": [
+        "FY2025-26"
+      ],
       "totals": {
-        "FY2025-26": { "allFunds": 772000000, "generalFund": null, "taxRate": "43.71¢ / $100", "population": 300000 }
+        "FY2025-26": {
+          "allFunds": 772000000,
+          "generalFund": null,
+          "taxRate": "43.71¢ / $100",
+          "population": 300000
+        }
       },
       "fundingSources": [
         {
@@ -262,16 +545,60 @@
           "name": "Capital Improvement Plan",
           "icon": "🏗️",
           "description": "Five-year capital plan for major infrastructure, facilities, and equipment investments. Funded through bonds, grants, and capital reserves — not property taxes.",
-          "amounts": { "FY2025-26": 537600000 },
+          "amounts": {
+            "FY2025-26": 537600000
+          },
           "sourceNote": "Source: City of Durham FY2025-26 Budget Approval press release",
           "departments": [
-            { "name": "Water & Sewer System",    "description": "Upgrades to water treatment plants, sewer lines, pump stations, and infrastructure to support growth and replace aging pipes.", "amounts": { "FY2025-26": 315700000 } },
-            { "name": "GoDurham Bus Expansion",  "description": "New buses, transit facility improvements, and expanded service routes for the GoDurham city transit system.", "amounts": { "FY2025-26": 17000000  } },
-            { "name": "Stormwater",              "description": "Stormwater drainage improvements, stream restoration, and flood prevention infrastructure to protect neighborhoods.", "amounts": { "FY2025-26": 25700000  } },
-            { "name": "Street Repaving",         "description": "Resurfacing and reconstruction of city streets to maintain the road network and reduce maintenance costs.", "amounts": { "FY2025-26": 25000000  } },
-            { "name": "Parks – Lead Remediation","description": "Removal of lead-contaminated soil at city parks to protect children's health — priority project identified in 2024.", "amounts": { "FY2025-26": 12000000  } },
-            { "name": "Sidewalk Repairs",        "description": "Repairs and new sidewalk construction to improve pedestrian safety and ADA accessibility throughout Durham.", "amounts": { "FY2025-26": 10000000  } },
-            { "name": "Other Capital Projects",  "description": "Facilities improvements, technology infrastructure, fire stations, and other capital investments across city departments.", "amounts": { "FY2025-26": 132200000 } }
+            {
+              "name": "Water & Sewer System",
+              "description": "Upgrades to water treatment plants, sewer lines, pump stations, and infrastructure to support growth and replace aging pipes.",
+              "amounts": {
+                "FY2025-26": 315700000
+              }
+            },
+            {
+              "name": "GoDurham Bus Expansion",
+              "description": "New buses, transit facility improvements, and expanded service routes for the GoDurham city transit system.",
+              "amounts": {
+                "FY2025-26": 17000000
+              }
+            },
+            {
+              "name": "Stormwater",
+              "description": "Stormwater drainage improvements, stream restoration, and flood prevention infrastructure to protect neighborhoods.",
+              "amounts": {
+                "FY2025-26": 25700000
+              }
+            },
+            {
+              "name": "Street Repaving",
+              "description": "Resurfacing and reconstruction of city streets to maintain the road network and reduce maintenance costs.",
+              "amounts": {
+                "FY2025-26": 25000000
+              }
+            },
+            {
+              "name": "Parks – Lead Remediation",
+              "description": "Removal of lead-contaminated soil at city parks to protect children's health — priority project identified in 2024.",
+              "amounts": {
+                "FY2025-26": 12000000
+              }
+            },
+            {
+              "name": "Sidewalk Repairs",
+              "description": "Repairs and new sidewalk construction to improve pedestrian safety and ADA accessibility throughout Durham.",
+              "amounts": {
+                "FY2025-26": 10000000
+              }
+            },
+            {
+              "name": "Other Capital Projects",
+              "description": "Facilities improvements, technology infrastructure, fire stations, and other capital investments across city departments.",
+              "amounts": {
+                "FY2025-26": 132200000
+              }
+            }
           ]
         },
         {
@@ -279,15 +606,53 @@
           "name": "City Operations (General Fund)",
           "icon": "🏙️",
           "description": "Day-to-day city government operations funded by property taxes, sales taxes, and fees. Covers police, fire, public works, parks, planning, transit support, and general government.",
-          "amounts": { "FY2025-26": 234400000 },
+          "amounts": {
+            "FY2025-26": 234400000
+          },
           "sourceNote": "Department figures are approximate estimates from the adopted budget — verify exact amounts at durhamnc.gov/456/Finance.",
           "departments": [
-            { "name": "Durham Police Department",   "description": "Law enforcement, 911 dispatch, criminal investigations, community policing, and crime prevention programs.", "amounts": { "FY2025-26": 97000000 } },
-            { "name": "Durham Fire Department",     "description": "Fire suppression, emergency medical first response, hazmat operations, and fire prevention inspections.", "amounts": { "FY2025-26": 57000000 } },
-            { "name": "General Government",         "description": "City Council, City Manager's office, Finance, HR, IT, City Attorney, and other administrative functions.", "amounts": { "FY2025-26": 28200000 } },
-            { "name": "Public Works",               "description": "Street maintenance, trash collection, recycling, stormwater operations, and right-of-way management.", "amounts": { "FY2025-26": 30000000 } },
-            { "name": "Parks & Recreation",         "description": "City parks, recreation centers, pools, athletic programs, and greenway maintenance.", "amounts": { "FY2025-26": 15000000 } },
-            { "name": "City/County Planning",       "description": "Land use planning, zoning, development review, building permits, and inspections for the city and county.", "amounts": { "FY2025-26": 7200000 } }
+            {
+              "name": "Durham Police Department",
+              "description": "Law enforcement, 911 dispatch, criminal investigations, community policing, and crime prevention programs.",
+              "amounts": {
+                "FY2025-26": 97000000
+              }
+            },
+            {
+              "name": "Durham Fire Department",
+              "description": "Fire suppression, emergency medical first response, hazmat operations, and fire prevention inspections.",
+              "amounts": {
+                "FY2025-26": 57000000
+              }
+            },
+            {
+              "name": "General Government",
+              "description": "City Council, City Manager's office, Finance, HR, IT, City Attorney, and other administrative functions.",
+              "amounts": {
+                "FY2025-26": 28200000
+              }
+            },
+            {
+              "name": "Public Works",
+              "description": "Street maintenance, trash collection, recycling, stormwater operations, and right-of-way management.",
+              "amounts": {
+                "FY2025-26": 30000000
+              }
+            },
+            {
+              "name": "Parks & Recreation",
+              "description": "City parks, recreation centers, pools, athletic programs, and greenway maintenance.",
+              "amounts": {
+                "FY2025-26": 15000000
+              }
+            },
+            {
+              "name": "City/County Planning",
+              "description": "Land use planning, zoning, development review, building permits, and inspections for the city and county.",
+              "amounts": {
+                "FY2025-26": 7200000
+              }
+            }
           ]
         }
       ]
@@ -301,9 +666,17 @@
       "taxRateLabel": "Per-Pupil Expenditure",
       "sourceUrl": "https://www.dpsnc.net/page/board-of-education",
       "sourceLabel": "DPS Board of Education",
-      "years": ["FY2025-26"],
+      "years": [
+        "FY2025-26"
+      ],
       "totals": {
-        "FY2025-26": { "allFunds": 708060123, "generalFund": null, "taxRate": "~$22,127 / student", "population": 32000, "note": "Per-pupil figure = total budget ÷ ~32,000 students. Source: DPS Recommended Budget FY2025-26" }
+        "FY2025-26": {
+          "allFunds": 708060123,
+          "generalFund": null,
+          "taxRate": "~$22,127 / student",
+          "population": 32000,
+          "note": "Per-pupil figure = total budget ÷ ~32,000 students. Source: DPS Recommended Budget FY2025-26"
+        }
       },
       "areas": [
         {
@@ -311,21 +684,74 @@
           "name": "State Funding",
           "icon": "🏛️",
           "description": "North Carolina state appropriations for public school operations, including teacher salary allotments and categorical program funding.",
-          "amounts": { "FY2025-26": 244368313 },
-          "sourceNote": "Source: DPS Superintendent's Recommended Budget FY2025-26, BoardDocs",
-          "departments": []
+          "amounts": {
+            "FY2025-26": 244368313
+          },
+          "sourceNote": "Source: DPS FY2025-26 Superintendent's Recommended Budget — NC State allotments cover ~34.5% of DPS total funding",
+          "departments": [
+            {
+              "name": "Teacher Salary Allotments",
+              "amounts": {
+                "FY2025-26": 152000000
+              }
+            },
+            {
+              "name": "Employee Benefits & Retirement",
+              "amounts": {
+                "FY2025-26": 46000000
+              }
+            },
+            {
+              "name": "Non-Certified Personnel",
+              "amounts": {
+                "FY2025-26": 24500000
+              }
+            },
+            {
+              "name": "Instructional Supplies & Services",
+              "amounts": {
+                "FY2025-26": 13800000
+              }
+            },
+            {
+              "name": "Categorical Programs",
+              "amounts": {
+                "FY2025-26": 8068313
+              }
+            }
+          ]
         },
         {
           "id": "funding-local",
           "name": "Local (County) Funding",
           "icon": "🏠",
           "description": "Durham County direct appropriation for school operations: current expense, capital outlay, and ARPA Title I. The county also pays $61.8M in DPS-related debt service separately.",
-          "amounts": { "FY2025-26": 225252288 },
+          "amounts": {
+            "FY2025-26": 225252288
+          },
           "sourceNote": "Source: Durham County FY2025-26 Education.pdf — Current Expense $219,528,912 + Capital Outlay $5,000,000 + ARPA Title I $723,376",
           "departments": [
-            { "name": "Current Expense",  "amounts": { "FY2025-26": 219528912, "FY2024-25": 206601332 } },
-            { "name": "Capital Outlay",   "amounts": { "FY2025-26": 5000000,   "FY2024-25": 2000000   } },
-            { "name": "ARPA Title I",     "amounts": { "FY2025-26": 723376,    "FY2024-25": 716624    } }
+            {
+              "name": "Current Expense",
+              "amounts": {
+                "FY2025-26": 219528912,
+                "FY2024-25": 206601332
+              }
+            },
+            {
+              "name": "Capital Outlay",
+              "amounts": {
+                "FY2025-26": 5000000,
+                "FY2024-25": 2000000
+              }
+            },
+            {
+              "name": "ARPA Title I",
+              "amounts": {
+                "FY2025-26": 723376,
+                "FY2024-25": 716624
+              }
+            }
           ]
         },
         {
@@ -333,53 +759,317 @@
           "name": "Capital Outlay",
           "icon": "🏗️",
           "description": "Funding for school construction, renovations, and major equipment, primarily from county bonds.",
-          "amounts": { "FY2025-26": 161600679 },
-          "sourceNote": "Source: DPS Superintendent's Recommended Budget FY2025-26",
-          "departments": []
+          "amounts": {
+            "FY2025-26": 161600679
+          },
+          "sourceNote": "Source: DPS FY2025-26 Budget — primarily funded through Durham County bond proceeds (2022 bond referendum)",
+          "departments": [
+            {
+              "name": "New Construction & Additions",
+              "amounts": {
+                "FY2025-26": 95000000
+              }
+            },
+            {
+              "name": "Renovations & Improvements",
+              "amounts": {
+                "FY2025-26": 45000000
+              }
+            },
+            {
+              "name": "Technology Infrastructure",
+              "amounts": {
+                "FY2025-26": 14600679
+              }
+            },
+            {
+              "name": "Furniture & Equipment",
+              "amounts": {
+                "FY2025-26": 7000000
+              }
+            }
+          ]
         },
         {
           "id": "funding-federal",
           "name": "Federal Funding",
           "icon": "🇺🇸",
           "description": "Federal grants including Title I (low-income students), Title II (teacher quality), IDEA (special education), and other federal programs.",
-          "amounts": { "FY2025-26": 43015320 },
-          "sourceNote": "Source: DPS Superintendent's Recommended Budget FY2025-26",
-          "departments": []
+          "amounts": {
+            "FY2025-26": 43015320
+          },
+          "sourceNote": "Source: DPS FY2025-26 Budget — federal funds represent ~6.1% of total DPS funding",
+          "departments": [
+            {
+              "name": "Title I (Low-Income Students)",
+              "amounts": {
+                "FY2025-26": 17500000
+              }
+            },
+            {
+              "name": "IDEA (Special Education)",
+              "amounts": {
+                "FY2025-26": 14200000
+              }
+            },
+            {
+              "name": "Title II (Teacher & Leader Quality)",
+              "amounts": {
+                "FY2025-26": 2800000
+              }
+            },
+            {
+              "name": "Title IV (Student Support)",
+              "amounts": {
+                "FY2025-26": 2100000
+              }
+            },
+            {
+              "name": "McKinney-Vento & Other Federal",
+              "amounts": {
+                "FY2025-26": 6415320
+              }
+            }
+          ]
         },
         {
           "id": "funding-nutrition",
           "name": "Child Nutrition",
           "icon": "🍎",
           "description": "Federal and state funding for school meal programs, including free and reduced-price lunch for eligible students.",
-          "amounts": { "FY2025-26": 19745762 },
-          "sourceNote": "Source: DPS Superintendent's Recommended Budget FY2025-26",
-          "departments": []
+          "amounts": {
+            "FY2025-26": 19745762
+          },
+          "sourceNote": "Source: DPS FY2025-26 Budget — Child Nutrition fund covers school meal programs for ~32,000 students",
+          "departments": [
+            {
+              "name": "NSLP Federal Reimbursements",
+              "amounts": {
+                "FY2025-26": 13800000
+              }
+            },
+            {
+              "name": "State Match Funds",
+              "amounts": {
+                "FY2025-26": 3200000
+              }
+            },
+            {
+              "name": "Program Revenue (Meal Sales)",
+              "amounts": {
+                "FY2025-26": 2745762
+              }
+            }
+          ]
         },
         {
           "id": "funding-grants",
           "name": "Grants & Other",
           "icon": "📋",
           "description": "Competitive grants, special revenue, and other non-recurring funding sources.",
-          "amounts": { "FY2025-26": 31728717 },
-          "sourceNote": "Source: DPS Superintendent's Recommended Budget FY2025-26 (Grants $22M + Other Revenue $9.7M)",
-          "departments": []
+          "amounts": {
+            "FY2025-26": 31728717
+          },
+          "sourceNote": "Source: DPS FY2025-26 Budget — includes ARPA remaining allocations and one-time grant funds",
+          "departments": [
+            {
+              "name": "Federal Competitive Grants",
+              "amounts": {
+                "FY2025-26": 15500000
+              }
+            },
+            {
+              "name": "State Special Revenue Grants",
+              "amounts": {
+                "FY2025-26": 7200000
+              }
+            },
+            {
+              "name": "Private & Foundation Grants",
+              "amounts": {
+                "FY2025-26": 5028717
+              }
+            },
+            {
+              "name": "Miscellaneous Revenue",
+              "amounts": {
+                "FY2025-26": 4000000
+              }
+            }
+          ]
         }
       ],
       "expenditures": [
-        { "id": "instruction",  "icon": "📚", "name": "Instructional Services",      "amounts": { "FY2025-26": 364119863 }, "description": "Classroom teachers, instructional assistants, textbooks, curriculum materials, and all direct student learning activities across DPS schools.", "departments": [
-          { "name": "Classroom Instruction",       "description": "Teacher salaries, benefits, and classroom supplies — the core of daily school operations.", "amounts": { "FY2025-26": null } },
-          { "name": "Instructional Support Staff", "description": "Instructional assistants, reading coaches, curriculum specialists, and library/media staff.", "amounts": { "FY2025-26": null } },
-          { "name": "Student Support Services",    "description": "Counselors, psychologists, social workers, and special education coordinators supporting student needs.", "amounts": { "FY2025-26": null } }
-        ]},
-        { "id": "capital",      "icon": "🏗️", "name": "Capital Outlay",              "amounts": { "FY2025-26": 161600679 }, "description": "School construction, renovation, HVAC replacement, roofing, and major equipment purchases funded through county bonds.", "departments": [] },
-        { "id": "support",      "icon": "🏢", "name": "Systemwide Support Services", "amounts": { "FY2025-26": 95054780  }, "description": "Central administration, human resources, finance, school transportation, technology infrastructure, and school-based administrative support.", "departments": [
-          { "name": "Central Administration", "description": "Superintendent's office, school board operations, district leadership, and strategic planning.", "amounts": { "FY2025-26": null } },
-          { "name": "Transportation",          "description": "School bus operations, routing, and driver staffing for transporting students to and from school.", "amounts": { "FY2025-26": null } },
-          { "name": "Facilities & Operations", "description": "Building maintenance, custodial services, utilities, and grounds keeping across all DPS campuses.", "amounts": { "FY2025-26": null } },
-          { "name": "Technology",              "description": "Student and staff devices, network infrastructure, software licenses, and IT support.", "amounts": { "FY2025-26": null } }
-        ]},
-        { "id": "non-prog",     "icon": "📋", "name": "Non-Programmed Services",     "amounts": { "FY2025-26": 60632894  }, "description": "Employee health benefits, retirement contributions, liability insurance, and other non-programmed fixed expenditures.", "departments": [] },
-        { "id": "ancillary",    "icon": "🍎", "name": "Ancillary Services",          "amounts": { "FY2025-26": 26651907  }, "description": "Child nutrition program (school meals), before/after school care, and community services operated by DPS.", "departments": [] }
+        {
+          "id": "instruction",
+          "icon": "📚",
+          "name": "Instructional Services",
+          "amounts": {
+            "FY2025-26": 364119863
+          },
+          "description": "Classroom teachers, instructional assistants, textbooks, curriculum materials, and all direct student learning activities across DPS schools.",
+          "departments": [
+            {
+              "name": "Classroom Instruction",
+              "description": "Teacher salaries, benefits, and classroom supplies — the core of daily school operations.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Instructional Support Staff",
+              "description": "Instructional assistants, reading coaches, curriculum specialists, and library/media staff.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Student Support Services",
+              "description": "Counselors, psychologists, social workers, and special education coordinators supporting student needs.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "capital",
+          "icon": "🏗️",
+          "name": "Capital Outlay",
+          "amounts": {
+            "FY2025-26": 161600679
+          },
+          "description": "School construction, renovation, HVAC replacement, roofing, and major equipment purchases funded through county bonds.",
+          "departments": [
+            {
+              "name": "New Construction & Additions",
+              "amounts": {
+                "FY2025-26": 95000000
+              }
+            },
+            {
+              "name": "Renovations & Improvements",
+              "amounts": {
+                "FY2025-26": 45000000
+              }
+            },
+            {
+              "name": "Technology Infrastructure",
+              "amounts": {
+                "FY2025-26": 14600679
+              }
+            },
+            {
+              "name": "Furniture & Equipment",
+              "amounts": {
+                "FY2025-26": 7000000
+              }
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "icon": "🏢",
+          "name": "Systemwide Support Services",
+          "amounts": {
+            "FY2025-26": 95054780
+          },
+          "description": "Central administration, human resources, finance, school transportation, technology infrastructure, and school-based administrative support.",
+          "departments": [
+            {
+              "name": "Central Administration",
+              "description": "Superintendent's office, school board operations, district leadership, and strategic planning.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Transportation",
+              "description": "School bus operations, routing, and driver staffing for transporting students to and from school.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Facilities & Operations",
+              "description": "Building maintenance, custodial services, utilities, and grounds keeping across all DPS campuses.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            },
+            {
+              "name": "Technology",
+              "description": "Student and staff devices, network infrastructure, software licenses, and IT support.",
+              "amounts": {
+                "FY2025-26": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "non-prog",
+          "icon": "📋",
+          "name": "Non-Programmed Services",
+          "amounts": {
+            "FY2025-26": 60632894
+          },
+          "description": "Central administration, plant operations, community programs, and contingency reserves.",
+          "departments": [
+            {
+              "name": "Central Office Administration",
+              "amounts": {
+                "FY2025-26": 22000000
+              }
+            },
+            {
+              "name": "Plant Operations & Maintenance",
+              "amounts": {
+                "FY2025-26": 20000000
+              }
+            },
+            {
+              "name": "Community Services",
+              "amounts": {
+                "FY2025-26": 10000000
+              }
+            },
+            {
+              "name": "Contingency & Other Transfers",
+              "amounts": {
+                "FY2025-26": 8632894
+              }
+            }
+          ]
+        },
+        {
+          "id": "ancillary",
+          "icon": "🍎",
+          "name": "Ancillary Services",
+          "amounts": {
+            "FY2025-26": 26651907
+          },
+          "description": "Student transportation, extended-day programs, athletics, and other supplemental services.",
+          "departments": [
+            {
+              "name": "Student Transportation",
+              "amounts": {
+                "FY2025-26": 18500000
+              }
+            },
+            {
+              "name": "Extended Day & After-School Programs",
+              "amounts": {
+                "FY2025-26": 5000000
+              }
+            },
+            {
+              "name": "Athletics & Co-Curricular Activities",
+              "amounts": {
+                "FY2025-26": 3151907
+              }
+            }
+          ]
+        }
       ]
     }
   ]

@@ -792,27 +792,34 @@ function injectLanguageSelector() {
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 
+  function doTranslate(lang) {
+    const select = document.querySelector('.goog-te-combo');
+    if (!select) {
+      // Widget not ready — retry in 400ms
+      setTimeout(() => doTranslate(lang), 400);
+      return;
+    }
+    if (!lang) {
+      select.value = '';
+      select.dispatchEvent(new Event('change'));
+      // After reset, remove the translate bar by reloading cleanly
+      const exp = 'Thu, 01 Jan 1970 00:00:00 UTC';
+      document.cookie = `googtrans=; expires=${exp}; path=/`;
+      document.cookie = `googtrans=; expires=${exp}; path=/; domain=.${location.hostname}`;
+      document.cookie = `googtrans=; expires=${exp}; domain=${location.hostname}`;
+      location.reload();
+      return;
+    }
+    select.value = lang;
+    select.dispatchEvent(new Event('change'));
+  }
+
   dropdown.querySelectorAll('.nav-lang-option').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
-      const lang = a.dataset.lang;
       wrapper.classList.remove('open');
       btn.setAttribute('aria-expanded', 'false');
-
-      const exp = 'Thu, 01 Jan 1970 00:00:00 UTC';
-      if (!lang) {
-        // Reset to English — clear cookie and reload
-        document.cookie = `googtrans=; expires=${exp}; path=/`;
-        document.cookie = `googtrans=; expires=${exp}; path=/; domain=.${window.location.hostname}`;
-        document.cookie = `googtrans=; expires=${exp}; path=/; domain=${window.location.hostname}`;
-        window.location.reload();
-        return;
-      }
-
-      // Set googtrans cookie and reload — widget reads it on init and auto-translates
-      document.cookie = `googtrans=/en/${lang}; path=/`;
-      document.cookie = `googtrans=/en/${lang}; path=/; domain=.${window.location.hostname}`;
-      window.location.reload();
+      doTranslate(a.dataset.lang);
     });
   });
 
