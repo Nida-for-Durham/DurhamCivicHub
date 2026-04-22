@@ -438,7 +438,7 @@ function renderMeetings(data, container) {
         </div>
         <div style="display:flex;gap:.75rem;flex-wrap:wrap;flex-shrink:0;">
           <a href="https://durhamcounty.granicus.com/boards/forms/111/apply/4966814?code=082fd717-0226-468a-a143-a401163bab24" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;background:#262E4F;color:#fff;font-size:.875rem;font-weight:700;padding:.5rem 1rem;border-radius:6px;text-decoration:none;">Apply — Durham County →</a>
-          <a href="https://www.durhamnc.gov/311/Boards-Commissions" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;background:#207C91;color:#fff;font-size:.875rem;font-weight:700;padding:.5rem 1rem;border-radius:6px;text-decoration:none;">Apply — City of Durham →</a>
+          <a href="https://www.durhamnc.gov/238/Boards-Committees-Commissions-Task-Force" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;background:#207C91;color:#fff;font-size:.875rem;font-weight:700;padding:.5rem 1rem;border-radius:6px;text-decoration:none;">Apply — City of Durham →</a>
         </div>
       </div>
       ${advisory.map(renderBodyCard).join('')}
