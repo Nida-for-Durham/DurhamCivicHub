@@ -113,7 +113,7 @@
       "category": "Facilities & Government",
       "amount": 132200000,
       "description": "Facilities improvements, fire station renovations, technology infrastructure, and other capital investments across city departments.",
-      "status": "Various",
+      "status": "Multiple Phases",
       "year": "FY2025-26",
       "sourceUrl": "https://www.durhamnc.gov/456/Finance",
       "sourceLabel": "City of Durham FY2025-26 Adopted Budget",
@@ -149,9 +149,9 @@
       "year": "2022 Bond",
       "sourceUrl": "https://www.dconc.gov/Budget-and-Management-Services",
       "sourceLabel": "Durham County FY2022-2031 CIP",
-      "lat": 35.9933,
-      "lng": -78.9088,
-      "locationNote": "Durham Technical Community College main campus"
+      "lat": 35.9737,
+      "lng": -78.8822,
+      "locationNote": "Durham Technical Community College, 1637 E Lawson St"
     },
     {
       "id": "museum-bond-2022",
@@ -165,9 +165,9 @@
       "year": "2022 Bond",
       "sourceUrl": "https://www.dconc.gov/Budget-and-Management-Services",
       "sourceLabel": "Durham County FY2022-2031 CIP",
-      "lat": 36.0409,
-      "lng": -78.8983,
-      "locationNote": "NC Museum of Life and Science, 433 Murray Ave"
+      "lat": 36.0293,
+      "lng": -78.8994,
+      "locationNote": "NC Museum of Life and Science, 433 W Murray Ave"
     },
     {
       "id": "public-safety-complex",
