@@ -1,0 +1,47 @@
+name: Daily Data Fetch
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # Daily 7:00 AM ET (noon UTC)
+  workflow_dispatch:
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # ── Fetch scripts (add each as it's built) ──────────────────
+
+      # - name: Fetch emergency alerts
+      #   run: node scripts/fetch-alerts.js
+
+      # - name: Fetch news RSS
+      #   run: node scripts/fetch-news.js
+
+      # - name: Fetch elections data
+      #   run: node scripts/fetch-elections.js
+
+      # - name: Check resource links
+      #   if: github.event.schedule == '0 12 1 * *'   # monthly
+      #   run: node scripts/check-resources.js
+
+      - name: Update meta timestamp
+        run: |
+          echo "{\"lastUpdated\":\"$(date +%Y-%m-%d)\",\"sources\":{}}" > data/meta.json
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "chore: daily data fetch $(date +%Y-%m-%d)"
+          git push

@@ -1174,3 +1174,14 @@ a { color: var(--teal); }
   font-size: .9rem;
   color: var(--muted);
 }
+
+/* ── Election countdown ───────────────────────────────────────── */
+.countdown-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+.countdown-num.countdown-soon {
+  color: var(--orange);
+}

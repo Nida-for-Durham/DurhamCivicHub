@@ -859,12 +859,240 @@ function injectLanguageSelector() {
   document.head.appendChild(gtStyle);
 }
 
+// ── Officials (voting page) ───────────────────────────────────
+async function loadOfficials() {
+  try {
+    const res  = await fetch('data/officials.json');
+    const data = await res.json();
+    renderElections();
+    renderOfficials(data);
+  } catch {
+    // static HTML fallback remains
+  }
+}
+
+async function renderElections() {
+  const container = document.getElementById('electionsContainer');
+  if (!container) return;
+  try {
+    const res  = await fetch('data/elections.json');
+    const data = await res.json();
+    const { nextElection: ne, earlyVoting: ev, registrationDeadline: rd, source } = data;
+
+    const card = (accentVar, label, dateLabel, desc) => `
+      <div style="background:#fff;border:1.5px solid var(--border,#e5e0d8);border-top:4px solid var(--${accentVar},#E97221);border-radius:10px;padding:1.25rem 1.5rem;">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--${accentVar},#E97221);margin-bottom:.4rem;">${label}</div>
+        <div style="font-family:'Margin',serif;font-size:1.35rem;font-weight:800;color:var(--navy,#262E4F);">${esc(dateLabel)}</div>
+        <div style="font-size:.85rem;color:#555;margin-top:.25rem;">${esc(desc)}</div>
+      </div>`;
+
+    container.innerHTML = `
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:1.25rem;">
+        ${card('orange', 'Next Election', ne.label, ne.type)}
+        ${card('teal',   'Early Voting',  ev.label, ev.desc)}
+        ${card('navy',   'Voter Reg. Deadline', rd.label, rd.note)}
+      </div>
+      <p style="font-size:.82rem;color:#888;font-style:italic;margin-bottom:0;">
+        Dates from the <a href="${esc(source)}" target="_blank" rel="noopener" style="color:var(--teal);">NC State Board of Elections 2026 election calendar</a>. Confirm before election day.
+      </p>`;
+
+    // Countdown
+    const countdownEl = document.getElementById('electionCountdown');
+    if (countdownEl && ne.date) {
+      const today    = new Date();
+      const election = new Date(ne.date + 'T00:00:00');
+      const days     = Math.ceil((election - today) / 86400000);
+      if (days > 0) {
+        countdownEl.innerHTML = `<span class="countdown-num${days <= 30 ? ' countdown-soon' : ''}">${days}</span> days until the ${esc(ne.label)} general election`;
+        countdownEl.style.display = 'block';
+      }
+    }
+  } catch {
+    // static content remains
+  }
+}
+
+function renderOfficials(data) {
+  const container = document.getElementById('officialsContainer');
+  if (!container) return;
+
+  container.innerHTML = data.groups.map(group => {
+    const noteHtml = group.note
+      ? `<p style="font-size:.82rem;color:var(--text-muted);margin-bottom:.85rem;">${esc(group.note)}${
+          group.noteLink
+            ? ` Full bios at <a href="${esc(group.noteLink.url)}" target="_blank" rel="noopener noreferrer" style="color:var(--teal)">${esc(group.noteLink.label)}</a>.`
+            : ''
+        }</p>`
+      : '';
+
+    const cards = group.officials.map(o => {
+      const partyBadge = o.party
+        ? `<span class="official-party party-${o.party === 'Democrat' ? 'd' : 'r'}">${esc(o.party)}</span>`
+        : '';
+      const photoEl = o.photo
+        ? `<img class="official-photo" src="${esc(o.photo)}" alt="${esc(o.name)}" loading="lazy"
+               referrerpolicy="no-referrer"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+        : '';
+      const initialsEl = (o.initials && o.initials.length <= 2)
+        ? `<div class="official-initials">${esc(o.initials)}</div>`
+        : `<div class="official-photo-wrap" style="background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:2.5rem">${o.initials}</div>`;
+
+      return `
+        <a class="official-card" href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">
+          <div class="official-photo-wrap">
+            ${photoEl}
+            ${o.photo ? initialsEl : ''}
+            ${!o.photo ? `<div style="width:100%;height:100%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">${esc(o.initials)}</div>` : ''}
+          </div>
+          <div class="official-info">
+            <div class="official-name">${esc(o.name)}</div>
+            <div class="official-title">${esc(o.title)}</div>
+            ${partyBadge}
+          </div>
+        </a>`;
+    }).join('');
+
+    return `
+      <div class="officials-group">
+        <div class="officials-group-label">${esc(group.label)}</div>
+        ${noteHtml}
+        <div class="officials-grid">${cards}</div>
+      </div>`;
+  }).join('');
+
+  if (window._twParse) window._twParse(container);
+}
+
+// ── Resources page ────────────────────────────────────────────
+async function loadResources() {
+  const container = document.getElementById('resourcesContainer');
+  if (!container) return;
+  try {
+    const res  = await fetch('data/resources.json');
+    const data = await res.json();
+    renderResources(data, container);
+    updateDataTimestamp('data-updated', data.lastUpdated);
+  } catch {
+    // static HTML fallback remains
+  }
+}
+
+function renderResources(data, container) {
+  // Crisis cards to pin at top
+  const crisisCards = data.categories
+    .flatMap(c => (c.cards || []).filter(card => card.isCrisis)
+      .map(card => ({ ...card, catId: c.id }))
+    );
+
+  const crisisSection = crisisCards.length ? `
+    <section class="resource-category" id="crisis-pinned" style="background:#7B1A1A;border-radius:12px;padding:1.5rem 1.5rem 1.75rem;margin-bottom:2.5rem;">
+      <div class="resource-category-header">
+        <h2 class="resource-category-title" style="color:#fff;border-bottom-color:rgba(255,255,255,.4);">🚨 Most Urgent</h2>
+        <p class="resource-category-intro" style="color:rgba(255,255,255,.85);">In a life-threatening emergency, call <strong>911</strong>. Crisis lines available 24/7.</p>
+      </div>
+      <div class="resource-grid">
+        ${crisisCards.map(c => renderResourceCard(c, true)).join('')}
+      </div>
+    </section>` : '';
+
+  const categories = data.categories.map(cat => {
+    const noteHtml = cat.note
+      ? `<p class="resource-category-note">${esc(cat.note)}</p>`
+      : '';
+    return `
+      <section class="resource-category" id="${esc(cat.id)}">
+        <div class="resource-category-header">
+          <h2 class="resource-category-title">${cat.icon} ${esc(cat.title)}</h2>
+          ${cat.intro ? `<p class="resource-category-intro">${esc(cat.intro)}</p>` : ''}
+          ${noteHtml}
+        </div>
+        <div class="resource-grid">
+          ${(cat.cards || []).map(c => renderResourceCard(c, false)).join('')}
+        </div>
+      </section>`;
+  }).join('');
+
+  container.innerHTML = crisisSection + categories;
+  if (window._twParse) window._twParse(container);
+}
+
+function renderResourceCard(c, dark) {
+  const phoneHtml = c.phone
+    ? `<p class="resource-card-phone">📞 <a href="${esc(c.phoneHref)}">${esc(c.phone)}</a></p>`
+    : '';
+  const spanishBadge = c.hasSpanish
+    ? `<span style="font-size:.7rem;font-weight:700;background:#16a34a;color:#fff;padding:.1rem .4rem;border-radius:3px;margin-left:.25rem;">Español</span>`
+    : '';
+  const cardStyle = dark ? 'background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);' : '';
+  const nameStyle = dark ? 'color:#fff;' : '';
+  const descStyle = dark ? 'color:rgba(255,255,255,.85);' : '';
+
+  return `
+    <div class="resource-card resource-card--${esc(c.type || 'nonprofit')}" style="${cardStyle}">
+      <div class="resource-card-icon">${c.icon}</div>
+      <p class="resource-card-name" style="${nameStyle}">${esc(c.name)}${spanishBadge}</p>
+      <p class="resource-card-desc" style="${descStyle}">${esc(c.desc)}</p>
+      ${phoneHtml}
+      <a href="${esc(c.url)}" class="resource-card-btn" target="_blank" rel="noopener">${esc(c.btnLabel || 'Learn More')}</a>
+    </div>`;
+}
+
+// ── Resource search ────────────────────────────────────────────
+let _resourcesData = null;
+
+function filterResources(q) {
+  const container = document.getElementById('resourcesContainer');
+  if (!container || !_resourcesData) return;
+  if (!q) {
+    renderResources(_resourcesData, container);
+    return;
+  }
+  const lower = q.toLowerCase();
+  const filtered = {
+    ..._resourcesData,
+    categories: _resourcesData.categories.map(cat => ({
+      ...cat,
+      cards: (cat.cards || []).filter(c =>
+        (c.name + ' ' + c.desc + ' ' + cat.title).toLowerCase().includes(lower)
+      )
+    })).filter(cat => cat.cards.length > 0)
+  };
+  renderResources(filtered, container);
+}
+
+// ── Footer "data last updated" ─────────────────────────────────
+async function injectFooterTimestamp() {
+  try {
+    const res  = await fetch('data/meta.json');
+    const data = await res.json();
+    if (!data.lastUpdated) return;
+    const footer = document.querySelector('.footer-inner');
+    if (!footer) return;
+    const p = document.createElement('p');
+    p.className = 'footer-note';
+    p.style.cssText = 'margin-top:.35rem;font-size:.78rem;opacity:.65;';
+    p.textContent = `Site data last updated: ${fmt(data.lastUpdated)}`;
+    const nav = footer.querySelector('.footer-nav');
+    if (nav) footer.insertBefore(p, nav);
+    else footer.appendChild(p);
+  } catch {
+    // no-op
+  }
+}
+
+function updateDataTimestamp(id, dateStr) {
+  const el = document.getElementById(id);
+  if (el && dateStr) el.textContent = `Updated ${fmt(dateStr)}`;
+}
+
 // ── Init ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   // Inject search UI, nav dropdowns, and language selector on every page
   injectSearchUI();
   buildNavDropdowns();
   injectLanguageSelector();
+  injectFooterTimestamp();
 
   // Load Twemoji for consistent graphic emoji across all browsers/platforms
   const twScript = document.createElement('script');
@@ -886,6 +1114,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Resources search wiring
+  const rs = document.getElementById('resourceSearch');
+  if (rs) {
+    rs.addEventListener('input', e => filterResources(e.target.value.trim()));
+  }
+
   // Page-specific init
   const page = document.body.dataset.page;
   switch (page) {
@@ -898,6 +1132,19 @@ document.addEventListener('DOMContentLoaded', () => {
       break;
     case 'calendar':
       loadCalendar();
+      break;
+    case 'voting':
+      loadOfficials();
+      break;
+    case 'resources':
+      (async () => {
+        const res  = await fetch('data/resources.json').catch(() => null);
+        if (!res) return;
+        _resourcesData = await res.json();
+        const container = document.getElementById('resourcesContainer');
+        if (container) renderResources(_resourcesData, container);
+        updateDataTimestamp('data-updated', _resourcesData.lastUpdated);
+      })();
       break;
   }
 });

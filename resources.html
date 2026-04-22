@@ -287,6 +287,18 @@
   <main>
     <div class="resources-main">
 
+      <!-- ── Search ── -->
+      <div style="margin-bottom:2rem;">
+        <input id="resourceSearch" type="search" placeholder="Search all resources — housing, food, legal, health…"
+               style="width:100%;max-width:600px;padding:.65rem 1rem;font-size:.95rem;font-family:'Libre Franklin',sans-serif;border:1.5px solid var(--border,#e5e0d8);border-radius:8px;outline:none;"
+               aria-label="Search resources" />
+        <p style="font-size:.78rem;color:#888;margin:.4rem 0 0;">In a life-threatening emergency, call <strong>911</strong>. For mental health crisis, call or text <strong>988</strong>.</p>
+        <p id="data-updated" style="font-size:.78rem;color:#888;margin:.15rem 0 0;"></p>
+      </div>
+
+      <div id="resourcesContainer">
+        <!-- Rendered by app.js from data/resources.json -->
+
       <!-- ── CATEGORY 1: Housing ── -->
       <section class="resource-category" id="housing">
         <div class="resource-category-header">
@@ -858,6 +870,8 @@
 
         </div>
       </section>
+
+      </div><!-- /#resourcesContainer (static fallback above; JS replaces with data/resources.json) -->
 
       <!-- ── Bottom Note ── -->
       <div class="resources-bottom-note">
