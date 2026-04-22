@@ -307,62 +307,6 @@
       line-height: 1.5;
     }
 
-    /* ── Static info section ── */
-    .info-section {
-      margin-top: 3rem;
-      border-top: 2px solid var(--border, #DDD8CC);
-      padding-top: 2rem;
-    }
-    .info-section-title {
-      font-family: 'Margin', serif;
-      font-size: clamp(1.2rem, 2.5vw, 1.55rem);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .03em;
-      color: var(--navy, #262E4F);
-      margin-bottom: 1rem;
-      padding-bottom: .4rem;
-      border-bottom: 3px solid var(--orange, #E97221);
-      display: inline-block;
-    }
-    .info-block {
-      background: #fff;
-      border: 1.5px solid var(--border, #DDD8CC);
-      border-radius: 10px;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 1.25rem;
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: .9rem;
-      color: #444;
-      line-height: 1.65;
-    }
-    .info-block p + p { margin-top: .6rem; }
-    .info-block a { color: var(--teal, #207C91); }
-    .info-block strong { color: var(--navy, #262E4F); }
-
-    .commissioner-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: .75rem;
-      margin-top: 1rem;
-    }
-    .commissioner-item {
-      background: var(--cream, #FAF6EE);
-      border: 1.5px solid var(--border, #DDD8CC);
-      border-radius: 8px;
-      padding: .75rem 1rem;
-      font-family: 'Libre Franklin', sans-serif;
-      font-size: .85rem;
-    }
-    .commissioner-item .dist {
-      font-weight: 700;
-      color: var(--navy, #262E4F);
-      font-size: .78rem;
-      text-transform: uppercase;
-      letter-spacing: .07em;
-    }
-    .commissioner-item .name { color: #333; margin-top: .2rem; }
-
     @media (max-width: 600px) {
       .results-grid { grid-template-columns: 1fr; }
       .lookup-form { flex-direction: column; }
@@ -464,49 +408,6 @@
         </a>
       </div>
 
-      <!-- ── Static Info ── -->
-      <div class="info-section">
-        <h2 class="info-section-title">About Durham's Elected Officials</h2>
-
-        <div class="info-block">
-          <p><strong>Durham County Board of Commissioners</strong> — all 5 commissioners are elected at-large, meaning they represent the entire county, not individual districts. The Board sets county policy, approves the county budget, and oversees county departments including social services, public health, and the library system.</p>
-          <p>
-            <a href="https://www.dconc.gov/county-departments/county-departments-f-z/technology-solutions-services/gis-mapping/district-maps" target="_blank" rel="noopener">View Commissioner District Map (dconc.gov) →</a>
-          </p>
-          <div class="commissioner-grid">
-            <div class="commissioner-item"><a href="https://www.dconc.gov/Board-of-Commissioners/Commissioners/Mike-Lee" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;"><div class="dist">Chair</div><div class="name">Dr. Mike Lee</div></a></div>
-            <div class="commissioner-item"><a href="https://www.dconc.gov/Board-of-Commissioners/Commissioners/Nida-Allam" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;"><div class="dist">Vice Chair</div><div class="name">Nida Allam</div></a></div>
-            <div class="commissioner-item"><a href="https://www.dconc.gov/Board-of-Commissioners/Commissioners/Michelle-Burton" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;"><div class="dist">Commissioner</div><div class="name">Michelle Burton</div></a></div>
-            <div class="commissioner-item"><a href="https://www.dconc.gov/Board-of-Commissioners/Commissioners/Stephen-Valentine" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;"><div class="dist">Commissioner</div><div class="name">Stephen Valentine</div></a></div>
-            <div class="commissioner-item"><a href="https://www.dconc.gov/Board-of-Commissioners/Commissioners/Wendy-Jacobs" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;"><div class="dist">Commissioner</div><div class="name">Wendy Jacobs</div></a></div>
-          </div>
-        </div>
-
-        <div class="info-block">
-          <p><strong>Durham City Council</strong> represents residents inside Durham city limits. The City Council sets city policy, the city budget, and oversees city services like police, parks, transit, and planning. If your address is in the unincorporated county (outside city limits), you don't have a City Council representative.</p>
-          <p><a href="https://www.durhamnc.gov/1245/City-Council" target="_blank" rel="noopener">Durham City Council (durhamnc.gov) →</a></p>
-        </div>
-
-        <div class="info-block">
-          <p><strong>NC General Assembly.</strong> Durham is represented in both the NC House and NC Senate. Your specific district depends on your address. Representatives can be reached through the NC General Assembly website.</p>
-          <p><a href="https://www.ncleg.gov/FindYourLegislators" target="_blank" rel="noopener">Find Your NC Legislators (ncleg.gov) →</a></p>
-        </div>
-
-        <div class="info-block">
-          <p><strong>Durham County Public Libraries</strong> are free for all Durham County residents! All branches offer books, e-books, computers, Wi-Fi, and community programs. A library card is free with proof of Durham County address.</p>
-          <p><a href="https://www.durhamcountylibrary.org/" target="_blank" rel="noopener">Durham County Library System →</a></p>
-        </div>
-
-        <div class="info-block">
-          <p><strong>Durham County Parks &amp; Recreation</strong> operates parks, greenways, recreational facilities, and nature programs throughout the county.</p>
-          <p>
-            <a href="https://www.dconc.gov/county-departments/county-departments-f-z/parks-recreation-and-open-space" target="_blank" rel="noopener">Durham County Parks →</a>
-            &nbsp;·&nbsp;
-            <a href="https://www.durhamnc.gov/2016/Parks-Recreation" target="_blank" rel="noopener">City of Durham Parks →</a>
-          </p>
-        </div>
-
-      </div><!-- /.info-section -->
 
     </div><!-- /.my-durham-main -->
   </main>
