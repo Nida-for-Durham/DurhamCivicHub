@@ -551,6 +551,25 @@
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
+  /* ── localStorage: save / restore last address ─────────────── */
+  const LS_KEY = 'durhamcivichub_last_address';
+
+  function saveAddress(addr) {
+    try { localStorage.setItem(LS_KEY, addr); } catch (_) {}
+  }
+
+  function restoreAddress() {
+    try {
+      const saved = localStorage.getItem(LS_KEY);
+      if (saved) {
+        const input = document.getElementById('addressInput');
+        if (input && !input.value) input.value = saved;
+      }
+    } catch (_) {}
+  }
+
+  document.addEventListener('DOMContentLoaded', restoreAddress);
+
   /* ── UI helpers ─────────────────────────────────────────────── */
   function setLoading(loading) {
     const btn     = document.getElementById('lookupBtn');
@@ -735,6 +754,47 @@
       </div>`;
   }
 
+  function buildTrashCard(address) {
+    const q = encodeURIComponent(address);
+    return `
+      <div class="result-card" style="border-top:4px solid #f59e0b;">
+        <div class="result-card-icon"><i data-lucide="trash-2" aria-hidden="true" class="lucide-wrap"></i></div>
+        <div class="result-card-category">Solid Waste · City of Durham</div>
+        <p class="result-card-title">Trash &amp; Recycling Day</p>
+        <p class="result-card-detail">Look up your pickup day and recycling schedule using the City of Durham Solid Waste address lookup. Enter your street address on the City's tool.</p>
+        <div class="result-card-links">
+          <a href="https://www.durhamnc.gov/159/Solid-Waste-Management" target="_blank" rel="noopener" class="result-card-link">Find My Pickup Day</a>
+        </div>
+      </div>`;
+  }
+
+  function buildPolicefireCard(inDurhamCity) {
+    if (inDurhamCity === false) {
+      return `
+        <div class="result-card" style="border-top:4px solid #6b7280;">
+          <div class="result-card-icon"><i data-lucide="shield" aria-hidden="true" class="lucide-wrap"></i></div>
+          <div class="result-card-category">Public Safety · Durham County</div>
+          <p class="result-card-title">Durham County Sheriff</p>
+          <p class="result-card-detail">Your address is in unincorporated Durham County, served by the Durham County Sheriff's Office and Durham County EMS/Fire.</p>
+          <div class="result-card-links">
+            <a href="https://www.dconc.gov/county-departments/departments-l-z/sheriff" target="_blank" rel="noopener" class="result-card-link">Sheriff's Office</a>
+            <a href="https://www.dconc.gov/county-departments/departments-a-e/emergency-services" target="_blank" rel="noopener" class="result-card-link result-card-link--secondary">Emergency Services</a>
+          </div>
+        </div>`;
+    }
+    return `
+      <div class="result-card" style="border-top:4px solid #ef4444;">
+        <div class="result-card-icon"><i data-lucide="shield" aria-hidden="true" class="lucide-wrap"></i></div>
+        <div class="result-card-category">Public Safety · City of Durham</div>
+        <p class="result-card-title">Durham Police &amp; Fire</p>
+        <p class="result-card-detail">Find your Durham Police Department district and nearest fire station using the City of Durham's public safety tools.</p>
+        <div class="result-card-links">
+          <a href="https://www.durhamnc.gov/2575/Districts-and-Beats" target="_blank" rel="noopener" class="result-card-link">Police Districts</a>
+          <a href="https://www.durhamnc.gov/174/Fire-Department" target="_blank" rel="noopener" class="result-card-link result-card-link--secondary">Fire Stations</a>
+        </div>
+      </div>`;
+  }
+
   /* ── Main lookup handler ─────────────────────────────────────── */
   async function handleLookup(e) {
     e.preventDefault();
@@ -762,6 +822,8 @@
       const houseProps  = _houseData  ? findProps(_houseData,  lat, lng) : null;
       const wardNum     = wardProps?.ward ?? null;
 
+      saveAddress(addressRaw);
+
       const cards = [
         buildCommissionerCard(),
         buildCityCouncilCard(inDurhamCity, wardNum),
@@ -769,6 +831,8 @@
         buildVotingCard(precinctInfo),
         buildLibraryCard(lat, lng),
         buildParksCard(),
+        buildTrashCard(addressRaw),
+        buildPolicefireCard(inDurhamCity),
       ].join('\n');
 
       document.getElementById('resultsGrid').innerHTML = cards;
