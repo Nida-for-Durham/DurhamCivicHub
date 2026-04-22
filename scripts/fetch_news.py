@@ -2,11 +2,20 @@
 fetch_news.py
 Pulls stories from Durham County RSS feeds and writes news.json.
 Runs daily via GitHub Actions.
+
+Guardrails (Part 5.3):
+- Auto-merge if fewer than 10 items changed from previous run
+- Hold for approval if 10+ items changed (never blocks silently)
+- Block and warn if all items disappeared (likely scraper failure)
+
+"What this means for you" lines are generated via Claude API and cached
+per story URL so repeat runs don't re-call the API.
 """
 
 from __future__ import annotations
 
 import json
+import os
 import feedparser
 import re
 import time
@@ -86,8 +95,10 @@ TAG_RULES = [
     ("Announcement", ["apply", "application", "deadline", "seeking", "vacancy", "hiring", "grant"]),
 ]
 
-MAX_STORIES  = 25   # more sources → more stories
-CUTOFF_DAYS  = 45   # keep up to 45 days
+MAX_STORIES      = 25    # more sources → more stories
+CUTOFF_DAYS      = 45    # keep up to 45 days
+GUARDRAIL_HOLD   = 10    # hold for approval if >= this many items changed
+ANTHROPIC_MODEL  = "claude-haiku-4-5-20251001"  # cheapest model for one-sentence summaries
 
 HEADERS = {
     "User-Agent": (
@@ -208,6 +219,63 @@ def fetch_all() -> list[dict]:
         time.sleep(0.5)  # polite rate-limiting
 
     return unique
+
+
+def generate_meaning(story: dict, api_key: str | None) -> str | None:
+    """Call Claude API to produce a one-sentence 'what this means for you' line."""
+    if not api_key:
+        return None
+    try:
+        resp = requests.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={
+                "x-api-key": api_key,
+                "anthropic-version": "2023-06-01",
+                "content-type": "application/json",
+            },
+            json={
+                "model": ANTHROPIC_MODEL,
+                "max_tokens": 80,
+                "messages": [{
+                    "role": "user",
+                    "content": (
+                        f"Headline: {story['title']}\n"
+                        f"Summary: {story.get('excerpt', '')}\n\n"
+                        "Write one sentence (15-25 words) starting with 'This means' that explains "
+                        "what this news story means for Durham County neighbors in plain, warm language. "
+                        "No em dashes. No jargon."
+                    ),
+                }],
+            },
+            timeout=15,
+        )
+        resp.raise_for_status()
+        return resp.json()["content"][0]["text"].strip()
+    except Exception as e:
+        print(f"    Claude API error: {e}")
+        return None
+
+
+def enrich_with_meanings(stories: list[dict], existing_by_link: dict, api_key: str | None) -> None:
+    """Add 'meaning' field to stories that don't already have one."""
+    if not api_key:
+        return
+    for s in stories:
+        existing = existing_by_link.get(s["link"], {})
+        if existing.get("meaning"):
+            s["meaning"] = existing["meaning"]
+            continue
+        meaning = generate_meaning(s, api_key)
+        if meaning:
+            s["meaning"] = meaning
+            print(f"    Meaning generated: {s['title'][:50]}")
+        time.sleep(0.3)
+
+
+def count_changed(fresh: list[dict], existing: list[dict]) -> int:
+    """Count how many stories in fresh are not already in existing (by link)."""
+    existing_links = {s["link"] for s in existing}
+    return sum(1 for s in fresh if s["link"] not in existing_links)
 
 
 def load_existing_news() -> dict:
