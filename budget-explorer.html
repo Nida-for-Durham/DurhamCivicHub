@@ -224,46 +224,54 @@
     .exp-area:hover { box-shadow: 0 4px 16px rgba(38,46,79,.1); }
     .exp-area-header {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 1rem;
       padding: 1rem 1.25rem;
       cursor: pointer;
       user-select: none;
     }
     .exp-area-icon {
-      font-size: 1.4rem;
-      flex-shrink: 0;
-      width: 2rem;
-      text-align: center;
+      font-size: 1.1rem;
+      margin-right: .3rem;
+      display: inline;
+      line-height: 1;
     }
-    .exp-area-info { flex: 1; min-width: 0; }
+    .exp-area-info { flex: 1; min-width: 120px; }
     .exp-area-name {
       font-family: 'Libre Franklin', sans-serif;
       font-size: .95rem;
       font-weight: 700;
       color: var(--exp-navy);
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+      flex-wrap: nowrap;
     }
     .exp-area-desc {
       font-family: 'Libre Franklin', sans-serif;
       font-size: .8rem;
       color: #666;
-      margin-top: .12rem;
+      margin-top: .25rem;
       line-height: 1.4;
     }
     .exp-area-right {
       text-align: right;
       flex-shrink: 0;
+      min-width: 80px;
+      max-width: 110px;
     }
     .exp-area-amount {
       font-family: 'Libre Franklin', sans-serif;
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--exp-navy);
+      white-space: nowrap;
     }
     .exp-area-pct {
       font-family: 'Libre Franklin', sans-serif;
-      font-size: .82rem;
+      font-size: .78rem;
       color: #888;
+      white-space: nowrap;
     }
     .exp-area-chevron {
       font-size: .8rem;
@@ -825,14 +833,13 @@
       return `
         <div class="exp-area expandable" id="area-${idx}">
           <div class="exp-area-header" onclick="toggleArea(${idx})">
-            <span class="exp-area-icon">${a.icon || '📊'}</span>
             <div class="exp-area-info">
-              <div class="exp-area-name">${a.name}</div>
+              <div class="exp-area-name"><span class="exp-area-icon">${a.icon || '📊'}</span>${a.name}</div>
               ${a.description ? `<div class="exp-area-desc">${a.description}</div>` : ''}
             </div>
             <div class="exp-area-right">
               <div class="exp-area-amount">${fmtDollars(amt)}</div>
-              <div class="exp-area-pct">${pctOfTotal} of total budget</div>
+              <div class="exp-area-pct">${pctOfTotal} of budget</div>
               ${yoyBadge(amt, prevAmt)}
             </div>
             <span class="exp-area-chevron">›</span>
