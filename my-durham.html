@@ -446,26 +446,13 @@
       { name: 'Nate Baker',        title: 'At-Large',                     url: 'https://www.durhamnc.gov/4797/Nate-Baker' },
       { name: 'Carl Rist',         title: 'At-Large',                     url: 'https://www.durhamnc.gov/1661/Carl-Rist' },
     ],
-    wards: [
-      { ward: 1, name: 'Matt Kopac',      url: 'https://www.durhamnc.gov/5483/Matt-Kopac' },
-      { ward: 2, name: 'Shanetta Burris', url: 'https://www.durhamnc.gov/5484/Shanetta-Burris' },
-      { ward: 3, name: 'Chelsea Cook',    url: 'https://www.durhamnc.gov/4664/Chelsea-Cook' },
-    ],
+    wards: {
+      1: { name: 'Matt Kopac',      url: 'https://www.durhamnc.gov/5483/Matt-Kopac' },
+      2: { name: 'Shanetta Burris', url: 'https://www.durhamnc.gov/5484/Shanetta-Burris' },
+      3: { name: 'Chelsea Cook',    url: 'https://www.durhamnc.gov/4664/Chelsea-Cook' },
+    },
   };
 
-  const NC_SENATE_DURHAM = [
-    { name: 'Natalie S. Murdock', district: 20, url: 'https://www.ncleg.gov/Members/MemberList/S/0' },
-    { name: 'Sophia Chitlik',     district: 22, url: 'https://www.ncleg.gov/Members/MemberList/S/0' },
-  ];
-
-  const NC_HOUSE_DURHAM = [
-    { name: 'Vernetta Alston', district: 29, url: 'https://www.ncleg.gov/Members/MemberList/H/0' },
-    { name: 'Marcia Morey',    district: 30, url: 'https://www.ncleg.gov/Members/MemberList/H/0' },
-    { name: 'Zack Hawkins',    district: 31, url: 'https://www.ncleg.gov/Members/MemberList/H/0' },
-    { name: 'B. Ray Jeffers',  district:  2, url: 'https://www.ncleg.gov/Members/MemberList/H/0' },
-  ];
-
-  /* Durham County Board of Commissioners — all 5 members are at-large (no districts) */
   const COMMISSIONERS = [
     { name: 'Dr. Mike Lee',      title: 'Chair',       url: 'https://www.dconc.gov/Board-of-Commissioners/Commissioners/Mike-Lee' },
     { name: 'Nida Allam',        title: 'Vice Chair',  url: 'https://www.dconc.gov/Board-of-Commissioners/Commissioners/Nida-Allam' },
@@ -482,14 +469,68 @@
     { name: 'North Regional',      address: '221 Milton Rd',         lat: 36.0817, lng: -78.9016, url: 'https://www.durhamcountylibrary.org/locations/north-regional-library/' },
   ];
 
-  /* ── Haversine distance (miles) ────────────────────────────────── */
+  /* ── GeoJSON data (loaded once) ──────────────────────────────── */
+  let _wardData = null, _senateData = null, _houseData = null;
+
+  async function loadGeoData() {
+    if (_wardData) return;
+    const [w, s, h] = await Promise.all([
+      fetch('data/council-wards.json').then(r => r.json()),
+      fetch('data/nc-senate.json').then(r => r.json()),
+      fetch('data/nc-house.json').then(r => r.json()),
+    ]);
+    _wardData   = w;
+    _senateData = s;
+    _houseData  = h;
+  }
+
+  /* ── Point-in-polygon (ray casting) ─────────────────────────── */
+  function pointInRing(lat, lng, ring) {
+    let inside = false;
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const [xi, yi] = ring[i];
+      const [xj, yj] = ring[j];
+      if (((yi > lat) !== (yj > lat)) &&
+          (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi)) {
+        inside = !inside;
+      }
+    }
+    return inside;
+  }
+
+  function pointInGeom(lat, lng, geom) {
+    if (geom.type === 'Polygon') return pointInRing(lat, lng, geom.coordinates[0]);
+    if (geom.type === 'MultiPolygon') return geom.coordinates.some(p => pointInRing(lat, lng, p[0]));
+    return false;
+  }
+
+  function findProps(fc, lat, lng) {
+    for (const f of fc.features) {
+      if (pointInGeom(lat, lng, f.geometry)) return f.properties;
+    }
+    return null;
+  }
+
+  /* ── Precinct + polling place from ArcGIS Online ─────────────── */
+  async function fetchPrecinct(lat, lng) {
+    const url = `https://services2.arcgis.com/G5vR3cOjh6g2Ed8E/ArcGIS/rest/services/Electoral/FeatureServer/2/query`
+      + `?geometry=${lng},${lat}&geometryType=esriGeometryPoint&spatialRel=esriSpatialRelIntersects`
+      + `&outFields=PRECINCT,POLLSITE&f=json`;
+    const res  = await fetch(url, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const attrs = data.features?.[0]?.attributes;
+    if (!attrs) return null;
+    return { precinct: attrs.PRECINCT, pollSite: attrs.POLLSITE };
+  }
+
+  /* ── Haversine distance (miles) ─────────────────────────────── */
   function distanceMiles(lat1, lng1, lat2, lng2) {
-    const R = 3958.8; // Earth radius in miles
+    const R = 3958.8;
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLng = (lng2 - lng1) * Math.PI / 180;
-    const a = Math.sin(dLat/2) * Math.sin(dLat/2)
-            + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180)
-            * Math.sin(dLng/2) * Math.sin(dLng/2);
+    const a = Math.sin(dLat/2)**2
+            + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLng/2)**2;
     return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
   }
 
@@ -504,9 +545,7 @@
 
   /* ── HTML escape ─────────────────────────────────────────────── */
   function esc(s) {
-    return String(s)
-      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
   /* ── UI helpers ─────────────────────────────────────────────── */
@@ -514,7 +553,7 @@
     const btn     = document.getElementById('lookupBtn');
     const btnText = document.getElementById('btnText');
     const spinner = document.getElementById('btnSpinner');
-    btn.disabled      = loading;
+    btn.disabled        = loading;
     btnText.textContent = loading ? 'Looking up...' : 'Look Up My Address';
     spinner.style.display = loading ? 'inline-block' : 'none';
   }
@@ -543,23 +582,12 @@
     const data = await res.json();
     if (!data.length) throw new Error('Address not found. Try adding "Durham, NC" to your address, or check the spelling.');
     const addr = data[0].address || {};
-    // Consider in-city if Nominatim tags it as Durham city (not just county)
     const inDurhamCity = addr.city === 'Durham' || addr.town === 'Durham';
     return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon), display: data[0].display_name, inDurhamCity };
   }
 
-  /* ── GIS query helper ───────────────────────────────────────── */
-  async function queryGIS(layerId, lat, lng) {
-    const base = 'https://gisweb.durhamnc.gov/arcgis/rest/services/PublicServices/COD_Public/MapServer';
-    const url  = `${base}/${layerId}/query?geometry=${lng},${lat}&geometryType=esriGeometryPoint&spatialRel=esriSpatialRelIntersects&outFields=*&f=json`;
-    const res  = await fetch(url, { signal: AbortSignal.timeout(8000) });
-    if (!res.ok) throw new Error(`GIS service error (layer ${layerId}).`);
-    return res.json();
-  }
-
   /* ── Build result cards ─────────────────────────────────────── */
   function buildCommissionerCard() {
-    // All 5 commissioners are at-large — they represent every Durham County resident equally
     const rows = COMMISSIONERS.map(c =>
       `<a href="${esc(c.url)}" target="_blank" rel="noopener" style="display:block;padding:.25rem 0;color:var(--navy,#262E4F);font-size:.85rem;font-weight:600;text-decoration:none;">${esc(c.name)}<span style="font-weight:400;color:#666;"> — ${esc(c.title)}</span></a>`
     ).join('');
@@ -576,7 +604,7 @@
       </div>`;
   }
 
-  function buildCityCouncilCard(gisData, inDurhamCity) {
+  function buildCityCouncilCard(inDurhamCity, wardNum) {
     if (inDurhamCity === false) {
       return `
         <div class="result-card result-card--city">
@@ -594,10 +622,18 @@
     const memberRow = (m, label) =>
       `<a href="${esc(m.url)}" target="_blank" rel="noopener" style="display:block;padding:.2rem 0;color:var(--navy,#262E4F);font-size:.82rem;font-weight:600;text-decoration:none;">${esc(m.name)}<span style="font-weight:400;color:#666;"> — ${esc(label)}</span></a>`;
 
+    const wardMember = wardNum && cc.wards[wardNum];
+    let wardHighlight = '';
+    if (wardMember) {
+      wardHighlight = `<div style="background:var(--cream,#FAF6EE);border:1.5px solid var(--border,#e5e0d8);border-radius:8px;padding:.6rem .85rem;margin:.4rem 0 .6rem;">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--teal,#207C91);margin-bottom:.2rem;">Your Ward ${wardNum} Representative</div>
+        <a href="${esc(wardMember.url)}" target="_blank" rel="noopener" style="font-size:1rem;font-weight:700;color:var(--navy,#262E4F);text-decoration:none;">${esc(wardMember.name)}</a>
+      </div>`;
+    }
+
     const rows = [
       memberRow(cc.mayor, 'Mayor'),
       ...cc.atLarge.map(m => memberRow(m, m.title)),
-      ...cc.wards.map(m => memberRow(m, `Ward ${m.ward}`)),
     ].join('');
 
     return `
@@ -605,52 +641,59 @@
         <div class="result-card-icon">🏙️</div>
         <div class="result-card-category">City Council</div>
         <p class="result-card-title">Durham City Council</p>
-        <p class="result-card-detail" style="margin-bottom:.25rem;">Your address is inside Durham city limits. Use the ward map to find your specific ward representative.</p>
-        <div style="margin:.25rem 0;">${rows}</div>
+        ${wardHighlight}
+        <div style="margin:.1rem 0 .1rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#888;">Mayor &amp; At-Large Members</div>
+        <div style="margin-bottom:.4rem;">${rows}</div>
         <div class="result-card-links">
           <a href="https://www.durhamnc.gov/1245/City-Council" target="_blank" rel="noopener" class="result-card-link">City Council</a>
-          <a href="https://www.durhamnc.gov/1396/City-Council-Members" target="_blank" rel="noopener" class="result-card-link result-card-link--secondary">Find My Ward</a>
         </div>
       </div>`;
   }
 
-  function buildStateLegislatorsCard() {
-    const senateRows = NC_SENATE_DURHAM.map(m =>
-      `<span style="display:block;padding:.15rem 0;font-size:.82rem;"><strong style="color:var(--navy,#262E4F);">${esc(m.name)}</strong><span style="color:#666;font-weight:400;"> — Senate District ${m.district}</span></span>`
-    ).join('');
-    const houseRows = NC_HOUSE_DURHAM.map(m =>
-      `<span style="display:block;padding:.15rem 0;font-size:.82rem;"><strong style="color:var(--navy,#262E4F);">${esc(m.name)}</strong><span style="color:#666;font-weight:400;"> — House District ${m.district}</span></span>`
-    ).join('');
+  function buildStateLegislatorsCard(senateProps, houseProps) {
+    const senRow = senateProps
+      ? `<a href="${esc(senateProps.url)}" target="_blank" rel="noopener" style="display:block;padding:.15rem 0;font-size:.85rem;font-weight:700;color:var(--navy,#262E4F);text-decoration:none;">${esc(senateProps.name)}<span style="font-weight:400;color:#666;font-size:.8rem;"> — Senate District ${senateProps.district}</span></a>`
+      : `<span style="font-size:.82rem;color:#888;">District not detected — <a href="https://www.ncleg.gov/FindYourLegislators" target="_blank" rel="noopener" style="color:var(--teal);">look up here</a></span>`;
+
+    const houseRow = houseProps
+      ? `<a href="${esc(houseProps.url)}" target="_blank" rel="noopener" style="display:block;padding:.15rem 0;font-size:.85rem;font-weight:700;color:var(--navy,#262E4F);text-decoration:none;">${esc(houseProps.name)}<span style="font-weight:400;color:#666;font-size:.8rem;"> — House District ${houseProps.district}</span></a>`
+      : `<span style="font-size:.82rem;color:#888;">District not detected — <a href="https://www.ncleg.gov/FindYourLegislators" target="_blank" rel="noopener" style="color:var(--teal);">look up here</a></span>`;
 
     return `
       <div class="result-card result-card--state">
         <div class="result-card-icon">🏫</div>
         <div class="result-card-category">NC General Assembly</div>
         <p class="result-card-title">NC House &amp; Senate</p>
-        <p class="result-card-detail" style="margin-bottom:.3rem;">Durham County is split across several districts. Use the NCLEG finder to confirm which district your address falls in.</p>
-        <div style="margin:.25rem 0 .1rem;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#888;">NC Senate</div>
-        <div style="margin-bottom:.4rem;">${senateRows}</div>
-        <div style="margin:.25rem 0 .1rem;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#888;">NC House</div>
-        <div style="margin-bottom:.5rem;">${houseRows}</div>
+        <div style="margin:.3rem 0 .1rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#888;">NC Senate</div>
+        <div style="margin-bottom:.5rem;">${senRow}</div>
+        <div style="margin:.1rem 0 .1rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#888;">NC House</div>
+        <div style="margin-bottom:.5rem;">${houseRow}</div>
         <div class="result-card-links">
-          <a href="https://www.ncleg.gov/FindYourLegislators" target="_blank" rel="noopener" class="result-card-link">Find My District</a>
+          <a href="https://www.ncleg.gov/FindYourLegislators" target="_blank" rel="noopener" class="result-card-link">NCLEG Find My Legislators</a>
         </div>
       </div>`;
   }
 
-  function buildVotingCard(address) {
-    // NC SBE polling place lookup — user re-enters address there (no URL param support)
-    const ppUrl  = `https://vt.ncsbe.gov/PPLkup/`;
-    const regUrl = `https://vt.ncsbe.gov/RegLkup/`;
+  function buildVotingCard(precinctInfo) {
+    let pollingDetail = '';
+    if (precinctInfo && precinctInfo.pollSite) {
+      const name = precinctInfo.pollSite.replace(/^#\d+\s+/, '');
+      pollingDetail = `
+        <div style="background:var(--cream,#FAF6EE);border:1.5px solid var(--border,#e5e0d8);border-radius:8px;padding:.6rem .85rem;margin:.4rem 0 .5rem;">
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--teal,#207C91);margin-bottom:.2rem;">Your Polling Place · Precinct ${esc(precinctInfo.precinct)}</div>
+          <div style="font-size:.9rem;font-weight:700;color:var(--navy,#262E4F);">${esc(name)}</div>
+        </div>`;
+    }
     return `
       <div class="result-card result-card--voting">
         <div class="result-card-icon">🗳️</div>
         <div class="result-card-category">Voting &amp; Elections</div>
-        <p class="result-card-title">Find Your Polling Place</p>
-        <p class="result-card-detail">Look up your assigned polling place, early voting sites, and voter registration status on the NC State Board of Elections. Enter your name or address on their site to see your exact polling location.</p>
+        <p class="result-card-title">Your Polling Place</p>
+        ${pollingDetail}
+        <p class="result-card-detail" style="margin-top:.25rem;">Confirm your polling place, early voting sites, and registration status on the NC State Board of Elections.</p>
         <div class="result-card-links">
-          <a href="${esc(ppUrl)}" target="_blank" rel="noopener" class="result-card-link">Polling Place Lookup</a>
-          <a href="${esc(regUrl)}" target="_blank" rel="noopener" class="result-card-link result-card-link--secondary">Voter Registration</a>
+          <a href="https://vt.ncsbe.gov/PPLkup/" target="_blank" rel="noopener" class="result-card-link">Polling Place Lookup</a>
+          <a href="https://vt.ncsbe.gov/RegLkup/" target="_blank" rel="noopener" class="result-card-link result-card-link--secondary">Voter Registration</a>
           <a href="voting.html" class="result-card-link result-card-link--secondary">Durham Voting Info</a>
         </div>
       </div>`;
@@ -658,7 +701,6 @@
 
   function buildLibraryCard(lat, lng) {
     const { library, miles } = nearestLibrary(lat, lng);
-    const milesStr = miles.toFixed(1);
     return `
       <div class="result-card result-card--library">
         <div class="result-card-icon">📚</div>
@@ -666,7 +708,7 @@
         <p class="result-card-title">${esc(library.name)}</p>
         <p class="result-card-detail">
           <strong>${esc(library.address)}</strong><br>
-          About ${esc(milesStr)} miles from your address.<br>
+          About ${miles.toFixed(1)} miles from your address.<br>
           Free library cards for all Durham County residents!
         </p>
         <div class="result-card-links">
@@ -699,45 +741,45 @@
     if (!addressRaw) return;
 
     setLoading(true);
-
-    // Hide old results
     document.getElementById('resultsSection').classList.remove('visible');
 
     try {
-      // 1. Geocode (includes address details for city-limits detection)
-      const { lat, lng, display, inDurhamCity } = await geocode(addressRaw);
+      // Run geocode + geo data load + precinct query in parallel
+      const [{ lat, lng, display, inDurhamCity }] = await Promise.all([
+        geocode(addressRaw),
+        loadGeoData(),
+      ]);
 
-      // 2. Query GIS for city council district only (commissioner is at-large, no GIS needed)
-      const cityGISResult = await Promise.allSettled([ queryGIS(12, lat, lng) ]);
-      const cityData = cityGISResult[0].status === 'fulfilled' ? cityGISResult[0].value : null;
+      // Precinct query runs after we have lat/lng
+      const precinctInfo = await fetchPrecinct(lat, lng).catch(() => null);
 
-      // 3. Build cards
+      // Point-in-polygon lookups against local GeoJSON
+      const wardProps   = _wardData   ? findProps(_wardData,   lat, lng) : null;
+      const senateProps = _senateData ? findProps(_senateData, lat, lng) : null;
+      const houseProps  = _houseData  ? findProps(_houseData,  lat, lng) : null;
+      const wardNum     = wardProps?.ward ?? null;
+
       const cards = [
         buildCommissionerCard(),
-        buildCityCouncilCard(cityData, inDurhamCity),
-        buildStateLegislatorsCard(),
-        buildVotingCard(addressRaw),
+        buildCityCouncilCard(inDurhamCity, wardNum),
+        buildStateLegislatorsCard(senateProps, houseProps),
+        buildVotingCard(precinctInfo),
         buildLibraryCard(lat, lng),
         buildParksCard(),
       ].join('\n');
 
       document.getElementById('resultsGrid').innerHTML = cards;
 
-      // 4. Show address bar
       document.getElementById('resultsAddressText').textContent = display
         ? display.split(',').slice(0, 3).join(',')
         : addressRaw;
       document.getElementById('resultsCoords').textContent = `${lat.toFixed(4)}, ${lng.toFixed(4)}`;
 
-      // 5. Reveal results
       const section = document.getElementById('resultsSection');
       section.classList.add('visible');
-
-      // 6. Scroll into view smoothly
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     } catch (err) {
-      // Surface the error in the form area
       const msg = err.name === 'TimeoutError'
         ? 'The lookup timed out. Please check your connection and try again.'
         : (err.message || 'Something went wrong. Please try again.');
