@@ -159,6 +159,23 @@
       .cal-grid-cell::after { content: attr(data-count); font-size: .55rem; color: #6b7280; display: block; margin-top: 2px; }
       .cal-grid-cell[data-count="0"]::after { display: none; }
     }
+
+    /* ── Speak helper step pills ── */
+    .speak-step-pill {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .75rem;
+      font-weight: 700;
+      padding: .25rem .7rem;
+      border-radius: 20px;
+      background: #e5e0d8;
+      color: #888;
+      transition: background .2s, color .2s;
+      white-space: nowrap;
+    }
+    .speak-step-pill--active {
+      background: var(--navy, #262E4F);
+      color: #fff;
+    }
   </style>
 </head>
 <body data-page="meetings">
@@ -216,28 +233,61 @@
         </div>
         <span id="speakChevron" style="font-size:1.25rem;color:var(--navy);flex-shrink:0;transition:transform .2s;">▾</span>
       </button>
-      <div id="speakBody" style="display:none;margin-top:1.25rem;">
-        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.25rem;" id="speakTabs">
-          <button class="speak-tab" data-body="bocc" onclick="selectSpeakBody('bocc',this)" style="font-family:'Libre Franklin',sans-serif;font-size:.82rem;font-weight:700;padding:.4rem .9rem;border-radius:20px;border:1.5px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;">BOCC</button>
-          <button class="speak-tab" data-body="city-council" onclick="selectSpeakBody('city-council',this)" style="font-family:'Libre Franklin',sans-serif;font-size:.82rem;font-weight:700;padding:.4rem .9rem;border-radius:20px;border:1.5px solid var(--border,#e5e0d8);background:#fff;color:var(--navy);cursor:pointer;">City Council</button>
-          <button class="speak-tab" data-body="dps" onclick="selectSpeakBody('dps',this)" style="font-family:'Libre Franklin',sans-serif;font-size:.82rem;font-weight:700;padding:.4rem .9rem;border-radius:20px;border:1.5px solid var(--border,#e5e0d8);background:#fff;color:var(--navy);cursor:pointer;">DPS Board</button>
+      <div id="speakBody" style="display:none;margin-top:1.5rem;">
+
+        <!-- Step indicators -->
+        <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-bottom:1.25rem;">
+          <span id="speakStep1Pill" class="speak-step-pill speak-step-pill--active">1 Pick a meeting</span>
+          <span style="color:#bbb;font-size:.8rem;">›</span>
+          <span id="speakStep2Pill" class="speak-step-pill">2 Know the rules</span>
+          <span style="color:#bbb;font-size:.8rem;">›</span>
+          <span id="speakStep3Pill" class="speak-step-pill">3 Draft your comment</span>
+          <span style="color:#bbb;font-size:.8rem;">›</span>
+          <span id="speakStep4Pill" class="speak-step-pill">4 Show up!</span>
         </div>
-        <div id="speakRulesContainer"><p style="color:#888;font-size:.9rem;">Loading…</p></div>
-        <!-- Draft helper -->
-        <div style="margin-top:1.25rem;background:#fff;border:1.5px solid var(--border,#e5e0d8);border-radius:10px;padding:1.25rem;">
-          <h3 style="font-family:'Libre Franklin',sans-serif;font-size:.95rem;font-weight:700;color:var(--navy);margin:0 0 .4rem;">Step 3: Draft your comment</h3>
-          <p style="font-size:.82rem;color:#666;margin:0 0 .7rem;">Answer these three questions, then copy the result:</p>
+
+        <!-- Step 1: Pick a meeting -->
+        <div id="speakStep1" style="background:#fff;border:1.5px solid var(--border,#e5e0d8);border-radius:10px;padding:1.1rem 1.25rem;margin-bottom:.85rem;">
+          <div style="font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:.6rem;"><i data-lucide="landmark" aria-hidden="true" class="lucide-wrap"></i> Step 1: Pick a meeting</div>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;" id="speakTabs">
+            <button class="speak-tab" data-body="bocc" onclick="selectSpeakBody('bocc',this)" style="font-family:'Libre Franklin',sans-serif;font-size:.82rem;font-weight:700;padding:.4rem .9rem;border-radius:20px;border:1.5px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;">BOCC</button>
+            <button class="speak-tab" data-body="city-council" onclick="selectSpeakBody('city-council',this)" style="font-family:'Libre Franklin',sans-serif;font-size:.82rem;font-weight:700;padding:.4rem .9rem;border-radius:20px;border:1.5px solid var(--border,#e5e0d8);background:#fff;color:var(--navy);cursor:pointer;">City Council</button>
+            <button class="speak-tab" data-body="dps" onclick="selectSpeakBody('dps',this)" style="font-family:'Libre Franklin',sans-serif;font-size:.82rem;font-weight:700;padding:.4rem .9rem;border-radius:20px;border:1.5px solid var(--border,#e5e0d8);background:#fff;color:var(--navy);cursor:pointer;">DPS Board</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Rules -->
+        <div id="speakStep2" style="background:#fff;border:1.5px solid var(--border,#e5e0d8);border-radius:10px;padding:1.1rem 1.25rem;margin-bottom:.85rem;">
+          <div style="font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:.75rem;"><i data-lucide="clipboard-list" aria-hidden="true" class="lucide-wrap"></i> Step 2: Know the rules</div>
+          <div id="speakRulesContainer"><p style="color:#888;font-size:.9rem;">Loading…</p></div>
+        </div>
+
+        <!-- Step 3: Draft -->
+        <div id="speakStep3" style="background:#fff;border:1.5px solid var(--border,#e5e0d8);border-radius:10px;padding:1.1rem 1.25rem;margin-bottom:.85rem;">
+          <div style="font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:.5rem;"><i data-lucide="pencil" aria-hidden="true" class="lucide-wrap"></i> Step 3: Draft your comment</div>
+          <p style="font-size:.82rem;color:#666;margin:0 0 .7rem;">Answer these three questions. Your draft will build below automatically.</p>
           <div style="display:flex;flex-direction:column;gap:.55rem;">
-            <textarea id="draftQ1" placeholder="What issue do you care about?" rows="2" oninput="buildDraftComment()" style="width:100%;padding:.55rem .75rem;font-size:.88rem;font-family:'Libre Franklin',sans-serif;border:1.5px solid var(--border,#e5e0d8);border-radius:6px;resize:vertical;box-sizing:border-box;"></textarea>
-            <textarea id="draftQ2" placeholder="How does it affect you or someone you know?" rows="2" oninput="buildDraftComment()" style="width:100%;padding:.55rem .75rem;font-size:.88rem;font-family:'Libre Franklin',sans-serif;border:1.5px solid var(--border,#e5e0d8);border-radius:6px;resize:vertical;box-sizing:border-box;"></textarea>
-            <textarea id="draftQ3" placeholder="What do you want the board to do?" rows="2" oninput="buildDraftComment()" style="width:100%;padding:.55rem .75rem;font-size:.88rem;font-family:'Libre Franklin',sans-serif;border:1.5px solid var(--border,#e5e0d8);border-radius:6px;resize:vertical;box-sizing:border-box;"></textarea>
+            <textarea id="draftQ1" placeholder="What issue do you care about? (e.g. the proposed budget cut to after-school programs)" rows="2" oninput="buildDraftComment()" style="width:100%;padding:.55rem .75rem;font-size:.88rem;font-family:'Libre Franklin',sans-serif;border:1.5px solid var(--border,#e5e0d8);border-radius:6px;resize:vertical;box-sizing:border-box;"></textarea>
+            <textarea id="draftQ2" placeholder="How does it affect you or your neighbors? (e.g. My two kids attend Easley and would lose their only safe afternoon option)" rows="2" oninput="buildDraftComment()" style="width:100%;padding:.55rem .75rem;font-size:.88rem;font-family:'Libre Franklin',sans-serif;border:1.5px solid var(--border,#e5e0d8);border-radius:6px;resize:vertical;box-sizing:border-box;"></textarea>
+            <textarea id="draftQ3" placeholder="What do you want the board to do? (e.g. restore full funding to after-school programs in the FY2027 budget)" rows="2" oninput="buildDraftComment()" style="width:100%;padding:.55rem .75rem;font-size:.88rem;font-family:'Libre Franklin',sans-serif;border:1.5px solid var(--border,#e5e0d8);border-radius:6px;resize:vertical;box-sizing:border-box;"></textarea>
           </div>
-          <div id="draftOutput" style="display:none;margin-top:.75rem;">
-            <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#888;margin-bottom:.3rem;">Your comment:</div>
+          <div id="draftOutput" style="display:none;margin-top:.85rem;">
+            <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#888;margin-bottom:.3rem;">Your comment draft:</div>
             <div id="draftText" style="background:var(--cream,#FAF6EE);border:1.5px solid var(--border,#e5e0d8);border-radius:6px;padding:.75rem;font-size:.88rem;line-height:1.6;white-space:pre-wrap;"></div>
-            <button onclick="navigator.clipboard.writeText(document.getElementById('draftText').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy to clipboard'},2000)})" style="margin-top:.5rem;background:var(--teal);color:#fff;font-family:'Libre Franklin',sans-serif;font-size:.82rem;font-weight:700;padding:.4rem .9rem;border:none;border-radius:6px;cursor:pointer;">Copy to clipboard</button>
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem;">
+              <button onclick="navigator.clipboard.writeText(document.getElementById('draftText').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy to clipboard'},2000)})" style="background:var(--teal);color:#fff;font-family:'Libre Franklin',sans-serif;font-size:.82rem;font-weight:700;padding:.4rem .9rem;border:none;border-radius:6px;cursor:pointer;"><i data-lucide="copy" aria-hidden="true" class="lucide-wrap"></i> Copy to clipboard</button>
+              <button id="emailClerkDraftBtn" onclick="emailClerkWithDraft()" style="background:var(--navy);color:#fff;font-family:'Libre Franklin',sans-serif;font-size:.82rem;font-weight:700;padding:.4rem .9rem;border:none;border-radius:6px;cursor:pointer;display:none;"><i data-lucide="mail" aria-hidden="true" class="lucide-wrap"></i> Email Clerk with draft</button>
+            </div>
           </div>
         </div>
+
+        <!-- Step 4: Show up -->
+        <div id="speakStep4" style="background:#fff;border:1.5px solid var(--border,#e5e0d8);border-radius:10px;padding:1.1rem 1.25rem;">
+          <div style="font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:.5rem;"><i data-lucide="mic" aria-hidden="true" class="lucide-wrap"></i> Step 4: Show up!</div>
+          <p style="font-size:.85rem;color:#555;line-height:1.6;margin:0 0 .65rem;">Arrive 15 minutes early. Sign up to speak when you arrive (look for the sign-up sheet or staff near the entrance). You'll be called by name. You have 3 minutes. State your name and neighborhood at the start.</p>
+          <div id="speakStep4Actions" style="display:flex;flex-wrap:wrap;gap:.5rem;"></div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -311,34 +361,72 @@
       renderSpeakRules(id);
     }
 
+    function updateStepPills(hasBody) {
+      const pills = ['speakStep1Pill','speakStep2Pill','speakStep3Pill','speakStep4Pill'];
+      pills.forEach((id, i) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.style.background = i === 0 ? 'var(--navy)' : (hasBody ? 'var(--teal)' : '#e5e0d8');
+        el.style.color = (i === 0 || hasBody) ? '#fff' : '#888';
+      });
+    }
+
     function renderSpeakRules(id) {
       const el = document.getElementById('speakRulesContainer');
       if (!el || !_speakData) return;
       const b = _speakData.bodies[id];
       if (!b) return;
+
+      // Update step 4 actions
       const calData = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nSUMMARY:${b.name}: Public Comment\nDESCRIPTION:Rules: ${b.rulesUrl}\nLOCATION:${b.location}\nEND:VEVENT\nEND:VCALENDAR`;
-      const calUrl = 'data:text/calendar;charset=utf8,' + encodeURIComponent(calData);
+      const calUrl  = 'data:text/calendar;charset=utf8,' + encodeURIComponent(calData);
+      const actionsEl = document.getElementById('speakStep4Actions');
+      if (actionsEl) {
+        actionsEl.innerHTML = `
+          <a href="${b.rulesUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;background:#fff;color:var(--navy);border:1.5px solid var(--border);font-family:'Libre Franklin',sans-serif;font-size:.8rem;font-weight:700;padding:.42rem .9rem;border-radius:6px;text-decoration:none;"><i data-lucide="clipboard-list" aria-hidden="true" class="lucide-wrap"></i> Official rules</a>
+          <a href="${calUrl}" download="meeting.ics" style="display:inline-flex;align-items:center;gap:.35rem;background:var(--teal);color:#fff;font-family:'Libre Franklin',sans-serif;font-size:.8rem;font-weight:700;padding:.42rem .9rem;border-radius:6px;text-decoration:none;"><i data-lucide="calendar" aria-hidden="true" class="lucide-wrap"></i> Add to calendar</a>`;
+        if (window._lcIcons) window._lcIcons(actionsEl);
+      }
+
       el.innerHTML = `
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.65rem;margin-bottom:.9rem;">
-          <div style="background:#fff;border:1.5px solid var(--border);border-left:4px solid var(--teal);border-radius:8px;padding:.75rem .9rem;">
-            <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:.2rem;">Step 1: Time limit</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.65rem;margin-bottom:.75rem;">
+          <div style="background:#f0fdfa;border:1.5px solid #99f6e4;border-left:4px solid var(--teal);border-radius:8px;padding:.65rem .85rem;">
+            <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:.2rem;">Time limit</div>
             <div style="font-size:.95rem;font-weight:700;color:var(--navy);">${b.timeLimit}</div>
           </div>
-          <div style="background:#fff;border:1.5px solid var(--border);border-left:4px solid var(--orange);border-radius:8px;padding:.75rem .9rem;">
-            <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--orange);margin-bottom:.2rem;">Step 2: Sign up by</div>
+          <div style="background:#fff7ed;border:1.5px solid #fdba74;border-left:4px solid var(--orange);border-radius:8px;padding:.65rem .85rem;">
+            <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--orange);margin-bottom:.2rem;">Sign up by</div>
             <div style="font-size:.88rem;font-weight:700;color:var(--navy);">${b.signupDeadline}</div>
           </div>
-          <div style="background:#fff;border:1.5px solid var(--border);border-left:4px solid var(--navy);border-radius:8px;padding:.75rem .9rem;">
+          <div style="background:#f1f5f9;border:1.5px solid var(--border);border-left:4px solid var(--navy);border-radius:8px;padding:.65rem .85rem;">
             <div style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--navy);margin-bottom:.2rem;">Location</div>
             <div style="font-size:.82rem;font-weight:600;color:var(--navy);">${b.location}</div>
           </div>
         </div>
-        <p style="font-size:.85rem;color:#555;line-height:1.6;margin-bottom:.85rem;">${b.notes}</p>
-        <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
-          <a href="mailto:${b.clerkEmail}?subject=Public%20Comment%20Request" style="display:inline-flex;align-items:center;gap:.35rem;background:var(--navy);color:#fff;font-family:'Libre Franklin',sans-serif;font-size:.8rem;font-weight:700;padding:.42rem .9rem;border-radius:6px;text-decoration:none;"><i data-lucide="mail" aria-hidden="true" class="lucide-wrap"></i> Email Clerk</a>
-          <a href="${calUrl}" download="meeting.ics" style="display:inline-flex;align-items:center;gap:.35rem;background:var(--teal);color:#fff;font-family:'Libre Franklin',sans-serif;font-size:.8rem;font-weight:700;padding:.42rem .9rem;border-radius:6px;text-decoration:none;"><i data-lucide="calendar" aria-hidden="true" class="lucide-wrap"></i> Add to calendar</a>
-          <a href="${b.rulesUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;background:#fff;color:var(--navy);border:1.5px solid var(--border);font-family:'Libre Franklin',sans-serif;font-size:.8rem;font-weight:700;padding:.42rem .9rem;border-radius:6px;text-decoration:none;"><i data-lucide="clipboard-list" aria-hidden="true" class="lucide-wrap"></i> Official rules</a>
-        </div>`;
+        <p style="font-size:.85rem;color:#555;line-height:1.6;margin:0;">${b.notes}</p>`;
+      updateStepPills(true);
+      if (window._lcIcons) window._lcIcons(el);
+
+      // Show the email clerk button now that a body is chosen
+      const emailBtn = document.getElementById('emailClerkDraftBtn');
+      if (emailBtn) {
+        emailBtn.style.display = 'inline-flex';
+        emailBtn.dataset.clerkEmail = b.clerkEmail;
+        emailBtn.dataset.bodyName   = b.name;
+      }
+    }
+
+    function emailClerkWithDraft() {
+      const btn  = document.getElementById('emailClerkDraftBtn');
+      const draft = document.getElementById('draftText')?.textContent?.trim() || '';
+      const email = btn?.dataset.clerkEmail || '';
+      const bodyName = btn?.dataset.bodyName || 'the board';
+      if (!email) return;
+      const subject = encodeURIComponent(`Public Comment – ${bodyName}`);
+      const body    = encodeURIComponent(
+        `Good ${new Date().getHours() < 12 ? 'morning' : 'afternoon'},\n\nI would like to submit the following public comment for ${bodyName}:\n\n${draft}\n\nThank you.`
+      );
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
     }
 
     function buildDraftComment() {
@@ -348,10 +436,11 @@
       const out = document.getElementById('draftOutput');
       const txt = document.getElementById('draftText');
       if (!q1 && !q2 && !q3) { out.style.display = 'none'; return; }
-      let c = '';
+      let c = 'Good evening.\n\n';
       if (q1) c += q1 + '\n\n';
       if (q2) c += q2 + '\n\n';
-      if (q3) c += 'I\'m asking the board to ' + q3.replace(/^(please |i want (you|them) to |i\'d like (you|them) to )/i,'') + '.';
+      if (q3) c += 'I am asking the board to ' + q3.replace(/^(please |i want (you|them) to |i\'d like (you|them) to )/i,'') + '.';
+      c += '\n\nThank you.';
       txt.textContent = c.trim();
       out.style.display = 'block';
     }
