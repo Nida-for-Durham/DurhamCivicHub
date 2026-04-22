@@ -53,8 +53,8 @@
           "status": "minutes",
           "links": [
             {
-              "label": "Minutes",
-              "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
+              "label": "Agenda Packet",
+              "url": "https://durhamcounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=1534",
               "primary": true
             },
             {
@@ -69,8 +69,8 @@
           "status": "minutes",
           "links": [
             {
-              "label": "Minutes",
-              "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
+              "label": "Agenda Packet",
+              "url": "https://durhamcounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=1533",
               "primary": true
             }
           ]
@@ -81,8 +81,8 @@
           "status": "minutes",
           "links": [
             {
-              "label": "Minutes",
-              "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
+              "label": "Agenda Packet",
+              "url": "https://durhamcounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=1531",
               "primary": true
             },
             {
@@ -97,8 +97,8 @@
           "status": "minutes",
           "links": [
             {
-              "label": "Minutes",
-              "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
+              "label": "Agenda Packet",
+              "url": "https://durhamcounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=1530",
               "primary": true
             },
             {
@@ -144,8 +144,8 @@
           "status": "minutes",
           "links": [
             {
-              "label": "Minutes",
-              "url": "https://www.durhamnc.gov/1338/City-Council",
+              "label": "Agenda Packet",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04202026-3430?packet=true",
               "primary": true
             },
             {
@@ -160,8 +160,8 @@
           "status": "minutes",
           "links": [
             {
-              "label": "Minutes",
-              "url": "https://www.durhamnc.gov/1338/City-Council",
+              "label": "Agenda Packet",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04062026-3417?packet=true",
               "primary": true
             },
             {
@@ -239,7 +239,7 @@
           "links": [
             {
               "label": "Agenda",
-              "url": "https://www.durhamnc.gov/579/Planning-Commission",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04142026-3416",
               "primary": true
             }
           ]
@@ -250,8 +250,8 @@
           "status": "minutes",
           "links": [
             {
-              "label": "Minutes",
-              "url": "https://www.durhamnc.gov/579/Planning-Commission",
+              "label": "Agenda Packet",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_03102026-3388",
               "primary": true
             }
           ]
