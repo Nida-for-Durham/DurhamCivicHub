@@ -159,6 +159,7 @@
       padding: .25rem .65rem;
       border-radius: 12px;
       line-height: 1;
+      border: none;
     }
     .cip-entity-badge--city   { background: #e0f3f6; color: var(--teal, #207C91); }
     .cip-entity-badge--county { background: #e8eaf3; color: var(--navy, #262E4F); }
@@ -171,7 +172,13 @@
       background: #f3f4f6;
       padding: .2rem .55rem;
       border-radius: 8px;
+      border: none;
     }
+    .cip-filter-chip {
+      cursor: pointer;
+      transition: opacity .15s, transform .1s;
+    }
+    .cip-filter-chip:hover { opacity: .75; transform: scale(1.04); }
     .cip-card-title {
       font-family: 'Libre Franklin', sans-serif;
       font-size: 1.05rem;
@@ -893,8 +900,8 @@
           : filtered.map(p => `
               <div class="cip-card" id="project-${p.id}">
                 <div class="cip-card-header">
-                  <span class="cip-entity-badge cip-entity-badge--${p.entity}">${p.entityLabel}</span>
-                  <span class="cip-category-tag">${p.category}</span>
+                  <button class="cip-entity-badge cip-entity-badge--${p.entity} cip-filter-chip" data-filter-entity="${p.entity}" title="Filter by ${p.entityLabel}">${p.entityLabel}</button>
+                  <button class="cip-category-tag cip-filter-chip" data-filter-cat="${p.category}" title="Filter by ${p.category}">${p.category}</button>
                 </div>
                 <h2 class="cip-card-title">${p.title}</h2>
                 <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;">
@@ -1064,6 +1071,22 @@
       }
 
       document.addEventListener('DOMContentLoaded', function () {
+        // Delegated click handler for in-card filter chips
+        const cipGrid = document.getElementById('cipGrid');
+        if (cipGrid) {
+          cipGrid.addEventListener('click', function (e) {
+            const chip = e.target.closest('[data-filter-entity],[data-filter-cat]');
+            if (!chip) return;
+            if (chip.dataset.filterEntity) {
+              const btn = document.querySelector(`[data-entity="${chip.dataset.filterEntity}"]`);
+              setEntityFilter(chip.dataset.filterEntity, btn);
+            } else if (chip.dataset.filterCat) {
+              const btn = document.querySelector(`[data-cat="${chip.dataset.filterCat}"]`);
+              setCategoryFilter(chip.dataset.filterCat, btn);
+            }
+          });
+        }
+
         fetch('cip-data.json')
           .then(r => r.json())
           .then(data => {
