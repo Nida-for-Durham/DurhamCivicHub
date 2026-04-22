@@ -3,7 +3,8 @@
   "note": "All figures from official adopted budgets and bond referendum documents.",
   "summary": {
     "cityTotal": 537600000,
-    "countyTotal": 221800000,
+    "countyTotal": 160000000,
+    "dpsTotal": 61800000,
     "totalCIP": 759400000
   },
   "projects": [
@@ -138,18 +139,18 @@
     {
       "id": "dps-capital",
       "title": "Durham Public Schools Capital Improvements",
-      "entity": "county",
-      "entityLabel": "Durham County",
+      "entity": "dps",
+      "entityLabel": "Durham Public Schools",
       "category": "Education",
       "amount": 61800000,
-      "description": "Annual county appropriation for DPS capital improvements — school building repairs, HVAC replacements, roofing, and facility upgrades not covered by the 2022 school construction bond. Separate from the current expense allocation.",
+      "description": "Durham County's annual appropriation for DPS capital improvements — school building repairs, HVAC replacements, roofing, and facility upgrades. Durham County provides the funding; DPS manages the construction projects. Separate from the current expense allocation.",
       "status": "Ongoing",
       "year": "FY2025-26",
       "sourceUrl": "https://www.dconc.gov/Budget-and-Management-Services",
       "sourceLabel": "Durham County FY2025-26 Adopted Budget",
       "lat": 35.9808,
       "lng": -78.9230,
-      "locationNote": "Program-level estimate — projects occur throughout Durham County"
+      "locationNote": "Program-level estimate — projects occur throughout Durham County schools"
     }
   ]
 }
