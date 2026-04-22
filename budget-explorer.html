@@ -630,6 +630,124 @@
       .exp-receipt-row-name { width: 7.5rem; }
       .exp-receipt-input { width: 130px; }
     }
+
+    /* ─── NC County Comparison ──────────────────────────────────────────── */
+    .exp-compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 700px) { .exp-compare-grid { grid-template-columns: 1fr; } }
+
+    .exp-compare-card {
+      background: #fff;
+      border: 1.5px solid var(--border, #e5e0d8);
+      border-radius: 12px;
+      padding: 1.1rem 1.4rem 1.25rem;
+    }
+    .exp-compare-card-title {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #888;
+      margin-bottom: 1rem;
+    }
+    .exp-cmp-row {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      margin-bottom: .65rem;
+    }
+    .exp-cmp-row:last-child { margin-bottom: 0; }
+    .exp-cmp-name {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--exp-navy);
+      width: 8.5rem;
+      flex-shrink: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .exp-cmp-name.highlight { color: var(--exp-orange); font-weight: 800; }
+    .exp-cmp-bar-wrap {
+      flex: 1;
+      height: 9px;
+      background: #f1f5f9;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .exp-cmp-bar-fill {
+      height: 100%;
+      border-radius: 5px;
+      transition: width .4s ease;
+    }
+    .exp-cmp-val {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--exp-navy);
+      width: 4.5rem;
+      text-align: right;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .exp-cmp-val.highlight { color: var(--exp-orange); }
+    .exp-compare-note {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .82rem;
+      color: #aaa;
+      line-height: 1.5;
+      margin-top: .75rem;
+      font-style: italic;
+    }
+    .exp-compare-source {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .82rem;
+      color: #aaa;
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+
+    /* ─── Print button ──────────────────────────────────────────────────── */
+    .exp-print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .45rem .9rem;
+      border: 1.5px solid var(--border, #e5e0d8);
+      border-radius: 6px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: .82rem;
+      font-weight: 600;
+      color: #555;
+      background: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color .15s, color .15s;
+    }
+    .exp-print-btn:hover { border-color: var(--exp-navy); color: var(--exp-navy); }
+
+    /* ─── Print stylesheet ──────────────────────────────────────────────── */
+    @media print {
+      .site-header, .site-footer, .entity-tabs,
+      .exp-controls, .exp-print-btn,
+      .exp-area-chevron, .exp-receipt-input-row,
+      .exp-source-link { display: none !important; }
+
+      body { background: #fff; font-size: 11pt; }
+      .exp-hero { background: var(--exp-navy) !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .exp-main { padding: .5rem; }
+      .exp-area { break-inside: avoid; }
+      .exp-area-detail { display: block !important; }
+      .exp-areas { grid-template-columns: 1fr 1fr !important; }
+      .exp-stat { break-inside: avoid; }
+      .exp-receipt-result { display: block !important; }
+    }
   </style>
 </head>
 <body data-page="budget-explorer">
@@ -748,10 +866,10 @@
     activeYear = e.years[0];
     viewMode = 'sources';
     openAreaIdx = null;
-    // Update URL hash without triggering a navigation
     if (history.replaceState) history.replaceState(null, '', '#' + e.id);
     buildTabs();
     renderEntity();
+    if (window.lucide) lucide.createIcons();
   }
 
   // ── Render active entity ────────────────────────────────────────────────
@@ -877,12 +995,15 @@
       ? (viewMode === 'spending' ? 'Where the Money Goes' : 'Where the Money Comes From')
       : 'Where the Money Goes';
 
-    // ── Assemble ──
+    // ── Assemble ── (lucide re-init happens at end of renderEntity)
     main.innerHTML = `
       <div class="exp-controls">
         ${e.years.length > 1 ? `<select class="exp-year-select" onchange="switchYear(this.value)">${yearOpts}</select>` : `<span style="font-family:'Libre Franklin',sans-serif;font-size:.85rem;font-weight:600;color:#888;">${yr}</span>`}
         ${viewToggle}
         <a class="exp-source-link" href="${e.sourceUrl}" target="_blank" rel="noopener"><i data-lucide="file-text" aria-hidden="true" class="lucide-wrap"></i> ${e.sourceLabel} →</a>
+        <button class="exp-print-btn" onclick="printBudget()" title="Print or save as PDF">
+          <i data-lucide="printer" aria-hidden="true" class="lucide-wrap"></i> Print / Save PDF
+        </button>
       </div>
 
       <div class="exp-stats">
@@ -916,6 +1037,8 @@
 
       ${buildTaxReceipt(e, yr)}
 
+      ${e.id === 'county' ? buildCountyComparison() : ''}
+
       ${fundingHtml}
 
       <div class="exp-section-title">${spendingLabel}</div>
@@ -929,6 +1052,67 @@
         Funding source percentages for county and city are approximate estimates from the adopted budget summary.
       </p>
     `;
+  }
+
+  // ── NC County Comparison data ────────────────────────────────────────────
+  // Tax rates from each county's adopted FY2024-25 or FY2025-26 budget document.
+  // Per-capita figures: total all-funds budget / county population estimate.
+  const NC_COUNTIES = [
+    { name: 'Durham',       rate: 55.42, perCapita: 3053, pop: 340,  budget:  1038, highlight: true,  rateYear: 'FY2025-26', sourceUrl: 'https://www.dconc.gov/Budget-and-Management-Services' },
+    { name: 'Wake',         rate: 65.70, perCapita: 1750, pop: 1200, budget:  2100, highlight: false, rateYear: 'FY2025-26', sourceUrl: 'https://www.wake.gov/departments-agencies/budget-management-services' },
+    { name: 'Mecklenburg',  rate: 47.22, perCapita: 2182, pop: 1120, budget:  2400, highlight: false, rateYear: 'FY2024-25', sourceUrl: 'https://www.mecknc.gov/CountyManagersOffice/OMB/Pages/Budget.aspx' },
+    { name: 'Guilford',     rate: 73.05, perCapita: 1174, pop:  545, budget:   640, highlight: false, rateYear: 'FY2024-25', sourceUrl: 'https://www.guilfordcountync.gov/our-county/county-finances' },
+    { name: 'Forsyth',      rate: 74.29, perCapita: 1026, pop:  395, budget:   405, highlight: false, rateYear: 'FY2024-25', sourceUrl: 'https://www.forsyth.cc/Manager/budget.aspx' },
+    { name: 'Cumberland',   rate: 83.00, perCapita:  952, pop:  340, budget:   324, highlight: false, rateYear: 'FY2024-25', sourceUrl: 'https://www.co.cumberland.nc.us/government/departments-a-e/budget' },
+    { name: 'New Hanover',  rate: 52.50, perCapita: 1880, pop:  245, budget:   461, highlight: false, rateYear: 'FY2024-25', sourceUrl: 'https://www.nhcgov.com/finance/pages/budget.aspx' },
+    { name: 'Union',        rate: 62.23, perCapita:  972, pop:  270, budget:   263, highlight: false, rateYear: 'FY2024-25', sourceUrl: 'https://www.unioncountync.gov/departments/budget' },
+  ];
+
+  function buildCountyComparison() {
+    const sorted_rate = [...NC_COUNTIES].sort((a, b) => a.rate - b.rate);
+    const sorted_pc   = [...NC_COUNTIES].sort((a, b) => b.perCapita - a.perCapita);
+    const maxRate     = Math.max(...NC_COUNTIES.map(c => c.rate));
+    const maxPc       = Math.max(...NC_COUNTIES.map(c => c.perCapita));
+
+    const rateRows = sorted_rate.map(c => `
+      <div class="exp-cmp-row">
+        <span class="exp-cmp-name${c.highlight ? ' highlight' : ''}">${c.highlight ? '★ ' : ''}${c.name}</span>
+        <div class="exp-cmp-bar-wrap">
+          <div class="exp-cmp-bar-fill" style="width:${(c.rate/maxRate*100).toFixed(1)}%;background:${c.highlight ? '#E97221' : '#207C91'}"></div>
+        </div>
+        <span class="exp-cmp-val${c.highlight ? ' highlight' : ''}">${c.rate.toFixed(2)}¢</span>
+      </div>`).join('');
+
+    const pcRows = sorted_pc.map(c => `
+      <div class="exp-cmp-row">
+        <span class="exp-cmp-name${c.highlight ? ' highlight' : ''}">${c.highlight ? '★ ' : ''}${c.name}</span>
+        <div class="exp-cmp-bar-wrap">
+          <div class="exp-cmp-bar-fill" style="width:${(c.perCapita/maxPc*100).toFixed(1)}%;background:${c.highlight ? '#E97221' : '#6E9D97'}"></div>
+        </div>
+        <span class="exp-cmp-val${c.highlight ? ' highlight' : ''}">$${c.perCapita.toLocaleString()}</span>
+      </div>`).join('');
+
+    return `
+      <div class="exp-section-title">How Durham Compares to NC Counties</div>
+      <p style="font-family:'Libre Franklin',sans-serif;font-size:.82rem;color:#555;margin:-0.5rem 0 1rem;line-height:1.55;">Durham's 55.42¢ tax rate is below the median for large NC counties. But our per-neighbor spending is among the highest - because Durham County directly funds DPS operating costs that some counties handle differently.</p>
+      <div class="exp-compare-grid">
+        <div class="exp-compare-card">
+          <div class="exp-compare-card-title">Property Tax Rate (¢ per $100 assessed value)</div>
+          ${rateRows}
+          <p class="exp-compare-note">Lower rate = less paid per $100 of home value. Rates from each county's most recently adopted budget.</p>
+        </div>
+        <div class="exp-compare-card">
+          <div class="exp-compare-card-title">County Spending Per Neighbor (All Funds)</div>
+          ${pcRows}
+          <p class="exp-compare-note">Total adopted budget divided by county population. Durham's high figure includes direct DPS funding ($248M).</p>
+        </div>
+      </div>
+      <p class="exp-compare-source">Sources: Each county's adopted budget document. Tax rates sourced from county budget offices. Population: US Census Bureau 2023 estimates. All non-Durham figures are approximate; verify at each county's budget office. Full NC county data: <a href="https://www.nctreasurer.com/slg/Pages/default.aspx" target="_blank" rel="noopener" style="color:var(--exp-teal);">NC Local Government Commission</a>.</p>`;
+  }
+
+  // ── Print / Save PDF ─────────────────────────────────────────────────────
+  function printBudget() {
+    window.print();
   }
 
   // ── Render funding sources bar chart ────────────────────────────────────
@@ -1187,12 +1371,14 @@
     activeYear = yr;
     openAreaIdx = null;
     renderEntity();
+    if (window.lucide) lucide.createIcons();
   }
 
   function setView(mode) {
     viewMode = mode;
     openAreaIdx = null;
     renderEntity();
+    if (window.lucide) lucide.createIcons();
   }
 
   // ── Load & init ─────────────────────────────────────────────────────────
@@ -1207,6 +1393,7 @@
       activeYear = budgetData.entities[activeEntity].years[0];
       buildTabs();
       renderEntity();
+      if (window.lucide) lucide.createIcons();
     } catch (err) {
       document.getElementById('expMain').innerHTML =
         '<p style="color:red;font-family:sans-serif;padding:2rem;">Failed to load budget data.</p>';
