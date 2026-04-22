@@ -32,6 +32,46 @@ jobs:
       - name: Update civic data
         run: python scripts/update_civic_data.py
 
+      # ── Fetch NWS weather alerts for Durham County (zone NCC063) ──
+      - name: Fetch weather alerts
+        run: |
+          python - <<'EOF'
+          import json, datetime, requests
+          from pathlib import Path
+
+          ZONE = "NCC063"
+          UA   = "durhamcivichub.org, nallam@dconc.gov"
+          url  = f"https://api.weather.gov/alerts/active/zone/{ZONE}"
+          out  = Path("data/alerts.json")
+
+          try:
+              r = requests.get(url, headers={"User-Agent": UA, "Accept": "application/geo+json"}, timeout=10)
+              r.raise_for_status()
+              features = r.json().get("features", [])
+              alerts = [
+                  {
+                      "event":    f["properties"].get("event", "Weather Alert"),
+                      "headline": f["properties"].get("headline", ""),
+                      "url":      f["properties"].get("url") or f"https://alerts.weather.gov/search?zone={ZONE}",
+                  }
+                  for f in features
+                  if f.get("properties", {}).get("status") == "Actual"
+              ]
+          except Exception as e:
+              print(f"NWS fetch failed: {e}")
+              try:
+                  alerts = json.loads(out.read_text()).get("alerts", [])
+              except Exception:
+                  alerts = []
+
+          payload = {
+              "updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              "alerts": alerts,
+          }
+          out.write_text(json.dumps(payload, indent=2))
+          print(f"Wrote {len(alerts)} alert(s) to {out}")
+          EOF
+
       # ── Check resource links (runs daily, skips if no broken links)
       - name: Check resource links
         run: python scripts/check_resources.py
@@ -63,6 +103,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ news.json meetings.json calendar.json budget-data.json
+          git add data/ news.json meetings.json calendar.json budget-data.json 2>/dev/null; true
           git diff --staged --quiet || git commit -m "chore: daily data fetch $(date +%Y-%m-%d)"
           git push

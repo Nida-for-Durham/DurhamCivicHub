@@ -1087,17 +1087,16 @@ function updateDataTimestamp(id, dateStr) {
 }
 
 // ── Weather Alerts ────────────────────────────────────────────
+// Reads from data/alerts.json written by GitHub Actions (bypasses NWS CORS)
 async function fetchWeatherAlerts() {
   try {
-    const res = await fetch('https://api.weather.gov/alerts/active/zone/NCC063', {
-      headers: { 'Accept': 'application/geo+json' }
-    });
+    const res = await fetch('data/alerts.json');
     if (!res.ok) return;
     const data = await res.json();
-    const alerts = (data.features || []).filter(f => f.properties?.status === 'Actual');
+    const alerts = data.alerts || [];
     if (!alerts.length) return;
 
-    const a = alerts[0].properties;
+    const a = alerts[0];
     const banner = document.createElement('div');
     banner.id = 'weatherAlertBanner';
     banner.style.cssText = [
@@ -1113,19 +1112,19 @@ async function fetchWeatherAlerts() {
       'gap:.75rem',
       'flex-wrap:wrap',
       'text-align:center',
-      'z-index:200',
       'position:relative'
     ].join(';');
 
     const eventText = esc(a.event || 'Weather Alert');
-    const headline = a.headline ? ' — ' + esc(a.headline.replace(/\.\s*$/, '')) : '';
-    const url = a.url || `https://alerts.weather.gov/search?zone=NCC063`;
+    const headline = a.headline ? ': ' + esc(a.headline.replace(/\.\s*$/, '')) : '';
+    const url = a.url || 'https://alerts.weather.gov/search?zone=NCC063';
     banner.innerHTML = `<span>⚠️ <strong>${eventText}</strong>${headline}</span>`
       + `<a href="${esc(url)}" target="_blank" rel="noopener"`
       + ` style="color:#ffc8a0;font-weight:700;white-space:nowrap;text-decoration:underline;">Full alert →</a>`;
 
+    // Insert before the header so it scrolls away naturally and never overlaps the sticky nav
     const header = document.querySelector('.site-header');
-    if (header) header.after(banner);
+    if (header) header.before(banner);
     else document.body.prepend(banner);
   } catch (_) {}
 }
