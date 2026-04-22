@@ -52,6 +52,7 @@
     }
     .cip-stat--city   { border-top: 4px solid var(--teal, #207C91); }
     .cip-stat--county { border-top: 4px solid var(--navy, #262E4F); }
+    .cip-stat--dps    { border-top: 4px solid #5b21b6; }
     .cip-stat--total  { border-top: 4px solid var(--orange, #E97221); }
 
     /* ── Filter bar ── */
@@ -107,6 +108,11 @@
       border-color: var(--navy, #262E4F);
       color: #fff;
     }
+    .cip-filter-btn.active--dps {
+      background: #5b21b6;
+      border-color: #5b21b6;
+      color: #fff;
+    }
 
     /* ── Projects count ── */
     .cip-count {
@@ -156,6 +162,7 @@
     }
     .cip-entity-badge--city   { background: #e0f3f6; color: var(--teal, #207C91); }
     .cip-entity-badge--county { background: #e8eaf3; color: var(--navy, #262E4F); }
+    .cip-entity-badge--dps    { background: #ede9fe; color: #5b21b6; }
     .cip-category-tag {
       font-family: 'Libre Franklin', sans-serif;
       font-size: .7rem;
@@ -298,13 +305,18 @@
         </div>
         <div class="cip-stat cip-stat--county">
           <div class="cip-stat-label">Durham County CIP</div>
-          <div class="cip-stat-value">$221.8M</div>
-          <div class="cip-stat-sub">$160M affordable housing bond (2022) + $61.8M school capital improvements</div>
+          <div class="cip-stat-value">$160M</div>
+          <div class="cip-stat-sub">$160M affordable housing bond approved by voters in November 2022</div>
+        </div>
+        <div class="cip-stat cip-stat--dps">
+          <div class="cip-stat-label">Durham Public Schools</div>
+          <div class="cip-stat-value">$61.8M</div>
+          <div class="cip-stat-sub">County-funded school capital improvements — DPS manages construction</div>
         </div>
         <div class="cip-stat cip-stat--total">
           <div class="cip-stat-label">Combined Total</div>
           <div class="cip-stat-value">$759.4M</div>
-          <div class="cip-stat-sub">City + County capital investment in Durham's future</div>
+          <div class="cip-stat-sub">City + County + DPS capital investment in Durham's future</div>
         </div>
       </div>
 
@@ -321,6 +333,10 @@
           <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#262E4F" stroke="#fff" stroke-width="2"/></svg>
           Durham County
         </span>
+        <span style="display:flex;align-items:center;gap:.4rem;font-family:'Libre Franklin',sans-serif;font-size:.82rem;color:#374151;">
+          <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="#5b21b6" stroke="#fff" stroke-width="2"/></svg>
+          Durham Public Schools
+        </span>
         <span style="font-family:'Libre Franklin',sans-serif;font-size:.72rem;color:#9ca3af;font-style:italic;">Click a marker to highlight the project card below</span>
       </div>
 
@@ -331,6 +347,7 @@
           <button class="cip-filter-btn active" data-entity="all" onclick="setEntityFilter('all', this)">All</button>
           <button class="cip-filter-btn" data-entity="city" onclick="setEntityFilter('city', this)">City of Durham</button>
           <button class="cip-filter-btn" data-entity="county" onclick="setEntityFilter('county', this)">Durham County</button>
+          <button class="cip-filter-btn" data-entity="dps" onclick="setEntityFilter('dps', this)">Durham Public Schools</button>
         </div>
         <div class="cip-filter-row" id="categoryFilters">
           <span class="cip-filter-label">Category</span>
@@ -462,10 +479,12 @@
       window.setEntityFilter = function (entity, btn) {
         activeEntity = entity;
         document.querySelectorAll('[data-entity]').forEach(b => {
-          b.classList.remove('active', 'active--navy');
+          b.classList.remove('active', 'active--navy', 'active--dps');
         });
         if (entity === 'county') {
           btn.classList.add('active', 'active--navy');
+        } else if (entity === 'dps') {
+          btn.classList.add('active', 'active--dps');
         } else {
           btn.classList.add('active');
         }
@@ -491,7 +510,7 @@
         // Color markers by entity
         projects.forEach(p => {
           if (!p.lat || !p.lng) return;
-          const color = p.entity === 'city' ? '#207C91' : '#262E4F';
+          const color = p.entity === 'city' ? '#207C91' : p.entity === 'dps' ? '#5b21b6' : '#262E4F';
           const marker = L.circleMarker([p.lat, p.lng], {
             radius: 10,
             fillColor: color,
