@@ -905,6 +905,82 @@ a { color: var(--teal); }
   letter-spacing: .02em;
 }
 
+/* ── Nav Dropdown ── */
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-chevron {
+  font-size: .58rem;
+  margin-left: .2rem;
+  opacity: .65;
+  display: inline-block;
+  transition: transform .18s;
+  pointer-events: none;
+}
+.nav-item:hover .nav-chevron,
+.nav-item.open .nav-chevron { transform: rotate(180deg); opacity: 1; }
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  min-width: 230px;
+  background: #1a2240;
+  border-top: 2px solid var(--orange, #E97221);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.38);
+  z-index: 300;
+  padding: .35rem 0;
+}
+.nav-item:hover .nav-dropdown,
+.nav-item.open .nav-dropdown { display: block; }
+.nav-dropdown-link {
+  display: block;
+  padding: .55rem 1.1rem;
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: .83rem;
+  font-weight: 600;
+  transition: background .12s, color .12s;
+  white-space: nowrap;
+  border: none;
+}
+.nav-dropdown-link:hover { background: rgba(255,255,255,.09); color: #fff; }
+.nav-dropdown-link--header {
+  font-weight: 800;
+  color: var(--peach, #EBA85C);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  margin-bottom: .2rem;
+}
+.nav-dropdown-link--header:hover { color: #fff; }
+.nav-dropdown-divider {
+  height: 1px;
+  background: rgba(255,255,255,.08);
+  margin: .25rem 0;
+}
+
+@media (max-width: 640px) {
+  .nav-item { flex-direction: column; align-items: stretch; width: 100%; }
+  .nav-dropdown {
+    position: static;
+    display: none;
+    box-shadow: none;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-radius: 0;
+    background: rgba(0,0,0,.25);
+    min-width: 0;
+    padding: .2rem 0;
+  }
+  .nav-item.open .nav-dropdown { display: block; }
+  .nav-item:not(.open):hover .nav-dropdown { display: none; }
+  .nav-dropdown-link { padding: .45rem .5rem .45rem 1.75rem; font-size: .8rem; }
+  .nav-dropdown-link--header { display: none; }
+  .nav-dropdown-divider { display: none; }
+}
+
 /* ── Site-wide Search Overlay ── */
 .nav-search-btn {
   background: none;
