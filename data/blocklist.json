@@ -1,0 +1,13 @@
+{
+  "note": "Entries in this blocklist must never be re-added to meetings.json, calendar.json, or any rendered meeting list. Each entry was verified as fabricated or erroneous and permanently blocked.",
+  "blockedMeetings": [
+    {
+      "body": "Board of Commissioners",
+      "date": "2026-04-28",
+      "type": "Budget Work Session",
+      "reason": "Fabricated entry. No BOCC Budget Work Session on April 28, 2026 appears in any official DCONC agenda archive or published schedule. Flagged across three separate audit rounds (2026-04-22). The Apr 28 Board of Adjustment (city, agenda URL _04282026-3431) is NOT blocked — that is a real meeting.",
+      "blockedOn": "2026-04-22",
+      "blockedBy": "Commissioner Allam audit"
+    }
+  ]
+}
