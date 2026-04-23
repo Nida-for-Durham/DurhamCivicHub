@@ -418,6 +418,27 @@ function renderBodyCard(body) {
     .sort((a, b) => b.date.localeCompare(a.date));
   const mostRecentPast = past.length > 0 ? [past[0]] : [];
   const displayMeetings = [...upcoming, ...mostRecentPast];
+  const total = displayMeetings.length;
+
+  let contentHtml;
+  if (total === 0) {
+    contentHtml = '<p style="font-size:.85rem;color:var(--muted);padding:.5rem 0;">No upcoming meetings scheduled yet. Check back soon.</p>';
+  } else {
+    const carouselItems = displayMeetings
+      .map((m, i) => `<div class="meeting-carousel-item${i === 0 ? ' active' : ''}" data-idx="${i}">${renderMeetingRow(m)}</div>`)
+      .join('');
+    const navHtml = total > 1 ? `
+      <div class="meeting-carousel-nav">
+        <button class="carousel-btn carousel-btn--prev"
+                onclick="meetingCarouselNav('${esc(body.id)}',-1)"
+                disabled aria-label="Previous meeting">‹</button>
+        <span class="carousel-counter"><strong>1</strong> of ${total}</span>
+        <button class="carousel-btn carousel-btn--next"
+                onclick="meetingCarouselNav('${esc(body.id)}',1)"
+                aria-label="Next meeting">›</button>
+      </div>` : '';
+    contentHtml = `<div class="meeting-carousel">${carouselItems}</div>${navHtml}`;
+  }
 
   return `
     <section class="meetings-section" id="${esc(body.id)}">
@@ -432,14 +453,26 @@ function renderBodyCard(body) {
         <span><i data-lucide="calendar" aria-hidden="true" class="lucide-wrap"></i> ${esc(body.schedule)}</span>
         <span><i data-lucide="map-pin" aria-hidden="true" class="lucide-wrap"></i> ${esc(body.location)}</span>
       </div>
-      <div>
-        ${displayMeetings.length
-          ? displayMeetings.map(m => renderMeetingRow(m)).join('')
-          : '<p style="font-size:.85rem;color:var(--muted);padding:.5rem 0;">No upcoming meetings scheduled yet. Check back soon.</p>'}
-      </div>
+      ${contentHtml}
       <a class="archive-link" href="${esc(body.archiveUrl)}" target="_blank" rel="noopener">Agendas & Minutes →</a>
     </section>
   `;
+}
+
+function meetingCarouselNav(bodyId, dir) {
+  const section = document.getElementById(bodyId);
+  if (!section) return;
+  const items = Array.from(section.querySelectorAll('.meeting-carousel-item'));
+  if (!items.length) return;
+  const curr = items.findIndex(i => i.classList.contains('active'));
+  const next = Math.max(0, Math.min(items.length - 1, curr + dir));
+  items.forEach((item, i) => item.classList.toggle('active', i === next));
+  const counter = section.querySelector('.carousel-counter');
+  if (counter) counter.innerHTML = `<strong>${next + 1}</strong> of ${items.length}`;
+  const prevBtn = section.querySelector('.carousel-btn--prev');
+  const nextBtn = section.querySelector('.carousel-btn--next');
+  if (prevBtn) prevBtn.disabled = next === 0;
+  if (nextBtn) nextBtn.disabled = next === items.length - 1;
 }
 
 function renderMeetings(data, container) {
