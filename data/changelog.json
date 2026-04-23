@@ -8,8 +8,58 @@
       "field": "excerpt",
       "old_value": "Durham County Manager David Sparks will present...",
       "new_value": "County Manager Claudia Hager will present...",
-      "reason": "David Sparks is a fabricated name. Claudia Hager verified at https://www.dconc.gov/County-Manager-Office/County-Manager",
+      "reason": "David Sparks is a fabricated name. Claudia Hager verified at dconc.gov",
       "source": "https://www.dconc.gov/County-Manager-Office/County-Manager"
+    },
+    {
+      "timestamp": "2026-04-22T00:00:00-04:00",
+      "type": "fact-correction",
+      "file": "resources.html",
+      "field": "East Regional Library address",
+      "old_value": "211 W Woodcroft Pkwy",
+      "new_value": "211 Lick Creek Lane, Durham, NC 27703",
+      "reason": "Wrong address. Correct address verified at durhamcountylibrary.org/hours-and-locations/",
+      "source": "https://durhamcountylibrary.org/hours-and-locations/"
+    },
+    {
+      "timestamp": "2026-04-22T00:00:00-04:00",
+      "type": "fact-correction",
+      "file": "resources.html",
+      "field": "Southwest Branch Library name",
+      "old_value": "Southwest Branch Library",
+      "new_value": "Southwest Regional Library",
+      "reason": "Official name is Southwest Regional Library per durhamcountylibrary.org",
+      "source": "https://durhamcountylibrary.org/hours-and-locations/"
+    },
+    {
+      "timestamp": "2026-04-22T00:00:00-04:00",
+      "type": "fact-correction",
+      "file": "resources.html",
+      "field": "Library URL pattern",
+      "old_value": "/locations/[branch]/",
+      "new_value": "/location/[branch]/",
+      "reason": "Wrong URL pattern. Correct pattern is /location/ (no s) per durhamcountylibrary.org",
+      "source": "https://durhamcountylibrary.org/hours-and-locations/"
+    },
+    {
+      "timestamp": "2026-04-22T00:00:00-04:00",
+      "type": "addition",
+      "file": "resources.html",
+      "field": "Library branches",
+      "old_value": "Missing Stanford L. Warren and Bragtown branches",
+      "new_value": "Added Stanford L. Warren Branch Library (1201 Fayetteville St, 27707) and Bragtown Branch Library (3200 Dearborn Dr, 27704)",
+      "reason": "Two branches were missing from the site",
+      "source": "https://durhamcountylibrary.org/hours-and-locations/"
+    },
+    {
+      "timestamp": "2026-04-22T00:00:00-04:00",
+      "type": "fact-correction",
+      "file": "my-durham.html",
+      "field": "Police districts link",
+      "old_value": "https://www.durhamnc.gov/2575/Districts-and-Beats",
+      "new_value": "https://www.durhamnc.gov/238/Police-Department",
+      "reason": "Old URL returns 404. Replaced with verified DPD main page.",
+      "source": "https://www.durhamnc.gov/238/Police-Department"
     }
   ]
 }
