@@ -13,7 +13,7 @@ import urllib.request
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
 DATA_DIR.mkdir(exist_ok=True)
-MEETINGS_FILE = ROOT / "data" / "data/meetings.json"
+MEETINGS_FILE = ROOT / "data" / "meetings.json"
 CALENDAR_FILE = ROOT / "data" / "calendar.json"
 
 def fetch(url, binary=False):
@@ -390,10 +390,10 @@ def _update_agendacenter(body, category_id, today_str):
 
 # ── Calendar ───────────────────────────────────────────────────────────────────
 
-_BOCC_LOCATION = "200 E. Main St., Durham – Room 2A"
+_BOCC_LOCATION = "200 E. Main St., Durham, Room 2A"
 _CITY_LOCATION = "101 City Hall Plaza, Durham"
-_PLANNING_LOCATION = "101 City Hall Plaza, Durham – Room 3G"
-_BOA_LOCATION = "101 City Hall Plaza, Durham – Room 3G"
+_PLANNING_LOCATION = "101 City Hall Plaza, Durham, Room 3G"
+_BOA_LOCATION = "101 City Hall Plaza, Durham, Room 3G"
 
 _BOCC_TIMES = {
     "Regular Meeting":        "Monday · 7:00 PM",
@@ -438,11 +438,11 @@ def update_calendar(meetings=None):
             links = m.get("links", [])
 
             if bid == "commissioners":
-                title = f"Board of Commissioners – {mtype}"
+                title = f"Board of Commissioners: {mtype}"
                 location = _BOCC_LOCATION
                 time_str = _BOCC_TIMES.get(mtype, "Monday · 7:00 PM")
             elif bid == "city-council":
-                title = f"Durham City Council – {mtype}"
+                title = f"Durham City Council: {mtype}"
                 location = _CITY_LOCATION
                 time_str = "Monday · 7:00 PM" if mtype == "Regular Meeting" else "Monday · 9:00 AM"
             elif bid == "planning":
