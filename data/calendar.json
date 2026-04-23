@@ -8,7 +8,7 @@
     {
       "id": 1,
       "date": "2026-04-10",
-      "title": "\ud83d\udce2 FY2026-27 Budget Public Input Period Open",
+      "title": "📢 FY2026-27 Budget Public Input Period Open",
       "time": "Ongoing: public hearing May 26 at 7 PM",
       "location": "Submit online at dconc.gov or in writing to the Board of Commissioners",
       "category": "announcement",
@@ -26,7 +26,7 @@
     {
       "id": 2,
       "date": "2026-04-12",
-      "title": "\ud83d\udce2 Durham County Seeks Applicants for Housing Advisory Board",
+      "title": "📢 Durham County Seeks Applicants for Housing Advisory Board",
       "time": "Applications due May 1, 2026",
       "location": "Apply online at dconc.gov",
       "category": "announcement",
@@ -39,8 +39,8 @@
     },
     {
       "date": "2026-04-13",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -59,7 +59,7 @@
     {
       "date": "2026-04-14",
       "title": "City-County Planning Commission",
-      "time": "Tuesday \u00b7 9:00 AM",
+      "time": "Tuesday · 9:00 AM",
       "location": "101 City Hall Plaza, Durham, Room 3G",
       "category": "government",
       "links": [
@@ -73,8 +73,8 @@
     },
     {
       "date": "2026-04-20",
-      "title": "Durham City Council \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "101 City Hall Plaza, Durham",
       "category": "government",
       "links": [
@@ -91,23 +91,9 @@
       "id": 5
     },
     {
-      "id": 6,
       "date": "2026-04-23",
-      "title": "Durham Peoples Alliance \u2013 Monthly Welcome & Hangout",
-      "time": "Thursday \u00b7 6:00 PM",
-      "location": "Boricua Soul, Durham",
-      "category": "community",
-      "links": [
-        {
-          "label": "Event Details",
-          "url": "https://www.durhampa.org/calendar"
-        }
-      ]
-    },
-    {
-      "date": "2026-04-23",
-      "title": "Durham City Council \u2013 Work Session",
-      "time": "Thursday \u00b7 1:00 PM",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
       "location": "101 City Hall Plaza, Durham",
       "category": "government",
       "links": [
@@ -128,10 +114,24 @@
       "id": 7
     },
     {
+      "id": 6,
+      "date": "2026-04-23",
+      "title": "Durham Peoples Alliance – Monthly Welcome & Hangout",
+      "time": "Thursday · 6:00 PM",
+      "location": "Boricua Soul, Durham",
+      "category": "community",
+      "links": [
+        {
+          "label": "Event Details",
+          "url": "https://www.durhampa.org/calendar"
+        }
+      ]
+    },
+    {
       "id": 8,
       "date": "2026-04-25",
-      "title": "Durham Farmers Market \u2013 Season Opener",
-      "time": "Saturday \u00b7 8:00 AM \u2013 12:00 PM",
+      "title": "Durham Farmers Market – Season Opener",
+      "time": "Saturday · 8:00 AM – 12:00 PM",
       "location": "501 Foster St., Durham (American Tobacco Campus)",
       "category": "community",
       "links": [
@@ -143,8 +143,8 @@
     },
     {
       "date": "2026-04-27",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -167,7 +167,7 @@
     {
       "date": "2026-04-28",
       "title": "Board of Adjustment",
-      "time": "Tuesday \u00b7 9:00 AM",
+      "time": "Tuesday · 9:00 AM",
       "location": "101 City Hall Plaza, Durham, Room 3G",
       "category": "government",
       "links": [
@@ -182,8 +182,8 @@
     {
       "id": 11,
       "date": "2026-04-29",
-      "title": "Community Sing \u2013 People's Alliance & Durham CAN",
-      "time": "Wednesday \u00b7 6:15 PM (doors open)",
+      "title": "Community Sing – People's Alliance & Durham CAN",
+      "time": "Wednesday · 6:15 PM (doors open)",
       "location": "Westminster Presbyterian Church, 3639 Old Chapel Hill Rd, Durham",
       "category": "community",
       "links": [
@@ -197,7 +197,7 @@
       "id": 12,
       "date": "2026-04-30",
       "title": "Hayti Heritage Center: Moonchild: The Life and Music of Yusuf Salim",
-      "time": "Thursday \u00b7 7:00 PM",
+      "time": "Thursday · 7:00 PM",
       "location": "Hayti Heritage Center, 804 Old Fayetteville St., Durham",
       "category": "community",
       "links": [
@@ -210,7 +210,7 @@
     {
       "id": 13,
       "date": "2026-05-01",
-      "title": "\ud83d\udce2 Durham County Housing Advisory Board Applications Due",
+      "title": "📢 Durham County Housing Advisory Board Applications Due",
       "time": "Deadline: May 1, 2026",
       "location": "Apply online at dconc.gov",
       "category": "announcement",
@@ -222,9 +222,32 @@
       ]
     },
     {
+      "id": 54,
       "date": "2026-05-04",
-      "title": "Board of Commissioners \u2013 Work Session",
-      "time": "Monday \u00b7 9:00 AM",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-04",
+      "title": "Board of Commissioners – Work Session",
+      "time": "Monday · 9:00 AM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -245,10 +268,29 @@
       "id": 14
     },
     {
+      "id": 55,
+      "date": "2026-05-07",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
       "id": 15,
       "date": "2026-05-07",
       "title": "Hayti Dialogues: In Conversation with Brit Bennett",
-      "time": "Thursday \u00b7 6:30 PM",
+      "time": "Thursday · 6:30 PM",
       "location": "Hayti Heritage Center, 804 Old Fayetteville St., Durham",
       "category": "community",
       "links": [
@@ -261,27 +303,10 @@
     {
       "id": 16,
       "date": "2026-05-11",
-      "title": "Board of Commissioners \u2013 Regular Meeting (County Manager Budget Presentation)",
-      "time": "Monday \u00b7 7:00 PM",
-      "location": "200 E. Main St., Durham \u2013 Commissioners Chambers",
+      "title": "Board of Commissioners – Regular Meeting (County Manager Budget Presentation)",
+      "time": "Monday · 7:00 PM",
+      "location": "200 E. Main St., Durham – Commissioners Chambers",
       "category": "budget",
-      "links": [
-        {
-          "label": "Live Stream",
-          "url": "https://www.youtube.com/@DurhamCountyNC"
-        },
-        {
-          "label": "Budget Docs",
-          "url": "https://www.dconc.gov/Budget-and-Management-Services"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-11",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
-      "location": "200 E. Main St., Durham, Room 2A",
-      "category": "government",
       "links": [
         {
           "label": "Agenda",
@@ -293,17 +318,20 @@
           "url": "https://www.youtube.com/@DurhamCountyNC"
         },
         {
+          "label": "Budget Docs",
+          "url": "https://www.dconc.gov/Budget-and-Management-Services"
+        },
+        {
           "label": "Public Comment",
           "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Rules-for-Citizens-and-Public-Comment"
         }
-      ],
-      "id": 17
+      ]
     },
     {
       "id": 18,
       "date": "2026-05-16",
-      "title": "Durham Peoples Alliance \u2013 Education Team Meeting",
-      "time": "Saturday \u00b7 1:00 PM",
+      "title": "Durham Peoples Alliance – Education Team Meeting",
+      "time": "Saturday · 1:00 PM",
       "location": "Near Old Northern HS, Durham (location TBD)",
       "category": "community",
       "links": [
@@ -314,25 +342,34 @@
       ]
     },
     {
-      "id": 19,
-      "date": "2026-05-19",
-      "title": "BOCC Budget Work Session (FY2026-27)",
-      "time": "Tuesday \u00b7 9:00 AM",
-      "location": "200 E. Main St., Durham",
-      "category": "budget",
+      "id": 56,
+      "date": "2026-05-18",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
       "links": [
         {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
           "label": "Live Stream",
-          "url": "https://www.youtube.com/@DurhamCountyNC"
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
         }
       ]
     },
     {
       "date": "2026-05-19",
-      "title": "Board of Commissioners \u2013 Budget Work Session",
-      "time": "Tuesday \u00b7 9:00 AM",
+      "title": "Board of Commissioners – Budget Work Session (FY2026-27)",
+      "time": "Tuesday · 9:00 AM",
       "location": "200 E. Main St., Durham, Room 2A",
-      "category": "government",
+      "category": "budget",
       "links": [
         {
           "label": "Live Stream",
@@ -347,25 +384,11 @@
       "id": 20
     },
     {
-      "id": 21,
       "date": "2026-05-21",
-      "title": "BOCC Budget Work Session (FY2026-27)",
-      "time": "Thursday \u00b7 1:00 PM",
-      "location": "200 E. Main St., Durham",
-      "category": "budget",
-      "links": [
-        {
-          "label": "Live Stream",
-          "url": "https://www.youtube.com/@DurhamCountyNC"
-        }
-      ]
-    },
-    {
-      "date": "2026-05-21",
-      "title": "Board of Commissioners \u2013 Budget Work Session",
-      "time": "Thursday \u00b7 1:00 PM",
+      "title": "Board of Commissioners – Budget Work Session (FY2026-27)",
+      "time": "Thursday · 1:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
-      "category": "government",
+      "category": "budget",
       "links": [
         {
           "label": "Live Stream",
@@ -380,10 +403,29 @@
       "id": 22
     },
     {
+      "id": 57,
+      "date": "2026-05-21",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
       "id": 23,
       "date": "2026-05-23",
       "title": "Durham Earth Day Community Festival",
-      "time": "Saturday \u00b7 10:00 AM \u2013 4:00 PM",
+      "time": "Saturday · 10:00 AM – 4:00 PM",
       "location": "Durham Central Park, 501 Foster St.",
       "category": "community",
       "links": [
@@ -396,9 +438,9 @@
     {
       "id": 24,
       "date": "2026-05-26",
-      "title": "Board of Commissioners \u2013 Regular Meeting / Budget Public Hearing",
-      "time": "Tuesday \u00b7 7:00 PM",
-      "location": "200 E. Main St., Durham \u2013 Commissioners Chambers",
+      "title": "Board of Commissioners – Regular Meeting / Budget Public Hearing",
+      "time": "Tuesday · 7:00 PM",
+      "location": "200 E. Main St., Durham – Commissioners Chambers",
       "category": "hearing",
       "links": [
         {
@@ -412,44 +454,34 @@
       ]
     },
     {
-      "date": "2026-05-26",
-      "title": "Board of Commissioners \u2013 Budget Public Hearing",
-      "time": "Tuesday \u00b7 7:00 PM",
-      "location": "200 E. Main St., Durham, Room 2A",
-      "category": "government",
+      "id": 58,
+      "date": "2026-05-27",
+      "title": "Durham City Council – Budget Work Session (FY2026-27)",
+      "time": "Wednesday · 9:00 AM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "budget",
       "links": [
         {
-          "label": "Sign Up to Speak",
-          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Rules-for-Citizens-and-Public-Comment",
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
           "primary": true
         },
         {
           "label": "Live Stream",
-          "url": "https://www.youtube.com/@DurhamCountyNC"
-        }
-      ],
-      "id": 25
-    },
-    {
-      "id": 26,
-      "date": "2026-05-28",
-      "title": "BOCC Budget Work Session (FY2026-27)",
-      "time": "Thursday \u00b7 9:00 AM",
-      "location": "200 E. Main St., Durham",
-      "category": "budget",
-      "links": [
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
         {
-          "label": "Live Stream",
-          "url": "https://www.youtube.com/@DurhamCountyNC"
+          "label": "Budget Info",
+          "url": "https://www.durhamnc.gov/204/Budget-Development-Process"
         }
       ]
     },
     {
       "date": "2026-05-28",
-      "title": "Board of Commissioners \u2013 Budget Work Session",
-      "time": "Thursday \u00b7 9:00 AM",
+      "title": "Board of Commissioners – Budget Work Session (FY2026-27)",
+      "time": "Thursday · 9:00 AM",
       "location": "200 E. Main St., Durham, Room 2A",
-      "category": "government",
+      "category": "budget",
       "links": [
         {
           "label": "Live Stream",
@@ -464,9 +496,55 @@
       "id": 27
     },
     {
+      "id": 59,
+      "date": "2026-05-28",
+      "title": "Durham City Council – Budget Work Session (FY2026-27)",
+      "time": "Thursday · 9:00 AM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "budget",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Budget Info",
+          "url": "https://www.durhamnc.gov/204/Budget-Development-Process"
+        }
+      ]
+    },
+    {
+      "id": 60,
       "date": "2026-06-01",
-      "title": "Board of Commissioners \u2013 Work Session",
-      "time": "Monday \u00b7 9:00 AM",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "title": "Board of Commissioners – Work Session",
+      "time": "Monday · 9:00 AM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -487,25 +565,11 @@
       "id": 28
     },
     {
-      "id": 29,
       "date": "2026-06-02",
-      "title": "BOCC Budget Work Session (FY2026-27)",
-      "time": "Tuesday \u00b7 9:00 AM",
-      "location": "200 E. Main St., Durham",
-      "category": "budget",
-      "links": [
-        {
-          "label": "Live Stream",
-          "url": "https://www.youtube.com/@DurhamCountyNC"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-02",
-      "title": "Board of Commissioners \u2013 Budget Work Session",
-      "time": "Tuesday \u00b7 9:00 AM",
+      "title": "Board of Commissioners – Budget Work Session (FY2026-27)",
+      "time": "Tuesday · 9:00 AM",
       "location": "200 E. Main St., Durham, Room 2A",
-      "category": "government",
+      "category": "budget",
       "links": [
         {
           "label": "Live Stream",
@@ -520,39 +584,11 @@
       "id": 30
     },
     {
-      "id": 31,
       "date": "2026-06-04",
-      "title": "BOCC Budget Work Session (FY2026-27)",
-      "time": "Thursday \u00b7 1:00 PM",
-      "location": "200 E. Main St., Durham",
-      "category": "budget",
-      "links": [
-        {
-          "label": "Live Stream",
-          "url": "https://www.youtube.com/@DurhamCountyNC"
-        }
-      ]
-    },
-    {
-      "id": 32,
-      "date": "2026-06-04",
-      "title": "Hayti Heritage Center: YahZarah",
-      "time": "Thursday \u00b7 7:00 PM",
-      "location": "Hayti Heritage Center, 804 Old Fayetteville St., Durham",
-      "category": "community",
-      "links": [
-        {
-          "label": "Tickets & Info",
-          "url": "https://www.hayti.org/season-schedule"
-        }
-      ]
-    },
-    {
-      "date": "2026-06-04",
-      "title": "Board of Commissioners \u2013 Budget Work Session",
-      "time": "Thursday \u00b7 1:00 PM",
+      "title": "Board of Commissioners – Budget Work Session (FY2026-27)",
+      "time": "Thursday · 1:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
-      "category": "government",
+      "category": "budget",
       "links": [
         {
           "label": "Live Stream",
@@ -567,11 +603,67 @@
       "id": 33
     },
     {
+      "id": 62,
+      "date": "2026-06-04",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "date": "2026-06-04",
+      "title": "Hayti Heritage Center: YahZarah",
+      "time": "Thursday · 7:00 PM",
+      "location": "Hayti Heritage Center, 804 Old Fayetteville St., Durham",
+      "category": "community",
+      "links": [
+        {
+          "label": "Tickets & Info",
+          "url": "https://www.hayti.org/season-schedule"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "date": "2026-06-04",
+      "title": "Durham City Council – Work Session (Budget)",
+      "time": "Thursday · 9:00 AM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "budget",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Budget Info",
+          "url": "https://www.durhamnc.gov/204/Budget-Development-Process"
+        }
+      ]
+    },
+    {
       "id": 34,
       "date": "2026-06-08",
-      "title": "Board of Commissioners \u2013 FY2026-27 Budget Adoption Vote",
-      "time": "Monday \u00b7 7:00 PM",
-      "location": "200 E. Main St., Durham \u2013 Commissioners Chambers",
+      "title": "Board of Commissioners – FY2026-27 Budget Adoption Vote",
+      "time": "Monday · 7:00 PM",
+      "location": "200 E. Main St., Durham – Commissioners Chambers",
       "category": "budget",
       "links": [
         {
@@ -589,33 +681,33 @@
       ]
     },
     {
-      "date": "2026-06-08",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
-      "location": "200 E. Main St., Durham, Room 2A",
+      "id": 63,
+      "date": "2026-06-15",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
       "category": "government",
       "links": [
         {
-          "label": "Agenda",
-          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
           "primary": true
         },
         {
           "label": "Live Stream",
-          "url": "https://www.youtube.com/@DurhamCountyNC"
+          "url": "https://www.youtube.com/@CityofDurhamNC"
         },
         {
           "label": "Public Comment",
-          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Rules-for-Citizens-and-Public-Comment"
+          "url": "https://www.durhamnc.gov/1338/City-Council"
         }
-      ],
-      "id": 35
+      ]
     },
     {
       "id": 36,
       "date": "2026-06-19",
-      "title": "Hayti Heritage Center: Mon\u00e9t Noelle Marshall",
-      "time": "Friday \u00b7 7:00 PM",
+      "title": "Hayti Heritage Center: Monét Noelle Marshall",
+      "time": "Friday · 7:00 PM",
       "location": "Hayti Heritage Center, 804 Old Fayetteville St., Durham",
       "category": "community",
       "links": [
@@ -627,8 +719,8 @@
     },
     {
       "date": "2026-06-22",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -651,8 +743,8 @@
     {
       "id": 38,
       "date": "2026-07-04",
-      "title": "Stagville and the Roots of Durham \u2013 Durham Peoples Alliance",
-      "time": "Saturday \u00b7 10:00 AM",
+      "title": "Stagville and the Roots of Durham – Durham Peoples Alliance",
+      "time": "Saturday · 10:00 AM",
       "location": "Stagville Historic Site, 5828 Old Oxford Hwy, Durham",
       "category": "community",
       "links": [
@@ -664,8 +756,8 @@
     },
     {
       "date": "2026-07-13",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -686,9 +778,51 @@
       "id": 39
     },
     {
+      "id": 64,
       "date": "2026-08-03",
-      "title": "Board of Commissioners \u2013 Work Session",
-      "time": "Monday \u00b7 9:00 AM",
+      "title": "Durham City Council – Work Session",
+      "time": "Monday · 10:00 AM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "date": "2026-08-03",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-03",
+      "title": "Board of Commissioners – Work Session",
+      "time": "Monday · 9:00 AM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -709,9 +843,28 @@
       "id": 40
     },
     {
+      "id": 66,
+      "date": "2026-08-06",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
       "date": "2026-08-10",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -732,9 +885,51 @@
       "id": 41
     },
     {
+      "id": 67,
+      "date": "2026-08-17",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "date": "2026-08-20",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
       "date": "2026-08-24",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -755,9 +950,32 @@
       "id": 42
     },
     {
+      "id": 69,
       "date": "2026-09-08",
-      "title": "Board of Commissioners \u2013 Work Session",
-      "time": "Tuesday \u00b7 9:00 AM",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Tuesday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Board of Commissioners – Work Session",
+      "time": "Tuesday · 9:00 AM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -778,9 +996,28 @@
       "id": 43
     },
     {
+      "id": 70,
+      "date": "2026-09-10",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
       "date": "2026-09-14",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -801,9 +1038,51 @@
       "id": 44
     },
     {
+      "id": 71,
+      "date": "2026-09-21",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "date": "2026-09-24",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
       "date": "2026-09-28",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -824,9 +1103,32 @@
       "id": 45
     },
     {
+      "id": 73,
       "date": "2026-10-05",
-      "title": "Board of Commissioners \u2013 Work Session",
-      "time": "Monday \u00b7 9:00 AM",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "title": "Board of Commissioners – Work Session",
+      "time": "Monday · 9:00 AM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -847,9 +1149,28 @@
       "id": 46
     },
     {
+      "id": 74,
+      "date": "2026-10-08",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
       "date": "2026-10-12",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -870,9 +1191,51 @@
       "id": 47
     },
     {
+      "id": 75,
+      "date": "2026-10-19",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "date": "2026-10-22",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
       "date": "2026-10-26",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -893,9 +1256,32 @@
       "id": 48
     },
     {
+      "id": 77,
       "date": "2026-11-02",
-      "title": "Board of Commissioners \u2013 Work Session",
-      "time": "Monday \u00b7 9:00 AM",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Board of Commissioners – Work Session",
+      "time": "Monday · 9:00 AM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -916,9 +1302,28 @@
       "id": 49
     },
     {
+      "id": 78,
+      "date": "2026-11-05",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
       "date": "2026-11-09",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -939,9 +1344,51 @@
       "id": 50
     },
     {
+      "id": 79,
+      "date": "2026-11-16",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "date": "2026-11-19",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
       "date": "2026-11-23",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -962,9 +1409,32 @@
       "id": 51
     },
     {
+      "id": 81,
       "date": "2026-12-07",
-      "title": "Board of Commissioners \u2013 Work Session",
-      "time": "Monday \u00b7 9:00 AM",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-07",
+      "title": "Board of Commissioners – Work Session",
+      "time": "Monday · 9:00 AM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -985,9 +1455,28 @@
       "id": 52
     },
     {
+      "id": 82,
+      "date": "2026-12-10",
+      "title": "Durham City Council – Work Session",
+      "time": "Thursday · 1:00 PM",
+      "location": "Committee Room, 101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        }
+      ]
+    },
+    {
       "date": "2026-12-14",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
+      "title": "Board of Commissioners – Regular Meeting",
+      "time": "Monday · 7:00 PM",
       "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
@@ -1006,6 +1495,29 @@
         }
       ],
       "id": 53
+    },
+    {
+      "id": 83,
+      "date": "2026-12-21",
+      "title": "Durham City Council – Regular Meeting",
+      "time": "Monday · 7:00 PM",
+      "location": "101 City Hall Plaza, Durham",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda Center",
+          "url": "https://www.durhamnc.gov/AgendaCenter/City-Council-4",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@CityofDurhamNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.durhamnc.gov/1338/City-Council"
+        }
+      ]
     }
   ]
 }
