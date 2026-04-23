@@ -3,6 +3,16 @@
   "runs": [
     {
       "timestamp": "2026-04-23T00:00:00-04:00",
+      "type": "addition",
+      "file": "data/calendar.json",
+      "field": "Missing BOCC meetings (Jun 1 Work Session, Jun 22 Regular Session)",
+      "old_value": "Not present in calendar",
+      "new_value": "Added id=47 Jun 1 Work Session 9 AM; id=48 Jun 22 Regular Session 7 PM. Also added bocc_schedule_source field pointing to official dconc.gov meeting schedule.",
+      "reason": "Root cause fix: calendar was AI-generated without verification against official BOCC schedule. Full audit against dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Meeting-Schedule found two missing entries.",
+      "source": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Meeting-Schedule"
+    },
+    {
+      "timestamp": "2026-04-23T00:00:00-04:00",
       "type": "removal",
       "file": "data/calendar.json",
       "field": "Apr 14 BOCC Regular Meeting (id=5)",

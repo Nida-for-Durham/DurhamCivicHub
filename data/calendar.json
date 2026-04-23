@@ -1,6 +1,7 @@
 {
   "updated": "2026-04-22",
   "note": "Edit this file to add or update events. Categories: announcement, government, budget, schools, hearing, community, health. Date format: YYYY-MM-DD.",
+  "bocc_schedule_source": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Meeting-Schedule",
   "events": [
     {
       "date": "2026-04-09",
@@ -618,12 +619,52 @@
       ]
     },
     {
+      "id": 47,
+      "date": "2026-06-01",
+      "title": "Board of Commissioners \u2013 Work Session",
+      "time": "Monday \u00b7 9:00 AM",
+      "location": "200 E. Main St., Durham \u2013 Room 2A",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda",
+          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library"
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@DurhamCountyNC"
+        }
+      ]
+    },
+    {
       "id": 43,
       "date": "2026-06-08",
       "title": "Board of Commissioners \u2013 FY2026-27 Budget Adoption Vote",
       "time": "Monday \u00b7 7:00 PM",
       "location": "200 E. Main St., Durham \u2013 Commissioners Chambers",
       "category": "budget",
+      "links": [
+        {
+          "label": "Agenda",
+          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library"
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@DurhamCountyNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Rules-for-Citizens-and-Public-Comment"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "date": "2026-06-22",
+      "title": "Board of Commissioners \u2013 Regular Meeting",
+      "time": "Monday \u00b7 7:00 PM",
+      "location": "200 E. Main St., Durham \u2013 Room 2A",
+      "category": "government",
       "links": [
         {
           "label": "Agenda",
