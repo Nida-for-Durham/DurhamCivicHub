@@ -1,0 +1,1069 @@
+{
+  "checked": "2026-04-22",
+  "total": 110,
+  "broken_count": 13,
+  "broken": [
+    {
+      "url": "https://bsky.app/profile/nidaallam.bsky.social",
+      "status": 404,
+      "error": null,
+      "sources": [
+        "connect.html:404"
+      ]
+    },
+    {
+      "url": "https://engagedurham.com/DocumentCenter/View/559/2023-Durham-County-Transit-Plan?bidId=",
+      "status": 404,
+      "error": null,
+      "sources": [
+        "transit.html:388",
+        "transit.html:466"
+      ]
+    },
+    {
+      "url": "https://fonts.googleapis.com",
+      "status": 404,
+      "error": null,
+      "sources": [
+        "budget-city.html:12",
+        "budget-county.html:12"
+      ]
+    },
+    {
+      "url": "https://realtimemap.gotriangle.org/",
+      "status": 0,
+      "error": "Timeout",
+      "sources": [
+        "transit.html:507"
+      ]
+    },
+    {
+      "url": "https://rideshare.gotriangle.org/",
+      "status": 0,
+      "error": "Timeout",
+      "sources": [
+        "transit.html:435"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/county-departments/departments-a-e/emergency-services",
+      "status": 404,
+      "error": null,
+      "sources": [
+        "my-durham.html:824"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/county-departments/departments-l-z/sheriff",
+      "status": 404,
+      "error": null,
+      "sources": [
+        "my-durham.html:823"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/government/advisory-boards",
+      "status": 404,
+      "error": null,
+      "sources": [
+        "connect.html:469"
+      ]
+    },
+    {
+      "url": "https://www.dcovotes.dconc.gov/",
+      "status": 403,
+      "error": null,
+      "sources": [
+        "voting.html:303",
+        "voting.html:338"
+      ]
+    },
+    {
+      "url": "https://www.duke-energy.com/home",
+      "status": 403,
+      "error": null,
+      "sources": [
+        "resources.html:900",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.nccourts.gov/locations/durham-county-courthouse",
+      "status": 403,
+      "error": null,
+      "sources": [
+        "resources.html:932",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.plannedparenthood.org/health-center/north-carolina/durham/27704/durham-health-center-4171-90860",
+      "status": 0,
+      "error": "ConnectionError",
+      "sources": [
+        "resources.html:606",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://x.com/NidaAllam",
+      "status": 403,
+      "error": null,
+      "sources": [
+        "connect.html:356"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "url": "https://988lifeline.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:743",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://bsky.app/profile/nidaallam.bsky.social",
+      "status": 404,
+      "ok": false,
+      "sources": [
+        "connect.html:404"
+      ]
+    },
+    {
+      "url": "https://dclt.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:471",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://dpfc.net/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:550",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://durhamcounty.granicus.com/boards",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "index.html:590",
+        "news.html:196"
+      ]
+    },
+    {
+      "url": "https://durhamcountylibrary.org/location/bragtown-branch-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:1060"
+      ]
+    },
+    {
+      "url": "https://durhamcountylibrary.org/location/east-regional-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:1020"
+      ]
+    },
+    {
+      "url": "https://durhamcountylibrary.org/location/main-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:999"
+      ]
+    },
+    {
+      "url": "https://durhamcountylibrary.org/location/north-regional-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:1040"
+      ]
+    },
+    {
+      "url": "https://durhamcountylibrary.org/location/south-regional-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:1010"
+      ]
+    },
+    {
+      "url": "https://durhamcountylibrary.org/location/southwest-regional-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:1030"
+      ]
+    },
+    {
+      "url": "https://durhamcountylibrary.org/location/stanford-l-warren-branch-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:1050"
+      ]
+    },
+    {
+      "url": "https://engagedurham.com/DocumentCenter/View/559/2023-Durham-County-Transit-Plan?bidId=",
+      "status": 404,
+      "ok": false,
+      "sources": [
+        "transit.html:388",
+        "transit.html:466"
+      ]
+    },
+    {
+      "url": "https://epass.nc.gov/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:496",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://fmfnc.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:809",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://fonts.googleapis.com",
+      "status": 404,
+      "ok": false,
+      "sources": [
+        "budget-city.html:12",
+        "budget-county.html:12"
+      ]
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-city.html:16",
+        "budget-county.html:16"
+      ]
+    },
+    {
+      "url": "https://foodbankcenc.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:503",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://foodshuttle.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:510",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://go.boarddocs.com/nc/dpsnc/Board.nsf/Public",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-schools.html:226"
+      ]
+    },
+    {
+      "url": "https://godurham.rideralerts.com/InfoPoint/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:357"
+      ]
+    },
+    {
+      "url": "https://godurhamtransit.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:370",
+        "transit.html:507"
+      ]
+    },
+    {
+      "url": "https://godurhamtransit.org/accessibility",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:411"
+      ]
+    },
+    {
+      "url": "https://godurhamtransit.org/maps-schedules/godurham",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:382"
+      ]
+    },
+    {
+      "url": "https://godurhamtransit.org/maps-schedules/godurham/bull-city-connector",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:441"
+      ]
+    },
+    {
+      "url": "https://gotriangle.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:507"
+      ]
+    },
+    {
+      "url": "https://gotriangle.org/gopass",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:394"
+      ]
+    },
+    {
+      "url": "https://gotriangle.org/real-time-stops/?agency=gotriangle&route=100",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:358"
+      ]
+    },
+    {
+      "url": "https://gotriangle.org/trip-planner",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:376"
+      ]
+    },
+    {
+      "url": "https://legalaidnc.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:673",
+        "resources.html:918"
+      ]
+    },
+    {
+      "url": "https://legalaidnc.org/get-help/our-practice-areas/immigration/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:717",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://lincolnchc.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:839",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://medicaid.ncdhhs.gov/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:854",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://nc.freelegalanswers.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:925",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://nc211.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:478",
+        "resources.html:816"
+      ]
+    },
+    {
+      "url": "https://peaknewsnetwork.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-city.html:320",
+        "budget-county.html:377"
+      ]
+    },
+    {
+      "url": "https://prochoice.org/patients/naf-hotline/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:631",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://realtimemap.gotriangle.org/",
+      "status": 0,
+      "ok": false,
+      "sources": [
+        "transit.html:507"
+      ],
+      "error": "Timeout"
+    },
+    {
+      "url": "https://rideshare.gotriangle.org/",
+      "status": 0,
+      "ok": false,
+      "sources": [
+        "transit.html:435"
+      ],
+      "error": "Timeout"
+    },
+    {
+      "url": "https://siembranc.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:702",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://taxcama.dconc.gov/camapwa/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-explorer.html:1275",
+        "budget-explorer.html:1391"
+      ]
+    },
+    {
+      "url": "https://umdurham.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:780",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://votebymail.ncsbe.gov/app/home",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "voting.html:293",
+        "voting.html:366"
+      ]
+    },
+    {
+      "url": "https://vt.ncsbe.gov/EVSite/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "voting.html:279",
+        "voting.html:356"
+      ]
+    },
+    {
+      "url": "https://vt.ncsbe.gov/PPLkup/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "my-durham.html:760",
+        "voting.html:272"
+      ]
+    },
+    {
+      "url": "https://vt.ncsbe.gov/RegLkup/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "my-durham.html:761",
+        "voting.html:265"
+      ]
+    },
+    {
+      "url": "https://www.alliancehealthplan.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:750",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.carolinaabortionfund.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:622",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "connect.html:509",
+        "news.html:198"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/Board-of-Commissioners",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-schools.html:360",
+        "connect.html:459"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "meetings.html:258",
+        "news.html:141"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Rules-for-Citizens-and-Public-Comment",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-county.html:166",
+        "budget-county.html:343"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/Budget-and-Management-Services",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-county.html:167",
+        "budget-county.html:190"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/Emergency-Services",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:802",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/Public-Health",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:543",
+        "resources.html:558"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/Public-Information/Community-Food-Resources",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:517",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/Social-Services",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:464",
+        "resources.html:879"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/Transportation",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:417"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/county-departments/departments-a-e/emergency-services",
+      "status": 404,
+      "ok": false,
+      "sources": [
+        "my-durham.html:824"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/county-departments/departments-l-z/sheriff",
+      "status": 404,
+      "ok": false,
+      "sources": [
+        "my-durham.html:823"
+      ]
+    },
+    {
+      "url": "https://www.dconc.gov/government/advisory-boards",
+      "status": 404,
+      "ok": false,
+      "sources": [
+        "connect.html:469"
+      ]
+    },
+    {
+      "url": "https://www.dcovotes.dconc.gov/",
+      "status": 403,
+      "ok": false,
+      "sources": [
+        "voting.html:303",
+        "voting.html:338"
+      ]
+    },
+    {
+      "url": "https://www.dprplaymore.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "my-durham.html:795",
+        "resources.html:957"
+      ]
+    },
+    {
+      "url": "https://www.dprplaymore.org/101/PARKS-TRAILS-FACILITIES",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "my-durham.html:794",
+        "resources.html:950"
+      ]
+    },
+    {
+      "url": "https://www.dprplaymore.org/595/Trails-Greenways",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:964",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.dprplaymore.org/facilities",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:978",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.dpsnc.net/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-schools.html:232",
+        "budget.html:216"
+      ]
+    },
+    {
+      "url": "https://www.dpsnc.net/page/board-of-education",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-schools.html:180",
+        "budget-schools.html:181"
+      ]
+    },
+    {
+      "url": "https://www.duke-energy.com/home",
+      "status": 403,
+      "ok": false,
+      "sources": [
+        "resources.html:900",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.dukehealth.org/locations/duke-fertility-center",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:638",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.durhamcountylibrary.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "my-durham.html:781"
+      ]
+    },
+    {
+      "url": "https://www.durhamcountylibrary.org/ebooks/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:1067",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.durhamcountylibrary.org/location/east-regional-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.durhamcountylibrary.org/location/main-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.durhamcountylibrary.org/location/north-regional-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.durhamcountylibrary.org/location/south-regional-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.durhamcountylibrary.org/location/southwest-regional-library/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "connect.html:509",
+        "news.html:197"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/1323/City-Council",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-city.html:143",
+        "budget-city.html:205"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/1367/Planning-Commission",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "news.html:148"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/1396/City-Council-Members",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "my-durham.html:713"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/159/Solid-Waste-Management",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "my-durham.html:809"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/174/Fire-Department",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "my-durham.html:836"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/238/Police-Department",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "my-durham.html:835"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/456/Finance",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-city.html:144",
+        "budget-city.html:180"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/5461/911-Crisis-Response-HEART",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:735",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/5489/Durham-Winter-Shelters",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:795",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/570/Neighborhood-Improvement-Services",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:457",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.durhamnc.gov/DocumentCenter/View/61856/FY26-COD-Adopted-Budget-Book",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-city.html:174",
+        "budget-city.html:275"
+      ]
+    },
+    {
+      "url": "https://www.durhamrescuemission.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:524",
+        "resources.html:787"
+      ]
+    },
+    {
+      "url": "https://www.elcentrohispano.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:573",
+        "resources.html:681"
+      ]
+    },
+    {
+      "url": "https://www.facebook.com/NidaAllamNC",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "connect.html:380"
+      ]
+    },
+    {
+      "url": "https://www.gotriangle.org/accessibility",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:423"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/nidaallam/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "connect.html:368"
+      ]
+    },
+    {
+      "url": "https://www.nccourts.gov/locations/durham-county-courthouse",
+      "status": 403,
+      "ok": false,
+      "sources": [
+        "resources.html:932",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.ncdhhs.gov/assistance/low-income-services",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "transit.html:429"
+      ]
+    },
+    {
+      "url": "https://www.ncdiaperbank.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:565",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "voting.html:258"
+      ]
+    },
+    {
+      "url": "https://www.ncleg.gov/FindYourLegislators",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "my-durham.html:721",
+        "my-durham.html:725"
+      ]
+    },
+    {
+      "url": "https://www.ncparks.gov/state-parks/eno-river-state-park",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:971",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.ncsbe.gov/voting/voter-id",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "voting.html:311",
+        "voting.html:341"
+      ]
+    },
+    {
+      "url": "https://www.nctreasurer.com/slg/Pages/default.aspx",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-explorer.html:1158"
+      ]
+    },
+    {
+      "url": "https://www.plannedparenthood.org/health-center/north-carolina/durham/27704/durham-health-center-4171-90860",
+      "status": 0,
+      "ok": false,
+      "sources": [
+        "resources.html:606",
+        "resources.json"
+      ],
+      "error": "ConnectionError"
+    },
+    {
+      "url": "https://www.reddit.com/user/NidaAllamNC/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "connect.html:392"
+      ]
+    },
+    {
+      "url": "https://www.thedcrc.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:657",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.thehotline.org/",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:666",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.welcomebaby.org/giving-closet",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "resources.html:583",
+        "resources.json"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/user/CityofDurhamNC",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-city.html:298"
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/user/DCoWebmaster/videos",
+      "status": 200,
+      "ok": true,
+      "sources": [
+        "budget-county.html:355",
+        "budget.html:288"
+      ]
+    },
+    {
+      "url": "https://x.com/NidaAllam",
+      "status": 403,
+      "ok": false,
+      "sources": [
+        "connect.html:356"
+      ]
+    }
+  ]
+}

@@ -4,6 +4,56 @@
     {
       "timestamp": "2026-04-22T00:00:00-04:00",
       "type": "fact-correction",
+      "file": "my-durham.html",
+      "field": "Sheriff's Office link",
+      "old_value": "https://www.dconc.gov/county-departments/departments-l-z/sheriff",
+      "new_value": "https://www.durhamsheriff.com/home",
+      "reason": "dconc.gov path returns 404. Correct URL verified at dconc.gov/county-departments listing.",
+      "source": "https://www.dconc.gov/county-departments"
+    },
+    {
+      "timestamp": "2026-04-22T00:00:00-04:00",
+      "type": "fact-correction",
+      "file": "my-durham.html",
+      "field": "Emergency Services link",
+      "old_value": "https://www.dconc.gov/county-departments/departments-a-e/emergency-services",
+      "new_value": "https://www.dconc.gov/Emergency-Services",
+      "reason": "Old URL pattern returns 404. Short-form URL returns 200.",
+      "source": "https://www.dconc.gov/Emergency-Services"
+    },
+    {
+      "timestamp": "2026-04-22T00:00:00-04:00",
+      "type": "fact-correction",
+      "file": "connect.html",
+      "field": "Advisory boards link",
+      "old_value": "https://www.dconc.gov/government/advisory-boards",
+      "new_value": "https://www.dconc.gov/clerk-to-the-board/boards-and-commissions",
+      "reason": "Old URL returns 404. Correct URL found via dconc.gov Clerk to the Board page.",
+      "source": "https://www.dconc.gov/clerk-to-the-board"
+    },
+    {
+      "timestamp": "2026-04-22T00:00:00-04:00",
+      "type": "fact-correction",
+      "file": "transit.html",
+      "field": "Durham County Transit Plan URL",
+      "old_value": "https://engagedurham.com/DocumentCenter/View/559/2023-Durham-County-Transit-Plan?bidId=",
+      "new_value": "https://www.engagedurham.com/DocumentCenter/View/559",
+      "reason": "Old URL returns 404. Correct URL verified via engagedurham.com transit plan page.",
+      "source": "https://engagedurham.com/101/Durham-Transit-Plan"
+    },
+    {
+      "timestamp": "2026-04-22T00:00:00-04:00",
+      "type": "fact-correction",
+      "file": "data/resources.json",
+      "field": "Library URL pattern",
+      "old_value": "/locations/[branch]/",
+      "new_value": "/location/[branch]/",
+      "reason": "resources.json still had old /locations/ pattern that was already fixed in resources.html.",
+      "source": "https://durhamcountylibrary.org/hours-and-locations/"
+    },
+    {
+      "timestamp": "2026-04-22T00:00:00-04:00",
+      "type": "fact-correction",
       "file": "data/news.json",
       "field": "excerpt",
       "old_value": "Durham County Manager David Sparks will present...",

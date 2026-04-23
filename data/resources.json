@@ -571,7 +571,7 @@
           "name": "Main Library",
           "desc": "Durham County's flagship library. 300 N Roxboro St, Durham. Books, computers, meeting rooms, and the largest collection in the system.",
           "type": "county",
-          "url": "https://www.durhamcountylibrary.org/locations/main-library/",
+          "url": "https://www.durhamcountylibrary.org/location/main-library/",
           "btnLabel": "Hours & Info"
         },
         {
@@ -579,7 +579,7 @@
           "name": "South Regional Library",
           "desc": "Serving south Durham. 4505 S Alston Ave, Durham. Full library services, community meeting space, and Spanish-language materials.",
           "type": "county",
-          "url": "https://www.durhamcountylibrary.org/locations/south-regional-library/",
+          "url": "https://www.durhamcountylibrary.org/location/south-regional-library/",
           "btnLabel": "Hours & Info",
           "hasSpanish": true
         },
@@ -588,7 +588,7 @@
           "name": "East Regional Library",
           "desc": "Serving east Durham. 211 W Woodcroft Pkwy, Durham. Full library services with community programs.",
           "type": "county",
-          "url": "https://www.durhamcountylibrary.org/locations/east-regional-library/",
+          "url": "https://www.durhamcountylibrary.org/location/east-regional-library/",
           "btnLabel": "Hours & Info"
         },
         {
@@ -596,7 +596,7 @@
           "name": "Southwest Branch Library",
           "desc": "Serving southwest Durham. 3605 Shannon Rd, Durham. Neighborhood branch with full library services.",
           "type": "county",
-          "url": "https://www.durhamcountylibrary.org/locations/southwest-regional-library/",
+          "url": "https://www.durhamcountylibrary.org/location/southwest-regional-library/",
           "btnLabel": "Hours & Info"
         },
         {
@@ -604,7 +604,7 @@
           "name": "North Regional Library",
           "desc": "Serving north Durham. 221 Milton Rd, Durham. Full library services and community programs.",
           "type": "county",
-          "url": "https://www.durhamcountylibrary.org/locations/north-regional-library/",
+          "url": "https://www.durhamcountylibrary.org/location/north-regional-library/",
           "btnLabel": "Hours & Info"
         },
         {
