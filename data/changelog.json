@@ -1,6 +1,16 @@
 {
-  "lastRun": "2026-04-22",
+  "lastRun": "2026-04-23",
   "runs": [
+    {
+      "timestamp": "2026-04-23T00:00:00-04:00",
+      "type": "fact-correction",
+      "file": "data/calendar.json",
+      "field": "BOCC meeting titles (id=5, id=28)",
+      "old_value": "Board of Commissioners – Regular Meeting at 9:00 AM",
+      "new_value": "Board of Commissioners – Work Session at 9:00 AM; id=5 day label corrected from Monday to Tuesday (Apr 14 is a Tuesday)",
+      "reason": "BOCC regular meetings are at 7 PM; 9 AM meetings are work sessions. id=5 also had wrong day-of-week label.",
+      "source": "Commissioner Allam (2026-04-23)"
+    },
     {
       "timestamp": "2026-04-22T00:00:00-04:00",
       "type": "fact-correction",
