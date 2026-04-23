@@ -15,10 +15,10 @@
       "timestamp": "2026-04-23T00:00:00-04:00",
       "type": "fact-correction",
       "file": "data/calendar.json",
-      "field": "BOCC meeting title (id=28)",
-      "old_value": "Board of Commissioners – Regular Meeting · Tuesday · 9:00 AM",
-      "new_value": "Board of Commissioners – Work Session · Tuesday · 9:00 AM",
-      "reason": "BOCC regular meetings are at 7 PM; 9 AM meetings are work sessions.",
+      "field": "BOCC Work Session date and Regular Meeting label (id=27, id=28)",
+      "old_value": "id=27: 'County Manager Presents FY2026-27 Recommended Budget' (no regular meeting label); id=28: Work Session on 2026-05-12 Tuesday",
+      "new_value": "id=27: 'Board of Commissioners – Regular Meeting (County Manager Budget Presentation)' on 2026-05-11 Monday 7 PM; id=28: Work Session moved to 2026-05-04 Monday 9 AM",
+      "reason": "May work session is May 4; regular meeting is May 11. May 12 was wrong date.",
       "source": "Commissioner Allam (2026-04-23)"
     },
     {
