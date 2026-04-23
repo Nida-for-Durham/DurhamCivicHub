@@ -58,7 +58,7 @@ jobs:
           from pathlib import Path
 
           ZONE = "NCC063"
-          UA   = "durhamcivichub.org, nallam@dconc.gov"
+          UA   = "DurhamCivicHub (nidaallam@nidaallam.com)"
           url  = f"https://api.weather.gov/alerts/active/zone/{ZONE}"
           out  = Path("data/alerts.json")
 
@@ -138,8 +138,29 @@ jobs:
       # ── Commit all changed data files ─────────────────────────────
       - name: Commit updated data
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ news.json news.xml meetings.json meetings.ics calendar.json budget-data.json 2>/dev/null; true
-          git diff --staged --quiet || git commit -m "chore: daily data fetch $(date +%Y-%m-%d)"
+          git config user.name "Nida Allam"
+          git config user.email "nidaallam@nidaallam.com"
+          git add data/ news.xml meetings.ics STATUS.md 2>/dev/null; true
+          git diff --staged --quiet || git commit -m "data: daily fetch $(date +%Y-%m-%d)"
           git push
+
+      # ── Auto-rollback: wait 10 min, check homepage returns 200 with expected text ─
+      - name: Verify deploy health
+        run: |
+          echo "Waiting 10 minutes for GitHub Pages to deploy..."
+          sleep 600
+          HOMEPAGE="https://civichub.nidaallam.com/index.html"
+          HTTP_CODE=$(curl -s -o /tmp/homepage.html -w "%{http_code}" "$HOMEPAGE")
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "::error::Homepage returned HTTP $HTTP_CODE — rolling back"
+            git revert --no-edit HEAD
+            git push
+            exit 1
+          fi
+          if ! grep -q "Durham Civic Hub" /tmp/homepage.html; then
+            echo "::error::Homepage loaded but expected text not found — rolling back"
+            git revert --no-edit HEAD
+            git push
+            exit 1
+          fi
+          echo "Deploy healthy — homepage returned 200 with expected content"

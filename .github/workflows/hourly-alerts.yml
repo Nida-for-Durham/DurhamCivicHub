@@ -23,7 +23,7 @@ jobs:
           # NWS requires User-Agent to be set or requests are rejected
           # This runs server-side so the User-Agent header is allowed
           ZONE = "NCC063"
-          UA   = "durhamcivichub.org, nallam@dconc.gov"
+          UA   = "DurhamCivicHub (nidaallam@nidaallam.com)"
           url  = f"https://api.weather.gov/alerts/active/zone/{ZONE}"
           out  = Path("data/alerts.json")
 
@@ -58,8 +58,8 @@ jobs:
 
       - name: Commit if alerts changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "Nida Allam"
+          git config user.email "nidaallam@nidaallam.com"
           git add data/alerts.json
-          git diff --staged --quiet || git commit -m "chore: update weather alerts $(date +%Y-%m-%dT%H:%M)"
+          git diff --staged --quiet || git commit -m "data: weather alerts $(date +%Y-%m-%dT%H:%M)"
           git push
