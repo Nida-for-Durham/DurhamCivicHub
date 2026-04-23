@@ -7,21 +7,6 @@
   "events": [
     {
       "id": 1,
-      "date": "2026-04-09",
-      "title": "Durham City Council \u2013 Work Session",
-      "time": "Thursday \u00b7 1:00 PM",
-      "location": "101 City Hall Plaza, Durham",
-      "category": "government",
-      "links": [
-        {
-          "label": "Agenda Packet",
-          "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04092026-3418?packet=true",
-          "primary": true
-        }
-      ]
-    },
-    {
-      "id": 2,
       "date": "2026-04-10",
       "title": "\ud83d\udce2 FY2026-27 Budget Public Input Period Open",
       "time": "Ongoing: public hearing May 26 at 7 PM",
@@ -39,7 +24,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 2,
       "date": "2026-04-12",
       "title": "\ud83d\udce2 Durham County Seeks Applicants for Housing Advisory Board",
       "time": "Applications due May 1, 2026",
@@ -53,11 +38,10 @@
       ]
     },
     {
-      "id": 4,
       "date": "2026-04-13",
       "title": "Board of Commissioners \u2013 Regular Meeting",
       "time": "Monday \u00b7 7:00 PM",
-      "location": "200 E. Main St., Durham \u2013 Room 2A",
+      "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
         {
@@ -69,14 +53,14 @@
           "label": "Video Recording",
           "url": "https://durhamcounty.granicus.com/MediaPlayer.php?view_id=2&clip_id=1534"
         }
-      ]
+      ],
+      "id": 3
     },
     {
-      "id": 6,
       "date": "2026-04-14",
       "title": "City-County Planning Commission",
       "time": "Tuesday \u00b7 9:00 AM",
-      "location": "101 City Hall Plaza, Durham \u2013 Room 3G",
+      "location": "101 City Hall Plaza, Durham, Room 3G",
       "category": "government",
       "links": [
         {
@@ -84,29 +68,10 @@
           "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04142026-3416",
           "primary": true
         }
-      ]
+      ],
+      "id": 4
     },
     {
-      "id": 7,
-      "date": "2026-04-14",
-      "title": "Board of Commissioners \u2013 Joint City-County Meeting",
-      "time": "Tuesday \u00b7 9:30 AM",
-      "location": "200 E. Main St., Durham \u2013 Room 2A",
-      "category": "government",
-      "links": [
-        {
-          "label": "Agenda Packet",
-          "url": "https://durhamcounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=1535",
-          "primary": true
-        },
-        {
-          "label": "Video Recording",
-          "url": "https://durhamcounty.granicus.com/MediaPlayer.php?view_id=2&clip_id=1535"
-        }
-      ]
-    },
-    {
-      "id": 9,
       "date": "2026-04-20",
       "title": "Durham City Council \u2013 Regular Meeting",
       "time": "Monday \u00b7 7:00 PM",
@@ -117,25 +82,16 @@
           "label": "Agenda Packet",
           "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04202026-3430?packet=true",
           "primary": true
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "date": "2026-04-23",
-      "title": "City-County Planning Commission",
-      "time": "Thursday \u00b7 5:00 PM",
-      "location": "Durham City Hall, 101 City Hall Plaza",
-      "category": "government",
-      "links": [
+        },
         {
-          "label": "Agenda",
-          "url": "https://www.durhamnc.gov/579/Planning-Commission"
+          "label": "Video Recording",
+          "url": "https://durham.granicus.com/MediaPlayer.php?view_id=2&clip_id=3301"
         }
-      ]
+      ],
+      "id": 5
     },
     {
-      "id": 14,
+      "id": 6,
       "date": "2026-04-23",
       "title": "Durham Peoples Alliance \u2013 Monthly Welcome & Hangout",
       "time": "Thursday \u00b7 6:00 PM",
@@ -149,7 +105,6 @@
       ]
     },
     {
-      "id": 15,
       "date": "2026-04-23",
       "title": "Durham City Council \u2013 Work Session",
       "time": "Thursday \u00b7 1:00 PM",
@@ -169,10 +124,11 @@
           "label": "Public Comment",
           "url": "https://www.durhamnc.gov/1338/City-Council"
         }
-      ]
+      ],
+      "id": 7
     },
     {
-      "id": 16,
+      "id": 8,
       "date": "2026-04-25",
       "title": "Durham Farmers Market \u2013 Season Opener",
       "time": "Saturday \u00b7 8:00 AM \u2013 12:00 PM",
@@ -186,16 +142,16 @@
       ]
     },
     {
-      "id": 18,
       "date": "2026-04-27",
       "title": "Board of Commissioners \u2013 Regular Meeting",
       "time": "Monday \u00b7 7:00 PM",
-      "location": "200 E. Main St., Durham \u2013 Room 2A",
+      "location": "200 E. Main St., Durham, Room 2A",
       "category": "government",
       "links": [
         {
           "label": "Agenda",
-          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library"
+          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
+          "primary": true
         },
         {
           "label": "Live Stream",
@@ -205,14 +161,14 @@
           "label": "Public Comment",
           "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Rules-for-Citizens-and-Public-Comment"
         }
-      ]
+      ],
+      "id": 9
     },
     {
-      "id": 20,
       "date": "2026-04-28",
       "title": "Board of Adjustment",
       "time": "Tuesday \u00b7 9:00 AM",
-      "location": "101 City Hall Plaza, Durham \u2013 Room 3G",
+      "location": "101 City Hall Plaza, Durham, Room 3G",
       "category": "government",
       "links": [
         {
@@ -220,10 +176,11 @@
           "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04282026-3431",
           "primary": true
         }
-      ]
+      ],
+      "id": 10
     },
     {
-      "id": 21,
+      "id": 11,
       "date": "2026-04-29",
       "title": "Community Sing \u2013 People's Alliance & Durham CAN",
       "time": "Wednesday \u00b7 6:15 PM (doors open)",
@@ -237,7 +194,7 @@
       ]
     },
     {
-      "id": 22,
+      "id": 12,
       "date": "2026-04-30",
       "title": "Hayti Heritage Center: Moonchild: The Life and Music of Yusuf Salim",
       "time": "Thursday \u00b7 7:00 PM",
@@ -251,7 +208,7 @@
       ]
     },
     {
-      "id": 23,
+      "id": 13,
       "date": "2026-05-01",
       "title": "\ud83d\udce2 Durham County Housing Advisory Board Applications Due",
       "time": "Deadline: May 1, 2026",
@@ -265,25 +222,7 @@
       ]
     },
     {
-      "id": 28,
-      "date": "2026-05-04",
-      "title": "Board of Commissioners \u2013 Work Session",
-      "time": "Monday \u00b7 9:00 AM",
-      "location": "200 E. Main St., Durham \u2013 Room 2A",
-      "category": "government",
-      "links": [
-        {
-          "label": "Agenda",
-          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library"
-        },
-        {
-          "label": "Live Stream",
-          "url": "https://www.youtube.com/@DurhamCountyNC"
-        }
-      ]
-    },
-    {
-      "id": 26,
+      "id": 14,
       "date": "2026-05-07",
       "title": "Hayti Dialogues: In Conversation with Brit Bennett",
       "time": "Thursday \u00b7 6:30 PM",
@@ -297,7 +236,7 @@
       ]
     },
     {
-      "id": 27,
+      "id": 15,
       "date": "2026-05-11",
       "title": "Board of Commissioners \u2013 Regular Meeting (County Manager Budget Presentation)",
       "time": "Monday \u00b7 7:00 PM",
@@ -315,7 +254,44 @@
       ]
     },
     {
-      "id": 32,
+      "date": "2026-05-11",
+      "title": "Board of Commissioners \u2013 Regular Meeting (Budget Presentation)",
+      "time": "Monday \u00b7 7:00 PM",
+      "location": "200 E. Main St., Durham, Room 2A",
+      "category": "government",
+      "links": [
+        {
+          "label": "Agenda",
+          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@DurhamCountyNC"
+        },
+        {
+          "label": "Public Comment",
+          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Rules-for-Citizens-and-Public-Comment"
+        }
+      ],
+      "id": 16
+    },
+    {
+      "id": 17,
+      "date": "2026-05-16",
+      "title": "Durham Peoples Alliance \u2013 Education Team Meeting",
+      "time": "Saturday \u00b7 1:00 PM",
+      "location": "Near Old Northern HS, Durham (location TBD)",
+      "category": "community",
+      "links": [
+        {
+          "label": "Event Details",
+          "url": "https://www.durhampa.org/calendar"
+        }
+      ]
+    },
+    {
+      "id": 18,
       "date": "2026-05-19",
       "title": "BOCC Budget Work Session (FY2026-27)",
       "time": "Tuesday \u00b7 9:00 AM",
@@ -329,7 +305,7 @@
       ]
     },
     {
-      "id": 34,
+      "id": 19,
       "date": "2026-05-21",
       "title": "BOCC Budget Work Session (FY2026-27)",
       "time": "Thursday \u00b7 1:00 PM",
@@ -343,7 +319,7 @@
       ]
     },
     {
-      "id": 35,
+      "id": 20,
       "date": "2026-05-23",
       "title": "Durham Earth Day Community Festival",
       "time": "Saturday \u00b7 10:00 AM \u2013 4:00 PM",
@@ -357,7 +333,7 @@
       ]
     },
     {
-      "id": 36,
+      "id": 21,
       "date": "2026-05-26",
       "title": "Board of Commissioners \u2013 Regular Meeting / Budget Public Hearing",
       "time": "Tuesday \u00b7 7:00 PM",
@@ -375,7 +351,26 @@
       ]
     },
     {
-      "id": 38,
+      "date": "2026-05-26",
+      "title": "Board of Commissioners \u2013 Budget Public Hearing",
+      "time": "Tuesday \u00b7 7:00 PM",
+      "location": "200 E. Main St., Durham, Room 2A",
+      "category": "government",
+      "links": [
+        {
+          "label": "Sign Up to Speak",
+          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Rules-for-Citizens-and-Public-Comment",
+          "primary": true
+        },
+        {
+          "label": "Live Stream",
+          "url": "https://www.youtube.com/@DurhamCountyNC"
+        }
+      ],
+      "id": 22
+    },
+    {
+      "id": 23,
       "date": "2026-05-28",
       "title": "BOCC Budget Work Session (FY2026-27)",
       "time": "Thursday \u00b7 9:00 AM",
@@ -389,39 +384,7 @@
       ]
     },
     {
-      "id": 30,
-      "date": "2026-05-16",
-      "title": "Durham Peoples Alliance \u2013 Education Team Meeting",
-      "time": "Saturday \u00b7 1:00 PM",
-      "location": "Near Old Northern HS, Durham (location TBD)",
-      "category": "community",
-      "links": [
-        {
-          "label": "Event Details",
-          "url": "https://www.durhampa.org/calendar"
-        }
-      ]
-    },
-    {
-      "id": 47,
-      "date": "2026-06-01",
-      "title": "Board of Commissioners \u2013 Work Session",
-      "time": "Monday \u00b7 9:00 AM",
-      "location": "200 E. Main St., Durham \u2013 Room 2A",
-      "category": "government",
-      "links": [
-        {
-          "label": "Agenda",
-          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library"
-        },
-        {
-          "label": "Live Stream",
-          "url": "https://www.youtube.com/@DurhamCountyNC"
-        }
-      ]
-    },
-    {
-      "id": 40,
+      "id": 24,
       "date": "2026-06-02",
       "title": "BOCC Budget Work Session (FY2026-27)",
       "time": "Tuesday \u00b7 9:00 AM",
@@ -435,7 +398,7 @@
       ]
     },
     {
-      "id": 41,
+      "id": 25,
       "date": "2026-06-04",
       "title": "BOCC Budget Work Session (FY2026-27)",
       "time": "Thursday \u00b7 1:00 PM",
@@ -449,7 +412,7 @@
       ]
     },
     {
-      "id": 42,
+      "id": 26,
       "date": "2026-06-04",
       "title": "Hayti Heritage Center: YahZarah",
       "time": "Thursday \u00b7 7:00 PM",
@@ -463,7 +426,7 @@
       ]
     },
     {
-      "id": 43,
+      "id": 27,
       "date": "2026-06-08",
       "title": "Board of Commissioners \u2013 FY2026-27 Budget Adoption Vote",
       "time": "Monday \u00b7 7:00 PM",
@@ -485,7 +448,7 @@
       ]
     },
     {
-      "id": 45,
+      "id": 28,
       "date": "2026-06-19",
       "title": "Hayti Heritage Center: Mon\u00e9t Noelle Marshall",
       "time": "Friday \u00b7 7:00 PM",
@@ -499,29 +462,7 @@
       ]
     },
     {
-      "id": 48,
-      "date": "2026-06-22",
-      "title": "Board of Commissioners \u2013 Regular Meeting",
-      "time": "Monday \u00b7 7:00 PM",
-      "location": "200 E. Main St., Durham \u2013 Room 2A",
-      "category": "government",
-      "links": [
-        {
-          "label": "Agenda",
-          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library"
-        },
-        {
-          "label": "Live Stream",
-          "url": "https://www.youtube.com/@DurhamCountyNC"
-        },
-        {
-          "label": "Public Comment",
-          "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Rules-for-Citizens-and-Public-Comment"
-        }
-      ]
-    },
-    {
-      "id": 46,
+      "id": 29,
       "date": "2026-07-04",
       "title": "Stagville and the Roots of Durham \u2013 Durham Peoples Alliance",
       "time": "Saturday \u00b7 10:00 AM",

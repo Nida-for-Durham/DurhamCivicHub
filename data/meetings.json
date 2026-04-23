@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-22",
+  "updated": "2026-04-23",
   "note": "Edit this file to add or update meetings. Status values: upcoming, minutes, cancelled.",
   "bodies": [
     {
       "id": "commissioners",
       "name": "Board of Commissioners",
       "description": "Durham County's five elected commissioners set the county property tax rate and adopt the county's annual operating budget. (The City of Durham sets a separate city tax rate independently.)",
-      "schedule": "2nd & 4th Monday, 7:00 PM (regular) · 1st Monday, 9:00 AM (work session)",
+      "schedule": "2nd & 4th Monday, 7:00 PM (regular) \u00b7 1st Monday, 9:00 AM (work session)",
       "location": "200 E. Main St., Durham, Commissioners Chambers, Room 2A",
       "archiveUrl": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
       "group": "elected",
@@ -64,22 +64,6 @@
             {
               "label": "Public Comment",
               "url": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/Rules-for-Citizens-and-Public-Comment"
-            }
-          ]
-        },
-        {
-          "date": "2026-04-14",
-          "type": "Joint City-County Meeting",
-          "status": "past",
-          "links": [
-            {
-              "label": "Agenda Packet",
-              "url": "https://durhamcounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=1535",
-              "primary": true
-            },
-            {
-              "label": "Video Recording",
-              "url": "https://durhamcounty.granicus.com/MediaPlayer.php?view_id=2&clip_id=1535"
             }
           ]
         },
@@ -162,6 +146,22 @@
               "url": "https://durhamcounty.granicus.com/MediaPlayer.php?view_id=2&clip_id=1528"
             }
           ]
+        },
+        {
+          "date": "2026-02-26",
+          "type": "Budget Retreat",
+          "status": "past",
+          "links": [
+            {
+              "label": "Agenda Packet",
+              "url": "https://durhamcounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=1527",
+              "primary": true
+            },
+            {
+              "label": "Video Recording",
+              "url": "https://durhamcounty.granicus.com/MediaPlayer.php?view_id=2&clip_id=1527"
+            }
+          ]
         }
       ]
     },
@@ -203,18 +203,10 @@
               "label": "Agenda Packet",
               "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04202026-3430?packet=true",
               "primary": true
-            }
-          ]
-        },
-        {
-          "date": "2026-04-09",
-          "type": "Work Session",
-          "status": "past",
-          "links": [
+            },
             {
-              "label": "Agenda Packet",
-              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04092026-3418?packet=true",
-              "primary": true
+              "label": "Video Recording",
+              "url": "https://durham.granicus.com/MediaPlayer.php?view_id=2&clip_id=3301"
             }
           ]
         }

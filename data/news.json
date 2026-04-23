@@ -1,14 +1,77 @@
 {
-  "updated": "2026-04-22",
+  "updated": "2026-04-23",
+  "count": 17,
   "stories": [
+    {
+      "title": "NC Central leadership responds after fatal shooting at party attended by students",
+      "excerpt": "Social media posts describing a Zebulon party where five people were shot suggested it was for North Carolina Central University students to celebrate the end of the semester.",
+      "link": "https://www.wral.com/news/local/nc-central-accountability-zebulon-shooting-april-2026/",
+      "source": "WRAL News",
+      "date": "2026-04-23",
+      "displayDate": "April 23, 2026",
+      "tag": "County",
+      "image": "https://images.wral.com/asset/news/local/2026/04/23/22351119/3294831-wake_shooting1-DMID1-6arb9vjqp-1920x1080.jpg?w=1200&h=630&height=630"
+    },
+    {
+      "title": "A Durham Death Doula’s Guide for Better Living and Dying",
+      "excerpt": "In a culture that will do anything to avoid talking about mortality, how should we think about death ? In a new book, Jane K. Callahan offers an  honest, empowering framework for preparing for the end.",
+      "link": "https://indyweek.com/news/culture/a-death-doulas-guide-to-a-meaningful-end-jane-callahan/",
+      "source": "Indy Week",
+      "date": "2026-04-23",
+      "displayDate": "April 23, 2026",
+      "tag": "County",
+      "image": "https://indyweek.com/wp-content/uploads/2026/04/2026-04-17-page-death-doula-jane-callahan-composite-with-book.jpg"
+    },
+    {
+      "title": "More Than 50 Years After Zoning Paved the Way for Development of Black Meadow Ridge, Half the Site Is Being Preserved",
+      "excerpt": "The Eno River Association helped spare 27 acres near West Point on the Eno from development. But the question remains: Why wasn’t Black Meadow Ridge protected to begin with?",
+      "link": "https://indyweek.com/news/black-meadow-ridge-history-eno-village/",
+      "source": "Indy Week",
+      "date": "2026-04-23",
+      "displayDate": "April 23, 2026",
+      "tag": "Development",
+      "image": "https://i0.wp.com/indyweek.com/wp-content/uploads/2026/04/MMNT_20260320_132144526-scaled.jpg?fit=2560%2C1920&ssl=1"
+    },
     {
       "title": "County Manager to Present FY2026-27 Budget on May 11",
       "link": "https://www.dconc.gov/Budget-and-Management-Services",
       "source": "Durham County",
       "date": "2026-04-22",
       "displayDate": "Apr 22, 2026",
-      "tags": ["Budget"],
+      "tags": [
+        "Budget"
+      ],
       "excerpt": "County Manager Claudia Hager will present the recommended FY2026-27 budget to the Board of Commissioners on May 11. A public hearing is scheduled for May 26 at 7 PM at 200 E. Main St. The Board is expected to adopt the budget at its June 8 meeting."
+    },
+    {
+      "title": "Triangle Counties Come Out Against Proposed Cap on Local Property Taxes",
+      "excerpt": "Durham, Orange, and Wake counties warn that a potential constitutional amendment limiting property tax increases would jeopardize critical services.",
+      "link": "https://indyweek.com/news/triangle-counties-come-out-against-proposed-cap-on-local-property-taxes/",
+      "source": "Indy Week",
+      "date": "2026-04-22",
+      "displayDate": "April 22, 2026",
+      "tag": "County",
+      "image": "https://indyweek.com/wp-content/uploads/2026/04/2026-04-21-property-taxes-npm.jpg"
+    },
+    {
+      "title": "Feds Fine Durham-Based Energy Efficiency Company $722 Million",
+      "excerpt": "American Efficient says it was incentivizing energy savings at major companies. One Federal Energy Regulatory Commission member claims “their entire business is a scam.”",
+      "link": "https://indyweek.com/news/business/american-efficient-ferc-durham-fine/",
+      "source": "Indy Week",
+      "date": "2026-04-22",
+      "displayDate": "April 22, 2026",
+      "tag": "Transit",
+      "image": "https://i0.wp.com/indyweek.com/wp-content/uploads/2026/04/AP25111623944517-scaled-1.jpg?fit=2560%2C1920&ssl=1"
+    },
+    {
+      "title": "Earth Month Profile: Marc Maximov, Bike Durham",
+      "excerpt": "Longtime cyclist and Bike Durham board member Marc Maximov shares his roadmap for embracing life without a car.",
+      "link": "https://indyweek.com/news/earth-month-profile-marc-maximov-bike-durham/",
+      "source": "Indy Week",
+      "date": "2026-04-22",
+      "displayDate": "April 22, 2026",
+      "tag": "County",
+      "image": "https://indyweek.com/wp-content/uploads/2026/04/earthday-profiles-markm-mauve.jpg"
     },
     {
       "title": "Budget Public Hearing: Have Your Say on May 26",
@@ -16,8 +79,29 @@
       "source": "Durham County",
       "date": "2026-04-20",
       "displayDate": "Apr 20, 2026",
-      "tags": ["Budget", "Community"],
+      "tags": [
+        "Budget",
+        "Community"
+      ],
       "excerpt": "Durham County will hold a public hearing on the FY2026-27 budget on May 26 at 7 PM in the Commissioners Chambers at 200 E. Main St. Neighbors can sign up to speak in person or submit written comments to the Board."
+    },
+    {
+      "title": "It’s not rocket science: UNC System leaders make the case for increased funding",
+      "excerpt": "There&#8217;s perhaps no better advocate for North Carolina’s higher education system these days than NASA Astronaut Christina Koch. A mission specialist on Artemis II, Koch graduated from the North Carolina School of Science and Mathematics in Durham in 1997 and went on to North Carolina State…",
+      "link": "https://ncnewsline.com/2026/04/17/its-not-rocket-science-unc-system-leaders-make-the-case-for-increased-funding/",
+      "source": "NC Newsline",
+      "date": "2026-04-17",
+      "displayDate": "April 17, 2026",
+      "tag": "Schools"
+    },
+    {
+      "title": "Young cancer survivor breaks ground on family housing for children in treatment at Duke Hospital",
+      "excerpt": "It would be an understatement to say that Harper Harrell has a smile that lights up a room — it lights up all of the outdoors. That was evident this week when the 12-year-old cancer survivor’s smile lit up her Durham backyard as she buzzed about, sharing with all comers her plans to build safe,…",
+      "link": "https://ncnewsline.com/2026/04/16/young-cancer-survivor-breaks-ground-on-family-housing-for-children-in-treatment-at-duke-hospital/",
+      "source": "NC Newsline",
+      "date": "2026-04-16",
+      "displayDate": "April 16, 2026",
+      "tag": "Housing"
     },
     {
       "title": "DPS Board Submits FY2026-27 County Funding Request",
@@ -25,7 +109,10 @@
       "source": "Durham Public Schools",
       "date": "2026-04-15",
       "displayDate": "Apr 15, 2026",
-      "tags": ["Schools", "Budget"],
+      "tags": [
+        "Schools",
+        "Budget"
+      ],
       "excerpt": "The Durham Public Schools Board of Education has submitted its FY2026-27 county appropriation request to the Durham County Board of Commissioners. The full recommended budget document is posted on the DPS Board of Education page."
     },
     {
@@ -34,8 +121,30 @@
       "source": "Durham County",
       "date": "2026-04-10",
       "displayDate": "Apr 10, 2026",
-      "tags": ["Community"],
+      "tags": [
+        "Community"
+      ],
       "excerpt": "Durham County is accepting applications for vacancies on advisory boards and commissions, including the Planning Commission, Library Advisory Board, and others. Any Durham County neighbor can apply. Appointments are made by the Board of Commissioners."
+    },
+    {
+      "title": "Two Durham elementary students detained by ICE, deported to Honduras within 48 hours",
+      "excerpt": "Two Durham elementary school students and their parents were detained by federal immigration authorities during a scheduled appointment in Charlotte earlier this week, and deported to Honduras within 48 hours, according to family members and advocates. The children, Genesis, 11, and Denis, 6,…",
+      "link": "https://ncnewsline.com/2026/04/09/two-durham-elementary-students-detained-by-ice-deported-to-honduras-within-48-hours/",
+      "source": "NC Newsline",
+      "date": "2026-04-09",
+      "displayDate": "April 9, 2026",
+      "tag": "Housing"
+    },
+    {
+      "title": "BOCC Budget Work Sessions Begin in April",
+      "link": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
+      "source": "Durham County",
+      "date": "2026-04-07",
+      "displayDate": "Apr 7, 2026",
+      "tags": [
+        "Budget"
+      ],
+      "excerpt": "The Durham County Board of Commissioners is holding a series of budget work sessions throughout April and May to review departmental requests ahead of the County Manager's recommended budget presentation on May 11. Agendas and video recordings are posted on the BOCC agenda library page."
     },
     {
       "title": "GoDurham Fixed-Route Buses Continue Fare-Free Service",
@@ -43,7 +152,9 @@
       "source": "GoDurham Transit",
       "date": "2026-04-01",
       "displayDate": "Apr 1, 2026",
-      "tags": ["Transit"],
+      "tags": [
+        "Transit"
+      ],
       "excerpt": "GoDurham fixed-route bus service remains fare-free for all riders. The Bull City Connector downtown circulator also runs free of charge Monday through Saturday. Trip planning tools and schedules are available at godurhamtransit.org."
     },
     {
@@ -52,17 +163,10 @@
       "source": "NC State Board of Elections",
       "date": "2026-04-01",
       "displayDate": "Apr 1, 2026",
-      "tags": ["Community"],
+      "tags": [
+        "Community"
+      ],
       "excerpt": "North Carolina voter registration is open year-round for the November 3, 2026 general election. Durham County neighbors can register online, by mail, or in person at the Durham County Board of Elections. Same-day registration is available during early voting."
-    },
-    {
-      "title": "BOCC Budget Work Sessions Begin in April",
-      "link": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
-      "source": "Durham County",
-      "date": "2026-04-07",
-      "displayDate": "Apr 7, 2026",
-      "tags": ["Budget"],
-      "excerpt": "The Durham County Board of Commissioners is holding a series of budget work sessions throughout April and May to review departmental requests ahead of the County Manager's recommended budget presentation on May 11. Agendas and video recordings are posted on the BOCC agenda library page."
     },
     {
       "title": "Durham County Library: Free Cards, Free Programs, All Branches",
@@ -70,7 +174,9 @@
       "source": "Durham County Library",
       "date": "2026-03-15",
       "displayDate": "Mar 15, 2026",
-      "tags": ["Community"],
+      "tags": [
+        "Community"
+      ],
       "excerpt": "Durham County Library offers free library cards to all Durham County neighbors with proof of address. All branches provide books, e-books, computers, Wi-Fi, and free community programs. No fines for overdue materials at any branch."
     }
   ]

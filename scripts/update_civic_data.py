@@ -396,14 +396,25 @@ _PLANNING_LOCATION = "101 City Hall Plaza, Durham, Room 3G"
 _BOA_LOCATION = "101 City Hall Plaza, Durham, Room 3G"
 
 _BOCC_TIMES = {
-    "Regular Meeting":        "Monday · 7:00 PM",
-    "Work Session":           "Monday · 9:00 AM",
-    "Budget Work Session":    "Monday · 9:00 AM",
-    "Budget Retreat":         "Thursday · 9:00 AM",
-    "Joint City-County Meeting": "Monday · 9:30 AM",
-    "Budget Public Hearing":  "Monday · 7:00 PM",
-    "Special Session":        "TBD",
+    "Regular Meeting":           "7:00 PM",
+    "Work Session":              "9:00 AM",
+    "Budget Work Session":       "9:00 AM",
+    "Budget Retreat":            "9:00 AM",
+    "Joint City-County Meeting": "9:30 AM",
+    "Budget Public Hearing":     "7:00 PM",
+    "Special Session":           "TBD",
 }
+
+_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+def _day_label(date_str, time_str):
+    """Return 'Weekday · HH:MM AM/PM' computed from the actual date."""
+    from datetime import date as _date
+    try:
+        d = _date.fromisoformat(date_str)
+        return f"{_DAYS[d.weekday()]} \u00b7 {time_str}"
+    except Exception:
+        return f"TBD \u00b7 {time_str}"
 
 def update_calendar(meetings=None):
     print("Updating calendar.json...")
@@ -416,15 +427,8 @@ def update_calendar(meetings=None):
     today_str = date.today().isoformat()
     cutoff = (date.today() - timedelta(days=14)).isoformat()  # keep last 2 weeks of past
 
-    # Split existing events: keep non-government events, rebuild government
-    keep_events = []
-    for ev in cal.get("events", []):
-        cat = ev.get("category", "")
-        if cat != "government":
-            keep_events.append(ev)
-        elif ev.get("date", "") >= cutoff:
-            # Keep very recent past government events briefly for context
-            keep_events.append(ev)
+    # Keep only non-government events; government events are fully rebuilt from meetings.json
+    keep_events = [ev for ev in cal.get("events", []) if ev.get("category") != "government"]
 
     # Build fresh government events from meetings.json
     new_gov = []
@@ -438,21 +442,24 @@ def update_calendar(meetings=None):
             links = m.get("links", [])
 
             if bid == "commissioners":
-                title = f"Board of Commissioners: {mtype}"
+                title = f"Board of Commissioners \u2013 {mtype}"
                 location = _BOCC_LOCATION
-                time_str = _BOCC_TIMES.get(mtype, "Monday · 7:00 PM")
+                raw_time = _BOCC_TIMES.get(mtype, "7:00 PM")
+                time_str = raw_time if raw_time == "TBD" else _day_label(date_str, raw_time)
             elif bid == "city-council":
-                title = f"Durham City Council: {mtype}"
+                title = f"Durham City Council \u2013 {mtype}"
                 location = _CITY_LOCATION
-                time_str = "Monday · 7:00 PM" if mtype == "Regular Meeting" else "Monday · 9:00 AM"
+                # Regular meetings: Mondays 7 PM; Work Sessions: Thursdays 1 PM
+                raw_time = "7:00 PM" if mtype == "Regular Meeting" else "1:00 PM"
+                time_str = _day_label(date_str, raw_time)
             elif bid == "planning":
                 title = "City-County Planning Commission"
                 location = _PLANNING_LOCATION
-                time_str = "Monday · 9:00 AM"
+                time_str = _day_label(date_str, "9:00 AM")
             elif bid == "board-of-adjustment":
                 title = "Board of Adjustment"
                 location = _BOA_LOCATION
-                time_str = "Tuesday · 9:00 AM"
+                time_str = _day_label(date_str, "9:00 AM")
             else:
                 continue
 
@@ -465,16 +472,9 @@ def update_calendar(meetings=None):
                 "links": links,
             })
 
-    # Remove duplicates (keep_events may already have some of these dates)
-    existing_gov_dates = {
-        (ev["date"], ev.get("title", ""))
-        for ev in keep_events
-        if ev.get("category") == "government"
-    }
-    new_gov = [
-        ev for ev in new_gov
-        if (ev["date"], ev["title"]) not in existing_gov_dates
-    ]
+    # Deduplicate by date — keep_events contains no government events so this is a safety net
+    existing_gov_dates = {ev["date"] for ev in keep_events if ev.get("category") == "government"}
+    new_gov = [ev for ev in new_gov if ev["date"] not in existing_gov_dates]
 
     all_events = keep_events + new_gov
     all_events.sort(key=lambda e: e["date"])
