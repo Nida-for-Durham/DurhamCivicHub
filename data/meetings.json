@@ -1282,19 +1282,19 @@
       "id": "planning",
       "name": "City-County Planning Commission",
       "description": "Reviews rezoning petitions, subdivision plans, and long-range land use policy for both the City and County.",
-      "schedule": "4th Wednesday, 9:00 AM",
-      "location": "101 City Hall Plaza, Durham, Committee Room",
+      "schedule": "2nd Tuesday, 5:30 PM",
+      "location": "101 City Hall Plaza, Durham, City Council Chambers",
       "archiveUrl": "https://www.durhamnc.gov/1367/Planning-Commission",
       "group": "advisory",
       "meetings": [
         {
-          "date": "2026-04-14",
+          "date": "2026-02-24",
           "type": "Regular Meeting",
           "status": "past",
           "links": [
             {
               "label": "Agenda",
-              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04142026-3416",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_02242026-3372",
               "primary": true
             }
           ]
@@ -1312,13 +1312,109 @@
           ]
         },
         {
-          "date": "2026-02-24",
+          "date": "2026-04-14",
           "type": "Regular Meeting",
           "status": "past",
           "links": [
             {
               "label": "Agenda",
-              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_02242026-3372",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04142026-3416",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-12",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1367/Planning-Commission",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-09",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1367/Planning-Commission",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-14",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1367/Planning-Commission",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-11",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1367/Planning-Commission",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-08",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1367/Planning-Commission",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-13",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1367/Planning-Commission",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-10",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1367/Planning-Commission",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-15",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1367/Planning-Commission",
               "primary": true
             }
           ]
@@ -1329,19 +1425,19 @@
       "id": "board-of-adjustment",
       "name": "Board of Adjustment",
       "description": "Hears appeals of zoning decisions and grants variances from development regulations.",
-      "schedule": "2nd & 4th Thursday, 9:00 AM",
+      "schedule": "4th Tuesday, 8:30 AM",
       "location": "101 City Hall Plaza, Durham, Committee Room",
       "archiveUrl": "https://www.durhamnc.gov/1372/Board-of-Adjustment-BOA",
       "group": "advisory",
       "meetings": [
         {
-          "date": "2026-04-28",
+          "date": "2026-02-24",
           "type": "Regular Meeting",
-          "status": "upcoming",
+          "status": "past",
           "links": [
             {
               "label": "Agenda",
-              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_04282026-3431",
+              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_02242026-3373",
               "primary": true
             }
           ]
@@ -1359,13 +1455,97 @@
           ]
         },
         {
-          "date": "2026-02-24",
+          "date": "2026-05-26",
           "type": "Regular Meeting",
-          "status": "past",
+          "status": "upcoming",
           "links": [
             {
-              "label": "Agenda",
-              "url": "https://www.durhamnc.gov/AgendaCenter/ViewFile/Agenda/_02242026-3373",
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1372/Board-of-Adjustment-BOA",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-23",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1372/Board-of-Adjustment-BOA",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-28",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1372/Board-of-Adjustment-BOA",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-25",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1372/Board-of-Adjustment-BOA",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-22",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1372/Board-of-Adjustment-BOA",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1372/Board-of-Adjustment-BOA",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-24",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1372/Board-of-Adjustment-BOA",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-29",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1372/Board-of-Adjustment-BOA",
               "primary": true
             }
           ]
@@ -1470,7 +1650,92 @@
       "location": "101 City Hall Plaza, Durham, Committee Room",
       "archiveUrl": "https://www.durhamnc.gov/1368/Environmental-Affairs-Board-EAB",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-05-06",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1368/Environmental-Affairs-Board-EAB",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1368/Environmental-Affairs-Board-EAB",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-05",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1368/Environmental-Affairs-Board-EAB",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-02",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1368/Environmental-Affairs-Board-EAB",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-07",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1368/Environmental-Affairs-Board-EAB",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1368/Environmental-Affairs-Board-EAB",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-09",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1368/Environmental-Affairs-Board-EAB",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "historic-preservation",
@@ -1480,7 +1745,104 @@
       "location": "101 City Hall Plaza, Durham, Committee Room",
       "archiveUrl": "https://www.durhamnc.gov/397/Historic-Preservation-Commission-HPC",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-05-05",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/397/Historic-Preservation-Commission-HPC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/397/Historic-Preservation-Commission-HPC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-07",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/397/Historic-Preservation-Commission-HPC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-04",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/397/Historic-Preservation-Commission-HPC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-01",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/397/Historic-Preservation-Commission-HPC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-06",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/397/Historic-Preservation-Commission-HPC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/397/Historic-Preservation-Commission-HPC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-08",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/397/Historic-Preservation-Commission-HPC",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "bicycle-pedestrian",
@@ -1490,7 +1852,92 @@
       "location": "City Hall or Zoom",
       "archiveUrl": "https://www.durhamnc.gov/3851/Durham-Bicycle-and-Pedestrian-Advisory-C",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-05-19",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/3851/Durham-Bicycle-and-Pedestrian-Advisory-C",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/3851/Durham-Bicycle-and-Pedestrian-Advisory-C",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-18",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/3851/Durham-Bicycle-and-Pedestrian-Advisory-C",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-15",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/3851/Durham-Bicycle-and-Pedestrian-Advisory-C",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-20",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/3851/Durham-Bicycle-and-Pedestrian-Advisory-C",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/3851/Durham-Bicycle-and-Pedestrian-Advisory-C",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-15",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/3851/Durham-Bicycle-and-Pedestrian-Advisory-C",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "workers-rights",
@@ -1510,7 +1957,56 @@
       "location": "Virtual (open to public)",
       "archiveUrl": "https://www.dconc.gov/Public-Health/About-Us/Board-of-Health/Board-of-Health-Agendas-and-Minutes",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-06-11",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Public-Health/About-Us/Board-of-Health/Board-of-Health-Agendas-and-Minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-13",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Public-Health/About-Us/Board-of-Health/Board-of-Health-Agendas-and-Minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-08",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Public-Health/About-Us/Board-of-Health/Board-of-Health-Agendas-and-Minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-12",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Public-Health/About-Us/Board-of-Health/Board-of-Health-Agendas-and-Minutes",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "library-trustees",
@@ -1520,7 +2016,116 @@
       "location": "Various Durham County Library branches",
       "archiveUrl": "https://durhamcountylibrary.org/board-of-trustees/meetings/",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-04-28",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamcountylibrary.org/board-of-trustees/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-26",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamcountylibrary.org/board-of-trustees/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-23",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamcountylibrary.org/board-of-trustees/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-28",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamcountylibrary.org/board-of-trustees/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-25",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamcountylibrary.org/board-of-trustees/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-22",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamcountylibrary.org/board-of-trustees/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamcountylibrary.org/board-of-trustees/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-24",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamcountylibrary.org/board-of-trustees/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-29",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamcountylibrary.org/board-of-trustees/meetings/",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "dss-board",
@@ -1530,7 +2135,116 @@
       "location": "Hybrid",
       "archiveUrl": "https://www.dconc.gov/Social-Services/Contact-DSS/DSS-Board-Minutes",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-04-22",
+          "type": "Regular Meeting",
+          "status": "past",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Social-Services/Contact-DSS/DSS-Board-Minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-27",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Social-Services/Contact-DSS/DSS-Board-Minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-24",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Social-Services/Contact-DSS/DSS-Board-Minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-22",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Social-Services/Contact-DSS/DSS-Board-Minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-26",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Social-Services/Contact-DSS/DSS-Board-Minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-23",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Social-Services/Contact-DSS/DSS-Board-Minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-28",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Social-Services/Contact-DSS/DSS-Board-Minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-25",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Social-Services/Contact-DSS/DSS-Board-Minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-30",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Social-Services/Contact-DSS/DSS-Board-Minutes",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "cultural-advisory",
@@ -1540,7 +2254,104 @@
       "location": "General Services Dept., Room 141, 2011 Fay St., Durham",
       "archiveUrl": "https://www.durhamnc.gov/452/Durham-Cultural-Advisory-Board",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-05-20",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/452/Durham-Cultural-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/452/Durham-Cultural-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-15",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/452/Durham-Cultural-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-19",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/452/Durham-Cultural-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-16",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/452/Durham-Cultural-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-21",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/452/Durham-Cultural-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-18",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/452/Durham-Cultural-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-16",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/452/Durham-Cultural-Advisory-Board",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "open-space-trails",
@@ -1550,7 +2361,104 @@
       "location": "Virtual / Durham City Hall Committee Room",
       "archiveUrl": "https://www.durhamnc.gov/1652/Durham-Open-Space-and-Trails-Commission-",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-05-20",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1652/Durham-Open-Space-and-Trails-Commission-",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1652/Durham-Open-Space-and-Trails-Commission-",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-15",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1652/Durham-Open-Space-and-Trails-Commission-",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-19",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1652/Durham-Open-Space-and-Trails-Commission-",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-16",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1652/Durham-Open-Space-and-Trails-Commission-",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-21",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1652/Durham-Open-Space-and-Trails-Commission-",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-18",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1652/Durham-Open-Space-and-Trails-Commission-",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-16",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1652/Durham-Open-Space-and-Trails-Commission-",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "homeless-services",
@@ -1560,7 +2468,80 @@
       "location": "414 E. Main St., Durham, Conference Room C",
       "archiveUrl": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Homeless-Services-Advisory-Committee",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-04-22",
+          "type": "Regular Meeting",
+          "status": "past",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Homeless-Services-Advisory-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-20",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Homeless-Services-Advisory-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-24",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Homeless-Services-Advisory-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-28",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Homeless-Services-Advisory-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-18",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Homeless-Services-Advisory-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-25",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Homeless-Services-Advisory-Committee",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "jccpc",
@@ -1570,7 +2551,92 @@
       "location": "101 City Hall Plaza, Durham, Committee Room",
       "archiveUrl": "https://www.durhamnc.gov/1418/Joint-City-County-Planning-Committee",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-05-06",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1418/Joint-City-County-Planning-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1418/Joint-City-County-Planning-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-05",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1418/Joint-City-County-Planning-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-02",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1418/Joint-City-County-Planning-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-07",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1418/Joint-City-County-Planning-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1418/Joint-City-County-Planning-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-09",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/1418/Joint-City-County-Planning-Committee",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "workforce-development",
@@ -1580,7 +2646,56 @@
       "location": "423 Morris Street, Durham (Durham Housing Authority)",
       "archiveUrl": "https://durhamnc.gov/460/Workforce-Development-Board",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-05-28",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamnc.gov/460/Workforce-Development-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-23",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamnc.gov/460/Workforce-Development-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-24",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamnc.gov/460/Workforce-Development-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-26",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://durhamnc.gov/460/Workforce-Development-Board",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "human-relations",
@@ -1600,7 +2715,104 @@
       "location": "Durham Farm Bureau, 1901 Hillandale Rd., Suite 105",
       "archiveUrl": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Farmland-Protection-Advisory-Board",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-05-21",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Farmland-Protection-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Farmland-Protection-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-16",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Farmland-Protection-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-20",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Farmland-Protection-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-17",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Farmland-Protection-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Farmland-Protection-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-19",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Farmland-Protection-Advisory-Board",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-17",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Farmland-Protection-Advisory-Board",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "opioid-settlement",
@@ -1610,7 +2822,56 @@
       "location": "Virtual (YouTube livestream)",
       "archiveUrl": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Opioid-Settlement-Advisory-Committee",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-05-11",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Opioid-Settlement-Advisory-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-10",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Opioid-Settlement-Advisory-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-13",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Opioid-Settlement-Advisory-Committee",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Opioid-Settlement-Advisory-Committee",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "rdu",
@@ -1620,7 +2881,104 @@
       "location": "RDU Airport Center, 1000 Trade Drive, Durham",
       "archiveUrl": "https://www.rdu.com/airport-authority/meetings/",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-05-21",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.rdu.com/airport-authority/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.rdu.com/airport-authority/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-16",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.rdu.com/airport-authority/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-20",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.rdu.com/airport-authority/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-17",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.rdu.com/airport-authority/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.rdu.com/airport-authority/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-19",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.rdu.com/airport-authority/meetings/",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-17",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.rdu.com/airport-authority/meetings/",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "durham-tech-trustees",
@@ -1630,7 +2988,20 @@
       "location": "Durham Tech Main Campus, Lyon Board Room, 1637 E. Lawson St.",
       "archiveUrl": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Durham-Technical-Community-College-Board-of-Trustees",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-06-16",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.dconc.gov/Clerk-to-the-Board/Boards-and-Commissions/Minutes-and-Meeting-Information/Durham-Technical-Community-College-Board-of-Trustees",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "abc-board",
@@ -1640,7 +3011,104 @@
       "location": "Durham ABC Office, 3620 Shannon Rd., Suite 200",
       "archiveUrl": "https://www.durhamabc.com/board-meeting-minutes",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-05-19",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamabc.com/board-meeting-minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamabc.com/board-meeting-minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-21",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamabc.com/board-meeting-minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-18",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamabc.com/board-meeting-minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-15",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamabc.com/board-meeting-minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-20",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamabc.com/board-meeting-minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamabc.com/board-meeting-minutes",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-15",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamabc.com/board-meeting-minutes",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "citizens-advisory",
@@ -1650,7 +3118,116 @@
       "location": "101 City Hall Plaza, Durham, Conference Room 1A",
       "archiveUrl": "https://www.durhamnc.gov/4775/Citizens-Advisory-Committee-CAC",
       "group": "advisory",
-      "meetings": []
+      "meetings": [
+        {
+          "date": "2026-04-27",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/4775/Citizens-Advisory-Committee-CAC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-25",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/4775/Citizens-Advisory-Committee-CAC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-06-22",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/4775/Citizens-Advisory-Committee-CAC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-07-27",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/4775/Citizens-Advisory-Committee-CAC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-08-24",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/4775/Citizens-Advisory-Committee-CAC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-09-28",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/4775/Citizens-Advisory-Committee-CAC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-10-26",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/4775/Citizens-Advisory-Committee-CAC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-11-23",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/4775/Citizens-Advisory-Committee-CAC",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-12-28",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Agenda & Minutes",
+              "url": "https://www.durhamnc.gov/4775/Citizens-Advisory-Committee-CAC",
+              "primary": true
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "recreation-advisory",
