@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-24",
+  "updated": "2026-04-25",
   "note": "Edit this file to add or update meetings. Status values: upcoming, minutes, cancelled.",
   "bodies": [
     {
@@ -1705,7 +1705,7 @@
         {
           "date": "2026-04-24",
           "type": "Regular Meeting",
-          "status": "upcoming",
+          "status": "minutes",
           "links": [
             {
               "label": "From the Desk of the County Manager, April 24, 2026",
