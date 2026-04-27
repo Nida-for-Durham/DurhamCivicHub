@@ -1,7 +1,27 @@
 {
-  "updated": "2026-04-26",
-  "count": 19,
+  "updated": "2026-04-27",
+  "count": 21,
   "stories": [
+    {
+      "title": "Record Numbers of Durham High Schoolers are Missing School",
+      "excerpt": "Over half of Durham Public Schools high schoolers were chronically absent in the first six months of the current school year.",
+      "link": "https://indyweek.com/news/record-numbers-of-durham-high-schoolers-are-missing-school/",
+      "source": "Indy Week",
+      "date": "2026-04-27",
+      "displayDate": "April 27, 2026",
+      "tag": "Housing",
+      "image": "https://indyweek.com/wp-content/uploads/2026/04/20250409_AE_INDY_DPS_selects_009-scaled.jpg"
+    },
+    {
+      "title": "Fake federal court warrant nearly costs Durham resident $30K, sheriff warns",
+      "excerpt": "Durham sheriff warns scammers are impersonating federal courts with fake arrest warrants that look real.",
+      "link": "https://abc11.com/post/durham-county-sheriff-alerts-public-convincing-federal-court-phone-scam/18972011/",
+      "source": "ABC11 / WTVD",
+      "date": "2026-04-26",
+      "displayDate": "April 26, 2026",
+      "tag": "Public Safety",
+      "image": "https://cdn.abcotvs.com/dip/images/18972063_durham-scam-img.jpg?w=1600"
+    },
     {
       "title": "Durham schools prioritizing wellness to curb chronic absenteeism",
       "excerpt": "Attendance in Durham Public Schools has not rebounded since the pandemic, with new district data showing that at least 37% of students are frequently missing class.",
