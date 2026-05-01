@@ -1,7 +1,17 @@
 {
-  "updated": "2026-04-30",
+  "updated": "2026-05-01",
   "count": 25,
   "stories": [
+    {
+      "title": "Durham prepares for tourism boom during first-ever Garmin marathon",
+      "excerpt": "Durham officials expect the race to bring a significant impact on the city's economy. According to the Durham Sports Commission, Durham hosts more and more large sporting events. In FY25, sports tourism had a $14.2 million total economic impact, with 48 events drawing more than 93,000 spectators.",
+      "link": "https://www.wral.com/news/local/durham-prepares-tourism-boom-first-ever-garmin-marathon-april-2026/",
+      "source": "WRAL News",
+      "date": "2026-04-30",
+      "displayDate": "April 30, 2026",
+      "tag": "County",
+      "image": "https://images.wral.com/asset/news/local/2026/04/30/22353544/garmin-DMID1-6au4xpsy4-1872x1033.jpg?w=1200&h=630&height=630"
+    },
     {
       "title": "Police, EMS respond to Durham gas station",
       "excerpt": "Officers and medics were seen at a Han-Dee Hugo's along Miami Boulevard around 12 p.m.",
@@ -247,15 +257,6 @@
         "Community"
       ],
       "excerpt": "Durham County is accepting applications for vacancies on advisory boards and commissions, including the Planning Commission, Library Advisory Board, and others. Any Durham County neighbor can apply. Appointments are made by the Board of Commissioners."
-    },
-    {
-      "title": "Two Durham elementary students detained by ICE, deported to Honduras within 48 hours",
-      "excerpt": "Two Durham elementary school students and their parents were detained by federal immigration authorities during a scheduled appointment in Charlotte earlier this week, and deported to Honduras within 48 hours, according to family members and advocates. The children, Genesis, 11, and Denis, 6,…",
-      "link": "https://ncnewsline.com/2026/04/09/two-durham-elementary-students-detained-by-ice-deported-to-honduras-within-48-hours/",
-      "source": "NC Newsline",
-      "date": "2026-04-09",
-      "displayDate": "April 9, 2026",
-      "tag": "Housing"
     }
   ]
 }
