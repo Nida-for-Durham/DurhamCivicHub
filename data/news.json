@@ -1,7 +1,27 @@
 {
-  "updated": "2026-05-01",
+  "updated": "2026-05-02",
   "count": 25,
   "stories": [
+    {
+      "title": "Durham community groups step in to feed students after classes canceled for educators rally",
+      "excerpt": "Organizers estimate the effort served more than 2,000 students across Durham",
+      "link": "https://abc11.com/post/may-rally-closes-school-nc-districts-community-groups-step-lunch-ladies-feed-students/19016671/",
+      "source": "ABC11 / WTVD",
+      "date": "2026-05-02",
+      "displayDate": "May 2, 2026",
+      "tag": "County",
+      "image": "https://cdn.abcotvs.com/dip/images/19017589_RallyLunch.jpg?w=1600"
+    },
+    {
+      "title": "Sheriff's office: Woman shot, seeks help inside Durham convenience store",
+      "excerpt": "A woman with a gunshot wound walked into a convenience store on East Club Boulevard in Durham and asked an employee to call 911 Friday afternoon.",
+      "link": "https://www.wral.com/news/local/woman-shot-asks-for-help-durham-convenience-store-may-2026/",
+      "source": "WRAL News",
+      "date": "2026-05-01",
+      "displayDate": "May 1, 2026",
+      "tag": "Public Safety",
+      "image": "https://images.wral.com/096aa9a6-c5af-410f-af50-49b7b41ea4e6?w=1200&h=630"
+    },
     {
       "title": "Durham prepares for tourism boom during first-ever Garmin marathon",
       "excerpt": "Durham officials expect the race to bring a significant impact on the city's economy. According to the Durham Sports Commission, Durham hosts more and more large sporting events. In FY25, sports tourism had a $14.2 million total economic impact, with 48 events drawing more than 93,000 spectators.",
@@ -234,29 +254,6 @@
       "displayDate": "April 16, 2026",
       "tag": "Housing",
       "image": "https://ncnewsline.com/wp-content/uploads/2026/04/IMG_5408-1-2048x1536.jpeg"
-    },
-    {
-      "title": "DPS Board Submits FY2026-27 County Funding Request",
-      "link": "https://www.dpsnc.net/page/board-of-education",
-      "source": "Durham Public Schools",
-      "date": "2026-04-15",
-      "displayDate": "Apr 15, 2026",
-      "tags": [
-        "Schools",
-        "Budget"
-      ],
-      "excerpt": "The Durham Public Schools Board of Education has submitted its FY2026-27 county appropriation request to the Durham County Board of Commissioners. The full recommended budget document is posted on the DPS Board of Education page."
-    },
-    {
-      "title": "Applications Open for County Advisory Boards and Commissions",
-      "link": "https://www.dconc.gov/clerk-to-the-board/boards-and-commissions",
-      "source": "Durham County",
-      "date": "2026-04-10",
-      "displayDate": "Apr 10, 2026",
-      "tags": [
-        "Community"
-      ],
-      "excerpt": "Durham County is accepting applications for vacancies on advisory boards and commissions, including the Planning Commission, Library Advisory Board, and others. Any Durham County neighbor can apply. Appointments are made by the Board of Commissioners."
     }
   ]
 }

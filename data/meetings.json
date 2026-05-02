@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-01",
+  "updated": "2026-05-02",
   "note": "Edit this file to add or update meetings. Status values: upcoming, minutes, cancelled.",
   "bodies": [
     {
@@ -1698,6 +1698,30 @@
             {
               "label": "Details",
               "url": "https://www.dconc.gov/clerk-to-the-board/boards-and-commissions",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-04",
+          "type": "Regular Meeting",
+          "status": "upcoming",
+          "links": [
+            {
+              "label": "Archive",
+              "url": "https://www.dconc.gov/county-departments/departments-a-e/board-of-commissioners/boards-and-commissions",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "date": "2026-05-01",
+          "type": "Regular Meeting",
+          "status": "minutes",
+          "links": [
+            {
+              "label": "From the Desk of the County Manager, May 1, 2026",
+              "url": "https://www.dconc.gov/DurhamCo-News/From-the-Desk-of-the-County-Manager-May-1-2026.htm",
               "primary": true
             }
           ]
