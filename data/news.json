@@ -1,7 +1,17 @@
 {
-  "updated": "2026-05-02",
+  "updated": "2026-05-03",
   "count": 25,
   "stories": [
+    {
+      "title": "North Carolina burn ban lifted for 81 counties, including Wake and Durham",
+      "excerpt": "A statewide burn ban was lifted for dozens of counties on Sunday, according to the North Carolina Forest Service.",
+      "link": "https://www.wral.com/news/local/burn-ban-lifted-wake-durham-counties-may-2026/",
+      "source": "WRAL News",
+      "date": "2026-05-03",
+      "displayDate": "May 3, 2026",
+      "tag": "County",
+      "image": "https://images.wral.com/asset/news/local/2026/05/03/22354366/3295310-burn_ban-DMID1-6av4tqznh-1280x720.jpg?w=1200&h=630&height=630"
+    },
     {
       "title": "Durham community groups step in to feed students after classes canceled for educators rally",
       "excerpt": "Organizers estimate the effort served more than 2,000 students across Durham",
@@ -11,6 +21,16 @@
       "displayDate": "May 2, 2026",
       "tag": "County",
       "image": "https://cdn.abcotvs.com/dip/images/19017589_RallyLunch.jpg?w=1600"
+    },
+    {
+      "title": "Runners qualify for Boston Marathon at Durham event",
+      "excerpt": "Thousands of runners descended on the Bull City for the inaugural Garmin Marathon Series, a race that also served as a qualifier for the Boston Marathon.",
+      "link": "https://abc11.com/post/garmin-marathon-series-runners-qualify-boston-durham-event/19022823/",
+      "source": "ABC11 / WTVD",
+      "date": "2026-05-02",
+      "displayDate": "May 2, 2026",
+      "tag": "County",
+      "image": "https://cdn.abcotvs.com/dip/images/19024788_050226-wtvd-bianca-durham-marathon-clean-img.jpg?w=1600"
     },
     {
       "title": "Sheriff's office: Woman shot, seeks help inside Durham convenience store",
@@ -234,26 +254,6 @@
         "Community"
       ],
       "excerpt": "Durham County will hold a public hearing on the FY2026-27 budget on May 26 at 7 PM in the Commissioners Chambers at 200 E. Main St. Neighbors can sign up to speak in person or submit written comments to the Board."
-    },
-    {
-      "title": "It’s not rocket science: UNC System leaders make the case for increased funding",
-      "excerpt": "There&#8217;s perhaps no better advocate for North Carolina’s higher education system these days than NASA Astronaut Christina Koch. A mission specialist on Artemis II, Koch graduated from the North Carolina School of Science and Mathematics in Durham in 1997 and went on to North Carolina State…",
-      "link": "https://ncnewsline.com/2026/04/17/its-not-rocket-science-unc-system-leaders-make-the-case-for-increased-funding/",
-      "source": "NC Newsline",
-      "date": "2026-04-17",
-      "displayDate": "April 17, 2026",
-      "tag": "Schools",
-      "image": "https://ncnewsline.com/wp-content/uploads/2026/04/GettyImages-2271101884-2048x1365.jpg"
-    },
-    {
-      "title": "Young cancer survivor breaks ground on family housing for children in treatment at Duke Hospital",
-      "excerpt": "It would be an understatement to say that Harper Harrell has a smile that lights up a room — it lights up all of the outdoors. That was evident this week when the 12-year-old cancer survivor’s smile lit up her Durham backyard as she buzzed about, sharing with all comers her plans to build safe,…",
-      "link": "https://ncnewsline.com/2026/04/16/young-cancer-survivor-breaks-ground-on-family-housing-for-children-in-treatment-at-duke-hospital/",
-      "source": "NC Newsline",
-      "date": "2026-04-16",
-      "displayDate": "April 16, 2026",
-      "tag": "Housing",
-      "image": "https://ncnewsline.com/wp-content/uploads/2026/04/IMG_5408-1-2048x1536.jpeg"
     }
   ]
 }
