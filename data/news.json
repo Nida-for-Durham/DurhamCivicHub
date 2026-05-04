@@ -1,9 +1,169 @@
 {
-  "updated": "2026-04-23",
-  "count": 17,
+  "updated": "2026-05-03",
+  "count": 25,
   "stories": [
     {
-      "title": "NC Central leadership responds after fatal shooting at party attended by students",
+      "title": "North Carolina burn ban lifted for 81 counties, including Wake and Durham",
+      "excerpt": "A statewide burn ban was lifted for dozens of counties on Sunday, according to the North Carolina Forest Service.",
+      "link": "https://www.wral.com/news/local/burn-ban-lifted-wake-durham-counties-may-2026/",
+      "source": "WRAL News",
+      "date": "2026-05-03",
+      "displayDate": "May 3, 2026",
+      "tag": "County",
+      "image": "https://images.wral.com/asset/news/local/2026/05/03/22354366/3295310-burn_ban-DMID1-6av4tqznh-1280x720.jpg?w=1200&h=630&height=630"
+    },
+    {
+      "title": "Durham community groups step in to feed students after classes canceled for educators rally",
+      "excerpt": "Organizers estimate the effort served more than 2,000 students across Durham",
+      "link": "https://abc11.com/post/may-rally-closes-school-nc-districts-community-groups-step-lunch-ladies-feed-students/19016671/",
+      "source": "ABC11 / WTVD",
+      "date": "2026-05-02",
+      "displayDate": "May 2, 2026",
+      "tag": "County",
+      "image": "https://cdn.abcotvs.com/dip/images/19017589_RallyLunch.jpg?w=1600"
+    },
+    {
+      "title": "Runners qualify for Boston Marathon at Durham event",
+      "excerpt": "Thousands of runners descended on the Bull City for the inaugural Garmin Marathon Series, a race that also served as a qualifier for the Boston Marathon.",
+      "link": "https://abc11.com/post/garmin-marathon-series-runners-qualify-boston-durham-event/19022823/",
+      "source": "ABC11 / WTVD",
+      "date": "2026-05-02",
+      "displayDate": "May 2, 2026",
+      "tag": "County",
+      "image": "https://cdn.abcotvs.com/dip/images/19024788_050226-wtvd-bianca-durham-marathon-clean-img.jpg?w=1600"
+    },
+    {
+      "title": "Sheriff's office: Woman shot, seeks help inside Durham convenience store",
+      "excerpt": "A woman with a gunshot wound walked into a convenience store on East Club Boulevard in Durham and asked an employee to call 911 Friday afternoon.",
+      "link": "https://www.wral.com/news/local/woman-shot-asks-for-help-durham-convenience-store-may-2026/",
+      "source": "WRAL News",
+      "date": "2026-05-01",
+      "displayDate": "May 1, 2026",
+      "tag": "Public Safety",
+      "image": "https://images.wral.com/096aa9a6-c5af-410f-af50-49b7b41ea4e6?w=1200&h=630"
+    },
+    {
+      "title": "Durham prepares for tourism boom during first-ever Garmin marathon",
+      "excerpt": "Durham officials expect the race to bring a significant impact on the city's economy. According to the Durham Sports Commission, Durham hosts more and more large sporting events. In FY25, sports tourism had a $14.2 million total economic impact, with 48 events drawing more than 93,000 spectators.",
+      "link": "https://www.wral.com/news/local/durham-prepares-tourism-boom-first-ever-garmin-marathon-april-2026/",
+      "source": "WRAL News",
+      "date": "2026-04-30",
+      "displayDate": "April 30, 2026",
+      "tag": "County",
+      "image": "https://images.wral.com/asset/news/local/2026/04/30/22353544/garmin-DMID1-6au4xpsy4-1872x1033.jpg?w=1200&h=630&height=630"
+    },
+    {
+      "title": "Police, EMS respond to Durham gas station",
+      "excerpt": "Officers and medics were seen at a Han-Dee Hugo's along Miami Boulevard around 12 p.m.",
+      "link": "https://www.wral.com/news/local/police-ems-durham-gas-station-april-2026/",
+      "source": "WRAL News",
+      "date": "2026-04-29",
+      "displayDate": "April 29, 2026",
+      "tag": "Public Safety",
+      "image": "https://images.wral.com/15bed512-0d46-4272-9937-b4ca318b1c5d?w=1200&h=630"
+    },
+    {
+      "title": "Charge: Durham man dragged Cary police officers who reached into his car",
+      "excerpt": "Damian Charles Awkward faces a total of seven charges, including two counts of assaulting a government official with a deadly weapon, felony possession of cocaine, misdemeanor resisting a public officer and misdemeanor possession of marijuana.",
+      "link": "https://www.wral.com/news/local/cary-police-drag-charge-april-2026/",
+      "source": "WRAL News",
+      "date": "2026-04-29",
+      "displayDate": "April 29, 2026",
+      "tag": "Public Safety",
+      "image": "https://images.wral.com/20aacd01-3ba6-4423-a692-f0fd35bbe4d2?w=1200&h=630"
+    },
+    {
+      "title": "Durham Could Impose a Two-Year Data Center Moratorium",
+      "excerpt": "The City Council is expected to hold a public hearing on the proposal Monday night.",
+      "link": "https://indyweek.com/news/durham-could-impose-a-two-year-data-center-moratorium/",
+      "source": "Indy Week",
+      "date": "2026-04-29",
+      "displayDate": "April 29, 2026",
+      "tag": "County",
+      "image": "https://indyweek.com/wp-content/uploads/2026/04/2026-04-29-durham-data-center-moratorium-illo-npm.jpg"
+    },
+    {
+      "title": "NC man charged with felony child abuse, warrants describe malnutrition, developmental delays",
+      "excerpt": "The Durham County Sheriff's Office has charged a man with four counts of felony child abuse.",
+      "link": "https://www.wral.com/news/local/nc-man-charged-felony-child-abuse-durham-alamance-counties-april-2026/",
+      "source": "WRAL News",
+      "date": "2026-04-28",
+      "displayDate": "April 28, 2026",
+      "tag": "Transit",
+      "image": "https://images.wral.com/a50f8489-7285-48b7-ac54-031afa8c76d7?w=1200&h=630"
+    },
+    {
+      "title": "Man killed along American Tobacco Trail in Durham, investigation underway",
+      "excerpt": "A man who was found critically injured Monday evening near the American Tobacco Trail has died, Durham police said. A homicide investigation is underway.",
+      "link": "https://www.wral.com/news/local/man-killed-durham-police-investigate-fayetteville-street-april-2026/",
+      "source": "WRAL News",
+      "date": "2026-04-28",
+      "displayDate": "April 28, 2026",
+      "tag": "Transit",
+      "image": "https://images.wral.com/asset/news/local/2026/04/28/22352605/Image__6_-DMID1-6at3u95gw-4032x3024.jpg?w=1200&h=630&height=630"
+    },
+    {
+      "title": "Attempts to lower the rate of Black maternal deaths in NC face new challenges",
+      "excerpt": "The path leading to the track at a Durham middle school on Saturday was marked with signs bearing the names of Black women who died from pregnancy-related causes.  Walkers and runners participating in a fundraiser for MAAME, or a Durham nonprofit that offers doula care, walked past the signs,…",
+      "link": "https://ncnewsline.com/2026/04/28/attempts-to-lower-the-rate-of-black-maternal-deaths-in-nc-face-new-challenges/",
+      "source": "NC Newsline",
+      "date": "2026-04-28",
+      "displayDate": "April 28, 2026",
+      "tag": "Schools",
+      "image": "https://ncnewsline.com/wp-content/uploads/2026/04/IMG_5082-2048x1536.jpeg"
+    },
+    {
+      "title": "Gun control advocates in NC work to preserve the permit law for concealed weapons",
+      "excerpt": "A bill allowing people to carry concealed handguns without permits is dangerous, Durham County Sheriff Clarence Birkhead said Tuesday, as it would increase gun violence and make the jobs of law enforcement officers harder.  Birkhead spoke at a news conference with gun control advocates. They…",
+      "link": "https://ncnewsline.com/2026/04/28/gun-control-advocates-in-nc-work-to-preserve-the-permit-law-for-concealed-weapons/",
+      "source": "NC Newsline",
+      "date": "2026-04-28",
+      "displayDate": "April 28, 2026",
+      "tag": "Public Safety",
+      "image": "https://ncnewsline.com/wp-content/uploads/2026/04/IMG_5096-2048x1536.jpeg"
+    },
+    {
+      "title": "Record Numbers of Durham High Schoolers are Missing School",
+      "excerpt": "Over half of Durham Public Schools high schoolers were chronically absent in the first six months of the current school year.",
+      "link": "https://indyweek.com/news/record-numbers-of-durham-high-schoolers-are-missing-school/",
+      "source": "Indy Week",
+      "date": "2026-04-27",
+      "displayDate": "April 27, 2026",
+      "tag": "Housing",
+      "image": "https://indyweek.com/wp-content/uploads/2026/04/20250409_AE_INDY_DPS_selects_009-scaled.jpg"
+    },
+    {
+      "title": "Former Durham City Council member’s lawsuit moves forward",
+      "excerpt": "A lawsuit filed by former Durham City Council Member Monique Holsey-Hyman is moving forward after an opinion by a state appellate court. The judges unanimously ruled to dismiss the appeal that cited legislative immunity for the former City Council members named in the suit.",
+      "link": "https://www.wral.com/news/local/monique-holsey-hyman-lawsuit-moves-forward-after-appeal-april-2026/",
+      "source": "WRAL News",
+      "date": "2026-04-27",
+      "displayDate": "April 27, 2026",
+      "tag": "County",
+      "image": "https://images.wral.com/asset/news/local/2024/03/08/21319566/3246884-monica-DMID1-627c3x449-1280x720.jpg?w=1200&h=630&height=630"
+    },
+    {
+      "title": "Fake federal court warrant nearly costs Durham resident $30K, sheriff warns",
+      "excerpt": "Durham sheriff warns scammers are impersonating federal courts with fake arrest warrants that look real.",
+      "link": "https://abc11.com/post/durham-county-sheriff-alerts-public-convincing-federal-court-phone-scam/18972011/",
+      "source": "ABC11 / WTVD",
+      "date": "2026-04-26",
+      "displayDate": "April 26, 2026",
+      "tag": "Public Safety",
+      "image": "https://cdn.abcotvs.com/dip/images/18972063_durham-scam-img.jpg?w=1600"
+    },
+    {
+      "title": "Durham schools prioritizing wellness to curb chronic absenteeism",
+      "excerpt": "Attendance in Durham Public Schools has not rebounded since the pandemic, with new district data showing that at least 37% of students are frequently missing class.",
+      "link": "https://abc11.com/post/durham-schools-prioritizing-wellness-curb-chronic-absenteeism/18960521/",
+      "source": "ABC11 / WTVD",
+      "date": "2026-04-24",
+      "displayDate": "April 24, 2026",
+      "tag": "Schools",
+      "image": "https://cdn.abcotvs.com/dip/images/18960955_042426-wtvd-dps-bus-img.jpg?w=1600"
+    },
+    {
+      "title": "Large outdoor party ends with 5 shot, 1 dead. Who is to blame?",
       "excerpt": "Social media posts describing a Zebulon party where five people were shot suggested it was for North Carolina Central University students to celebrate the end of the semester.",
       "link": "https://www.wral.com/news/local/nc-central-accountability-zebulon-shooting-april-2026/",
       "source": "WRAL News",
@@ -33,6 +193,16 @@
       "image": "https://i0.wp.com/indyweek.com/wp-content/uploads/2026/04/MMNT_20260320_132144526-scaled.jpg?fit=2560%2C1920&ssl=1"
     },
     {
+      "title": "Housing, Eviction Diversion, Small Businesses: How Durham Has Allocated Pandemic Relief Money",
+      "excerpt": "The City of Durham has allocated more than $70 million in American Rescue Plan Act money.",
+      "link": "https://indyweek.com/news/housing-eviction-diversion-small-businesses-how-durham-has-allocated-pandemic-relief-money/",
+      "source": "Indy Week",
+      "date": "2026-04-23",
+      "displayDate": "April 23, 2026",
+      "tag": "Housing",
+      "image": "https://indyweek.com/wp-content/uploads/2025/04/2025-04-18-durham-reorg-city-hall-cityofdurham.webp"
+    },
+    {
       "title": "County Manager to Present FY2026-27 Budget on May 11",
       "link": "https://www.dconc.gov/Budget-and-Management-Services",
       "source": "Durham County",
@@ -55,7 +225,7 @@
     },
     {
       "title": "Feds Fine Durham-Based Energy Efficiency Company $722 Million",
-      "excerpt": "American Efficient says it was incentivizing energy savings at major companies. One Federal Energy Regulatory Commission member claims “their entire business is a scam.”",
+      "excerpt": "American Efficient says it incentivizes energy savings. One FERC commissioner claims “their entire business is a scam.”",
       "link": "https://indyweek.com/news/business/american-efficient-ferc-durham-fine/",
       "source": "Indy Week",
       "date": "2026-04-22",
@@ -84,100 +254,6 @@
         "Community"
       ],
       "excerpt": "Durham County will hold a public hearing on the FY2026-27 budget on May 26 at 7 PM in the Commissioners Chambers at 200 E. Main St. Neighbors can sign up to speak in person or submit written comments to the Board."
-    },
-    {
-      "title": "It’s not rocket science: UNC System leaders make the case for increased funding",
-      "excerpt": "There&#8217;s perhaps no better advocate for North Carolina’s higher education system these days than NASA Astronaut Christina Koch. A mission specialist on Artemis II, Koch graduated from the North Carolina School of Science and Mathematics in Durham in 1997 and went on to North Carolina State…",
-      "link": "https://ncnewsline.com/2026/04/17/its-not-rocket-science-unc-system-leaders-make-the-case-for-increased-funding/",
-      "source": "NC Newsline",
-      "date": "2026-04-17",
-      "displayDate": "April 17, 2026",
-      "tag": "Schools"
-    },
-    {
-      "title": "Young cancer survivor breaks ground on family housing for children in treatment at Duke Hospital",
-      "excerpt": "It would be an understatement to say that Harper Harrell has a smile that lights up a room — it lights up all of the outdoors. That was evident this week when the 12-year-old cancer survivor’s smile lit up her Durham backyard as she buzzed about, sharing with all comers her plans to build safe,…",
-      "link": "https://ncnewsline.com/2026/04/16/young-cancer-survivor-breaks-ground-on-family-housing-for-children-in-treatment-at-duke-hospital/",
-      "source": "NC Newsline",
-      "date": "2026-04-16",
-      "displayDate": "April 16, 2026",
-      "tag": "Housing"
-    },
-    {
-      "title": "DPS Board Submits FY2026-27 County Funding Request",
-      "link": "https://www.dpsnc.net/page/board-of-education",
-      "source": "Durham Public Schools",
-      "date": "2026-04-15",
-      "displayDate": "Apr 15, 2026",
-      "tags": [
-        "Schools",
-        "Budget"
-      ],
-      "excerpt": "The Durham Public Schools Board of Education has submitted its FY2026-27 county appropriation request to the Durham County Board of Commissioners. The full recommended budget document is posted on the DPS Board of Education page."
-    },
-    {
-      "title": "Applications Open for County Advisory Boards and Commissions",
-      "link": "https://www.dconc.gov/clerk-to-the-board/boards-and-commissions",
-      "source": "Durham County",
-      "date": "2026-04-10",
-      "displayDate": "Apr 10, 2026",
-      "tags": [
-        "Community"
-      ],
-      "excerpt": "Durham County is accepting applications for vacancies on advisory boards and commissions, including the Planning Commission, Library Advisory Board, and others. Any Durham County neighbor can apply. Appointments are made by the Board of Commissioners."
-    },
-    {
-      "title": "Two Durham elementary students detained by ICE, deported to Honduras within 48 hours",
-      "excerpt": "Two Durham elementary school students and their parents were detained by federal immigration authorities during a scheduled appointment in Charlotte earlier this week, and deported to Honduras within 48 hours, according to family members and advocates. The children, Genesis, 11, and Denis, 6,…",
-      "link": "https://ncnewsline.com/2026/04/09/two-durham-elementary-students-detained-by-ice-deported-to-honduras-within-48-hours/",
-      "source": "NC Newsline",
-      "date": "2026-04-09",
-      "displayDate": "April 9, 2026",
-      "tag": "Housing"
-    },
-    {
-      "title": "BOCC Budget Work Sessions Begin in April",
-      "link": "https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library",
-      "source": "Durham County",
-      "date": "2026-04-07",
-      "displayDate": "Apr 7, 2026",
-      "tags": [
-        "Budget"
-      ],
-      "excerpt": "The Durham County Board of Commissioners is holding a series of budget work sessions throughout April and May to review departmental requests ahead of the County Manager's recommended budget presentation on May 11. Agendas and video recordings are posted on the BOCC agenda library page."
-    },
-    {
-      "title": "GoDurham Fixed-Route Buses Continue Fare-Free Service",
-      "link": "https://godurhamtransit.org/",
-      "source": "GoDurham Transit",
-      "date": "2026-04-01",
-      "displayDate": "Apr 1, 2026",
-      "tags": [
-        "Transit"
-      ],
-      "excerpt": "GoDurham fixed-route bus service remains fare-free for all riders. The Bull City Connector downtown circulator also runs free of charge Monday through Saturday. Trip planning tools and schedules are available at godurhamtransit.org."
-    },
-    {
-      "title": "Voter Registration Open for November 2026 General Election",
-      "link": "https://www.ncsbe.gov/registering",
-      "source": "NC State Board of Elections",
-      "date": "2026-04-01",
-      "displayDate": "Apr 1, 2026",
-      "tags": [
-        "Community"
-      ],
-      "excerpt": "North Carolina voter registration is open year-round for the November 3, 2026 general election. Durham County neighbors can register online, by mail, or in person at the Durham County Board of Elections. Same-day registration is available during early voting."
-    },
-    {
-      "title": "Durham County Library: Free Cards, Free Programs, All Branches",
-      "link": "https://library.durhamcounty.gov/",
-      "source": "Durham County Library",
-      "date": "2026-03-15",
-      "displayDate": "Mar 15, 2026",
-      "tags": [
-        "Community"
-      ],
-      "excerpt": "Durham County Library offers free library cards to all Durham County neighbors with proof of address. All branches provide books, e-books, computers, Wi-Fi, and free community programs. No fines for overdue materials at any branch."
     }
   ]
 }
