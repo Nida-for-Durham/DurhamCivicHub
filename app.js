@@ -525,6 +525,7 @@ function renderMeetings(data, container) {
 
 function renderMeetingRow(m) {
   const rel   = relDay(m.date);
+  const time  = m.official_time || m.time || '';
   const label = m.status === 'upcoming' ? 'meeting-status--upcoming'
               : m.status === 'cancelled' ? 'meeting-status--cancelled'
               : 'meeting-status--past';
@@ -537,6 +538,7 @@ function renderMeetingRow(m) {
       <div class="meeting-date-display">
         ${rel ? `<span class="meeting-rel-day">${esc(rel)}</span>` : ''}
         <span class="meeting-row-date">${esc(fmt(m.date))}</span>
+        ${time ? `<span class="meeting-row-time">${esc(time)}</span>` : ''}
       </div>
       <div class="meeting-row-info">
         <div class="meeting-type">${esc(m.type)}</div>
@@ -1316,7 +1318,7 @@ if ('serviceWorker' in navigator) {
 (function injectLastUpdated() {
   const PAGE_SOURCES = {
     'news.html':            { file: 'data/news.json',     key: 'updated',     label: 'Durham County government sources',        url: 'https://www.dconc.gov/' },
-    'meetings.html':        { file: 'data/meetings.json', key: 'lastFetched', label: 'dconc.gov, durhamnc.gov, dpsnc.net',       url: 'https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library' },
+    'meetings.html':        { file: 'data/meetings.json', key: 'updated',     label: 'dconc.gov, durhamnc.gov, dpsnc.net',       url: 'https://www.dconc.gov/Board-of-Commissioners/Meetings-and-Announcements/BOCC-Agendas-and-Video-Library' },
     'budget-explorer.html': { file: 'data/budget-data.json', key: 'note',    label: 'Durham County Budget & Management Services', url: 'https://www.dconc.gov/Budget-and-Management-Services' },
     'budget-county.html':   { file: 'data/budget-data.json', key: 'note',    label: 'Durham County Budget & Management Services', url: 'https://www.dconc.gov/Budget-and-Management-Services' },
     'budget-city.html':     { file: 'data/budget-data.json', key: 'note',    label: 'City of Durham Finance Department',          url: 'https://www.durhamnc.gov/456/Finance' },

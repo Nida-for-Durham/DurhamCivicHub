@@ -162,6 +162,29 @@
       .cal-grid-cell[data-count="0"]::after { display: none; }
     }
 
+    /* ── Meeting time in row ── */
+    .meeting-row-time {
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--teal, #207C91);
+      margin-top: .1rem;
+      display: block;
+    }
+
+    /* ── Fix sticky-header scroll overlap ── */
+    /* header (56px) + page-tabs (~44px) + buffer */
+    .meetings-section {
+      scroll-margin-top: 112px;
+    }
+    #advisory {
+      scroll-margin-top: 112px;
+    }
+
+    /* Remove orphan top border on the single visible carousel item */
+    .meeting-carousel .meeting-row {
+      border-top: none;
+    }
+
     /* ── Speak helper step pills ── */
     .speak-step-pill {
       font-family: 'Libre Franklin', sans-serif;

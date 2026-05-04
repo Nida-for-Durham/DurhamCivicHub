@@ -670,8 +670,9 @@ a { color: var(--teal); }
   border-top: 1px solid var(--border-lt);
 }
 .meeting-date-display { display: flex; flex-direction: column; }
-.meeting-rel-day { font-size: .85rem; font-weight: 800; text-transform: uppercase; color: var(--teal); letter-spacing: .05em; }
+.meeting-rel-day  { font-size: .85rem; font-weight: 800; text-transform: uppercase; color: var(--teal); letter-spacing: .05em; }
 .meeting-row-date { font-size: .82rem; font-weight: 700; color: var(--navy); }
+.meeting-row-time { font-size: .78rem; font-weight: 600; color: var(--teal); margin-top: .1rem; display: block; }
 .meeting-type { font-size: 1rem; font-weight: 700; color: var(--navy); }
 .meeting-status {
   font-size: .8rem;
